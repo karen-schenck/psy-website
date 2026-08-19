@@ -1,0 +1,181 @@
+# Odock.ai — Full Content Index for LLM Crawlers
+# https://odock.ai
+
+## What Odock is
+
+Odock.ai is an open-source AI governance gateway that sits between applications
+and LLM providers or MCP servers. Every request passes through a six-stage
+lifecycle: authenticate, authorize, inspect, reserve budget, route, record.
+
+Odock is OpenAI-compatible. Migration requires zero code changes — teams point
+existing API calls to the Odock endpoint and issue virtual API keys.
+
+## Who it is for
+
+- Platform engineering teams managing multi-provider LLM infrastructure
+- Security teams enforcing prompt injection protection, DLP, and access controls
+- FinOps teams enforcing AI spend budgets and quotas per team or project
+- Compliance teams needing audit-ready logs for EU AI Act high-risk provisions
+
+## Key capabilities
+
+- Virtual API keys with scoped access per team, user, project, or tenant
+- Budget and quota enforcement before upstream calls fire (not post-hoc)
+- MCP server governance: tool allowlists, access policies, audit trails
+- Prompt injection protection and data leakage controls at the gateway layer
+- Multi-provider routing, failover, and load balancing (OpenAI, Anthropic, etc.)
+- EU AI Act compliance support: structured audit evidence for every request
+- Plugin architecture for custom workflow steps
+- Deployment: cloud-hosted, self-hosted, or hybrid (VPC data plane)
+
+## Documentation
+
+Full documentation: https://docs.odock.ai/docs/getting-started
+
+## Key pages
+
+- Homepage: https://odock.ai
+- Enterprise: https://odock.ai/enterprise/
+- EU AI Act compliance: https://odock.ai/eu/
+- MCP Gateway: https://odock.ai/mcp-gateway/
+- LLM Gateway: https://odock.ai/llm-gateway/
+- Blog: https://odock.ai/blog/
+- AI gateway comparisons (LiteLLM, Kong, Cloudflare, Portkey, Envoy, Odock): https://odock.ai/compare/
+- GitHub: https://github.com/odock-ai
+
+## Contact
+
+Demo requests: https://odock.ai/contact/
+Email: hello@odock.ai
+
+## Blog articles
+
+### From Chatbots to Delegated Work: Why Agentic AI Needs a Runtime Control Plane
+URL: https://odock.ai/blog/from-chatbots-to-delegated-work-why-agentic-ai-needs-a-runtime-control-plane/
+Summary: Explains the 2026 shift from short chatbot interactions to delegated,
+long-running agentic work. Covers why agents need runtime identity, tool
+governance, pre-execution budget reservation, routing controls, and durable
+usage evidence before enterprises scale autonomous workflows.
+
+### AI Act Transparency and GPAI Enforcement: What Changed After August 2026
+URL: https://odock.ai/blog/ai-act-transparency-and-gpai-enforcement-what-changed-after-august-2026/
+Summary: Covers what changed when EU AI Act enforcement and transparency
+obligations became operational on 2 August 2026. Explains why AI teams now need
+runtime evidence for identity, access, model and tool usage, policy outcomes,
+safety checks, logs, and oversight.
+
+### A2A, MCP, and the Agent Standards Race: Why Interoperability Needs Governance
+URL: https://odock.ai/blog/a2a-mcp-and-the-agent-standards-race-why-interoperability-needs-governance/
+Summary: Explains the agent interoperability wave around A2A and MCP. Shows why
+standardized agent-to-agent communication and agent-to-tool execution require a
+governance layer with scoped identities, tool-level access controls, semantic
+payload filters, upstream auth injection, and audit records.
+
+### EU AI Act 2026: What the August 2 Deadline Actually Means for AI Teams
+URL: https://odock.ai/blog/eu-ai-act-2026-what-the-august-deadline-means-for-ai-teams/
+Summary: A plain-language guide to the EU AI Act in 2026: what became applicable on
+2 August 2026, how the Omnibus package postponed most Annex III high-risk
+obligations to December 2027, the penalty tiers, and how an AI governance gateway
+produces the access control, logging, and audit evidence the Act requires.
+
+### Why the AI Gateway Became Mandatory Infrastructure in 2026
+URL: https://odock.ai/blog/why-the-ai-gateway-became-mandatory-infrastructure-in-2026/
+Summary: Provider sprawl, MCP agent traffic, and tightening regulation turned the
+AI gateway from optimization into requirement. Defines what enterprise-grade means
+in 2026 (low overhead, hierarchical governance, audit-grade logging, multi-provider
+failover, MCP tool governance) and why security must be native to the request lifecycle.
+
+### The 6 MCP Security Risks Every Enterprise Faces in 2026
+URL: https://odock.ai/blog/mcp-security-risks-enterprise-ai-agents-2026/
+Summary: The six recurring MCP security risks for enterprise AI agents, over-privileged
+access, indirect prompt injection, tool poisoning and rug pulls, credential sprawl,
+audit blind spots, and unbounded consumption, and how each is closed at the gateway
+by treating MCP access as scoped, inspected, recorded capability access.
+
+### What Is an LLM Gateway and Why AI Teams Need One Before Production
+URL: https://odock.ai/blog/what-is-an-llm-gateway-and-why-ai-teams-need-one/
+Summary: Explains what an LLM gateway does, why governance becomes necessary after
+the prototype phase, and how Odock centralizes provider access, security, budgets,
+and observability behind one endpoint.
+
+### How to Control LLM Costs with Virtual API Keys, Budgets, and Quotas
+URL: https://odock.ai/blog/how-to-control-llm-costs-with-virtual-api-keys-budgets-and-quotas/
+Summary: Explains the operational model for AI cost governance — virtual API keys
+for attribution, budget reservations before upstream calls, and real-time quota
+enforcement.
+
+### Prompt Injection, Data Leakage, and Why LLM Guardrails Must Live in the Gateway
+URL: https://odock.ai/blog/prompt-injection-data-leakage-and-llm-security-guardrails/
+Summary: Why application-level AI security is insufficient at scale, and how
+centralizing prompt injection protection, jailbreak filtering, and DLP controls
+at the gateway layer ensures consistent, auditable enforcement.
+
+### LiteLLM, Kong, Cloudflare, Portkey, and Odock: An Honest AI Gateway Comparison
+URL: https://odock.ai/blog/litellm-kong-cloudflare-portkey-vs-odock-ai-gateway-comparison/
+Summary: Compares major AI gateways on philosophy, architecture, and feature set.
+Odock's differentiator is modular AI workflow governance vs. routing-first or
+API-management-first approaches.
+
+### MCP Server Governance: How to Give AI Agents Tool Access Without Losing Control
+URL: https://odock.ai/blog/mcp-server-governance-for-ai-agents/
+Summary: How to govern MCP tool access for AI agents — allowlists, access
+policies, audit trails, and permission scoping at the infrastructure layer.
+
+### AI Security in 2026: Prompt Injection, Tool Poisoning, and the New Agentic Risk Stack
+URL: https://odock.ai/blog/ai-security-in-2026-prompt-injection-tool-poisoning-and-agentic-risk/
+Summary: A dated 2025-2026 comparison of the latest OWASP and MCP security
+guidance against Odock's runtime controls for prompt injection, leakage,
+capability governance, and unbounded consumption.
+
+### How to Build a Lifecycle-Aware AI Security Engine
+URL: https://odock.ai/blog/how-to-build-a-lifecycle-aware-ai-security-engine/
+Summary: Explains why modern AI security must be staged across request,
+identity, token, tool, and response phases, and compares that architecture
+with Odock's SafetySec and gateway enforcement model.
+
+### How to Design Multi-Provider LLM Routing and Failover Before an Outage
+URL: https://odock.ai/blog/how-to-design-multi-provider-llm-routing-and-failover/
+Summary: A practical guide to multi-provider routing strategies, failover
+configuration, and why permissions, budgets, and observability must be in place
+before failover is meaningful.
+
+### What to Log, Monitor, and Trace in Production LLM Applications
+URL: https://odock.ai/blog/what-to-log-monitor-and-trace-in-production-llm-apps/
+Summary: A production observability guide covering what to log (quality, latency,
+cost, safety, routing), how to trace requests across providers and tools, and
+how gateway-level logging differs from application-level logging.
+
+### Shadow AI in 2026: Why Banning Tools Fails and Governed Enablement Wins
+URL: https://odock.ai/blog/shadow-ai-2026-how-to-govern-unsanctioned-ai-tool-use/
+Summary: 2026 data shows 67% of employees use AI tools at work against 18% of
+organisations with a formal AI security policy, and shadow AI detections up 4x
+in a year. Explains why blocking access fails and how governed enablement,
+routing all usage through a gateway with identity, logging, and guardrails,
+closes the gap instead.
+
+### AI Agents Are Non-Human Identities Now: The 2026 Credential Sprawl Problem
+URL: https://odock.ai/blog/ai-agent-identity-and-non-human-identity-security-in-2026/
+Summary: Non-human identities now outnumber humans 144 to 1 in cloud-native
+environments. Explains why an AI agent's credential behaves differently from a
+static service account, and how gateway-issued scoped virtual keys with
+in-place rotation and revocation close the agent identity lifecycle gap.
+
+### ISO 42001 vs NIST AI RMF vs EU AI Act: One Gateway, Three Frameworks
+URL: https://odock.ai/blog/iso-42001-vs-nist-ai-rmf-vs-eu-ai-act-ai-governance-frameworks-compared/
+Summary: Compares the voluntary NIST AI RMF risk methodology, the certifiable
+ISO 42001 management system, and the binding EU AI Act, and maps how one
+gateway's access control, logging, and policy layers produce evidence that
+satisfies all three simultaneously.
+
+### The Great Model Churn of 2026: Why Model-Agnostic Routing Stopped Being Optional
+URL: https://odock.ai/blog/the-great-model-churn-of-2026-why-model-agnostic-routing-matters/
+Summary: New models ship roughly every three days in 2026 and open-weight models
+now lead specific benchmarks outright. Explains why hardcoding a model name is a
+liability and how a model-agnostic gateway catalog absorbs the release velocity.
+
+### From Laptop to Production: Self-Host LLMs with Ollama and vLLM, Then Distribute Them Like a Pro with Odock
+URL: https://odock.ai/blog/self-host-llms-with-ollama-and-vllm-and-distribute-them-with-odock/
+Summary: A practical path from prototyping on Ollama to serving production
+traffic on vLLM, then registering the self-hosted endpoint as a gateway
+provider so it can be distributed to teams or paying customers with virtual
+keys, budgets, pricing, and usage records.
