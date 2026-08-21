@@ -23,8 +23,8 @@ export async function generateMetadata({
   return buildSubpageMetadata(
     locale as Locale,
     '/contact',
-    content.contact.title,
-    content.contact.description
+    content.contactPage.metadata.title,
+    content.contactPage.metadata.description
   );
 }
 

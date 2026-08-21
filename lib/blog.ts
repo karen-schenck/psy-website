@@ -3,7 +3,7 @@ import path from 'node:path';
 import type { Metadata } from 'next';
 import blogUi from '@/data/blog-ui.json';
 import { extractMarkdownHeadings, type MarkdownHeading } from '@/lib/markdown';
-import { DEFAULT_LOCALE, SUPPORTED_LOCALES, type Locale } from '@/lib/i18n';
+import { DEFAULT_LOCALE, SUPPORTED_LOCALES, getSiteContent, type Locale } from '@/lib/i18n';
 import { articleSchema, breadcrumbSchema, faqSchema } from '@/lib/schema';
 import {
   buildLanguageAlternates,
@@ -74,24 +74,24 @@ export type BlogPost = BlogFrontmatter & {
 const BLOGS_DIRECTORY = path.join(process.cwd(), 'data', 'blogs');
 
 const BLOG_INDEX_TITLES: Record<Locale, string> = {
-  en: 'LLM Infrastructure, Security, and Cost Control Blog | Odock.ai',
-  fr: 'Blog IA, infrastructure LLM et couts | Odock.ai',
+  fr: 'Blog — Anxiété, burn-out, relations | Karen Schenck',
+  en: 'Blog — Anxiety, Burnout, Relationships | Karen Schenck',
 };
 
 const DEFAULT_BLOG_AUTHORS: Record<Locale, BlogAuthor> = {
-  en: {
-    name: 'Youcef Kaddour',
-    role: 'Founder at Odock and AI infrastructure engineer',
-    bio: 'Youcef Kaddour is the founder of Odock and an AI infrastructure engineer focused on secure LLM systems, MCP governance, runtime guardrails, and production-grade multi-provider AI architecture.',
-    avatarLabel: 'YK',
-    profileHref: '/contact',
-  },
   fr: {
-    name: 'Youcef Kaddour',
-    role: 'Fondateur d’Odock et ingénieur en infrastructure IA',
-    bio: 'Youcef Kaddour est le fondateur d’Odock et un ingénieur en infrastructure IA spécialisé dans les systèmes LLM sécurisés, la gouvernance MCP, les guardrails runtime et les architectures IA multi-provider prêtes pour la production.',
-    avatarLabel: 'YK',
-    profileHref: '/contact',
+    name: 'Karen Schenck',
+    role: 'Psychopraticienne à Antibes',
+    bio: 'Karen Schenck est psychopraticienne à Antibes. Son approche intégrative associe TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne.',
+    avatarLabel: 'KS',
+    profileHref: '/ma-pratique',
+  },
+  en: {
+    name: 'Karen Schenck',
+    role: 'Psychotherapist in Antibes',
+    bio: 'Karen Schenck is a psychotherapist in Antibes. Her integrative approach combines CBT, Gestalt therapy, Schema Therapy and Jungian psychology.',
+    avatarLabel: 'KS',
+    profileHref: '/ma-pratique',
   },
 };
 
@@ -120,13 +120,8 @@ function getLocalizedAuthorUrl(locale: Locale, pathOrUrl?: string) {
   return withCanonicalBase(getLocalizedPath(locale, pathOrUrl));
 }
 
-function getOpenGraphImage() {
-  return `${canonicalBase || ''}/odock-ai.png`;
-}
-
-function getLocalizedOpenGraphImage(locale: Locale) {
-  const image = locale === 'fr' ? '/odock-ai-fr.png' : '/odock-ai.png';
-  return `${canonicalBase || ''}${image}`;
+function getLocalizedOpenGraphImage(_locale: Locale) {
+  return `${canonicalBase || ''}/images/cabinet-antibes.png`;
 }
 
 function parseLocaleBodies(body: string) {
@@ -280,6 +275,7 @@ export function formatBlogDate(locale: Locale, date: string) {
 
 export function buildBlogIndexMetadata(locale: Locale): Metadata {
   const ui = getBlogUi(locale);
+  const brandName = getSiteContent(locale).header.brand.name;
   const keywords = Array.from(new Set(getAllBlogPosts(locale).flatMap((post) => post.keywords)));
   const canonical = withCanonicalBase(getBlogIndexPath(locale));
 
@@ -287,35 +283,35 @@ export function buildBlogIndexMetadata(locale: Locale): Metadata {
     title: BLOG_INDEX_TITLES[locale],
     description: ui.description,
     keywords,
-    applicationName: 'Odock.ai',
+    applicationName: brandName,
     metadataBase: canonicalBase ? new URL(canonicalBase) : undefined,
     alternates: {
       canonical,
       languages: buildLanguageAlternates('/blog'),
     },
     robots: defaultRobots,
-    category: 'technology',
-    creator: 'Odock.ai',
-    publisher: 'Odock.ai',
+    category: 'health',
+    creator: brandName,
+    publisher: brandName,
     openGraph: {
-      title: `${ui.title} | Odock.ai`,
+      title: `${ui.title} | ${brandName}`,
       description: ui.description,
       type: 'website',
       url: canonical,
-      siteName: 'Odock.ai',
+      siteName: brandName,
       locale: getOpenGraphLocale(locale),
       images: [
         {
           url: getLocalizedOpenGraphImage(locale),
-          width: 1280,
-          height: 720,
-          alt: 'Odock blog cover',
+          width: 1536,
+          height: 1024,
+          alt: `${brandName} blog`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${ui.title} | Odock.ai`,
+      title: `${ui.title} | ${brandName}`,
       description: ui.description,
       images: [getLocalizedOpenGraphImage(locale)],
     },
@@ -323,43 +319,44 @@ export function buildBlogIndexMetadata(locale: Locale): Metadata {
 }
 
 export function buildBlogPostMetadata(locale: Locale, post: BlogPost): Metadata {
+  const brandName = getSiteContent(locale).header.brand.name;
   const canonical = withCanonicalBase(getBlogPostPath(locale, post.slug));
 
   return {
-    title: `${post.seoTitle} | Odock.ai`,
+    title: `${post.seoTitle} | ${brandName}`,
     description: post.description,
     keywords: post.keywords,
-    applicationName: 'Odock.ai',
+    applicationName: brandName,
     metadataBase: canonicalBase ? new URL(canonicalBase) : undefined,
     alternates: {
       canonical,
       languages: buildLanguageAlternates(`/blog/${post.slug}`),
     },
     robots: defaultRobots,
-    category: 'technology',
+    category: 'health',
     creator: post.author.name,
-    publisher: 'Odock.ai',
+    publisher: brandName,
     openGraph: {
-      title: `${post.seoTitle} | Odock.ai`,
+      title: `${post.seoTitle} | ${brandName}`,
       description: post.description,
       type: 'article',
       url: canonical,
-      siteName: 'Odock.ai',
+      siteName: brandName,
       locale: getOpenGraphLocale(locale),
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
       images: [
         {
           url: getLocalizedOpenGraphImage(locale),
-          width: 1280,
-          height: 720,
+          width: 1536,
+          height: 1024,
           alt: post.title,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${post.seoTitle} | Odock.ai`,
+      title: `${post.seoTitle} | ${brandName}`,
       description: post.description,
       images: [getLocalizedOpenGraphImage(locale)],
     },
@@ -382,16 +379,14 @@ export function buildBlogIndexStructuredData(locale: Locale) {
       url: getLocalizedAuthorUrl(locale, post.author.profileHref),
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'Odock.ai',
-      logo: { '@type': 'ImageObject', url: `${canonicalBase || ''}/logo-dark.svg` },
+      '@id': `${canonicalBase || ''}/#organization`,
     },
   }));
 
   return {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    name: 'Odock Blog',
+    name: `${getSiteContent(locale).header.brand.name} — Blog`,
     description: getBlogUi(locale).description,
     url: withCanonicalBase(getBlogIndexPath(locale)),
     blogPost: items,
@@ -410,6 +405,7 @@ export function buildBlogPostStructuredData(locale: Locale, post: BlogPost) {
       publishedTime: post.publishedAt,
       modifiedTime: post.updatedAt,
       authorName: post.author.name,
+      canonicalBase: canonicalBase || '',
     }),
     mainEntityOfPage: articleUrl,
     url: articleUrl,
@@ -422,16 +418,14 @@ export function buildBlogPostStructuredData(locale: Locale, post: BlogPost) {
       url: authorUrl,
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'Odock.ai',
-      logo: { '@type': 'ImageObject', url: `${canonicalBase || ''}/logo-dark.svg` },
+      '@id': `${canonicalBase || ''}/#organization`,
     },
     image: [getLocalizedOpenGraphImage(locale)],
   };
 
   const breadcrumb = breadcrumbSchema([
-    { name: 'Home', url: withCanonicalBase(getLocalizedPath(locale)) },
-    { name: 'Blog', url: withCanonicalBase(getBlogIndexPath(locale)) },
+    { name: getBlogUi(locale).homeLabel, url: withCanonicalBase(getLocalizedPath(locale)) },
+    { name: getBlogUi(locale).badge, url: withCanonicalBase(getBlogIndexPath(locale)) },
     { name: post.title, url: articleUrl },
   ]);
 

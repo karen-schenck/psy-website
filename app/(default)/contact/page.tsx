@@ -12,8 +12,8 @@ export const metadata: Metadata = {
   ...buildSubpageMetadata(
     DEFAULT_LOCALE,
     '/contact',
-    content.contact.title,
-    content.contact.description
+    content.contactPage.metadata.title,
+    content.contactPage.metadata.description
   ),
 };
 

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, Tag, User, ChevronRight, Share2, Bookmark, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { Header } from '@/components/landing/header';
 import { Footer } from '@/components/landing/footer';
 import { BlogMarkdown } from '@/components/blog/blog-markdown';
@@ -111,24 +111,19 @@ export function BlogPostContent({
   return (
     <main className="relative min-h-screen bg-background">
       <ReadingProgress />
-      
-      {/* Subtle background */}
-      <div className="fixed inset-0 grid-pattern pointer-events-none opacity-20" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
 
-      <div className="relative z-10">
-        <Header />
+      <Header />
 
-        <article className="px-4 pb-24 pt-24 lg:px-8 lg:pt-32">
-          <div className="mx-auto max-w-6xl">
-            {/* Breadcrumb */}
-            <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
-              <Link href="/" className="transition-colors hover:text-foreground">Home</Link>
-              <ChevronRight className="h-4 w-4" />
-              <Link href={blogIndexPath} className="transition-colors hover:text-foreground">Blog</Link>
-              <ChevronRight className="h-4 w-4" />
-              <span className="text-foreground line-clamp-1">{post.title}</span>
-            </nav>
+      <article className="px-4 pb-24 pt-24 lg:px-8 lg:pt-32">
+        <div className="mx-auto max-w-6xl">
+          {/* Breadcrumb */}
+          <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
+            <Link href="/" className="transition-colors hover:text-foreground">{ui.homeLabel}</Link>
+            <ChevronRight className="h-4 w-4" />
+            <Link href={blogIndexPath} className="transition-colors hover:text-foreground">{ui.badge}</Link>
+            <ChevronRight className="h-4 w-4" />
+            <span className="text-foreground line-clamp-1">{post.title}</span>
+          </nav>
 
             <div className="grid gap-12 lg:grid-cols-[1fr_280px]">
               {/* Main Content */}
@@ -137,7 +132,7 @@ export function BlogPostContent({
                 <header className="mb-12">
                   {/* Category & Meta */}
                   <div className="mb-6 flex flex-wrap items-center gap-4">
-                    <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">
+                    <span className="border border-accent/40 px-4 py-1.5 text-sm font-medium text-accent">
                       {post.category}
                     </span>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
@@ -147,7 +142,7 @@ export function BlogPostContent({
                       </span>
                       {post.updatedAt !== post.publishedAt && (
                         <span className="flex items-center gap-1.5">
-                          Updated: {updatedAtLabel}
+                          {ui.updatedLabel}: {updatedAtLabel}
                         </span>
                       )}
                       <span className="flex items-center gap-1.5">
@@ -158,7 +153,7 @@ export function BlogPostContent({
                   </div>
 
                   {/* Title */}
-                  <h1 className="mb-6 text-3xl font-bold leading-tight tracking-tight text-foreground sm:text-4xl lg:text-5xl">
+                  <h1 className="mb-6 font-display text-3xl leading-tight text-heading sm:text-4xl lg:text-5xl">
                     {post.title}
                   </h1>
 
@@ -168,9 +163,9 @@ export function BlogPostContent({
                   </p>
 
                   {/* Author Card */}
-                  <div className="flex flex-wrap items-center gap-6 rounded-xl border border-border bg-card p-5">
+                  <div className="flex flex-wrap items-center gap-6 border border-border bg-card p-5">
                     <div className="flex items-center gap-4">
-                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-lg font-semibold text-primary">
+                      <div className="flex h-14 w-14 items-center justify-center bg-secondary text-lg font-semibold text-heading">
                         {getAuthorBadge(post.author.name, post.author.avatarLabel)}
                       </div>
                       <div>
@@ -195,7 +190,7 @@ export function BlogPostContent({
                 </header>
 
                 {/* Key Takeaways - Mobile */}
-                <section className="mb-10 rounded-xl border border-primary/20 bg-primary/5 p-6 lg:hidden">
+                <section className="mb-10 border border-accent/30 bg-accent/5 p-6 lg:hidden">
                   <div className="mb-4 flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
                     <h2 className="text-sm font-semibold uppercase tracking-wider text-primary">
@@ -205,7 +200,7 @@ export function BlogPostContent({
                   <ul className="space-y-3">
                     {post.keyTakeaways.map((item, index) => (
                       <li key={item} className="flex gap-3 text-sm leading-relaxed text-foreground">
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center bg-secondary text-xs font-semibold text-heading">
                           {index + 1}
                         </span>
                         <span>{item}</span>
@@ -215,7 +210,7 @@ export function BlogPostContent({
                 </section>
 
                 {/* Intro */}
-                <section className="mb-10 rounded-xl border border-border bg-card p-6 lg:p-8">
+                <section className="mb-10 border border-border bg-card p-6 lg:p-8">
                   <p className="text-base leading-8 text-muted-foreground lg:text-lg lg:leading-8">
                     {post.intro}
                   </p>
@@ -225,7 +220,7 @@ export function BlogPostContent({
                 <BlogMarkdown markdown={post.body} />
 
                 {/* Key Takeaways - Bottom */}
-                <section className="mt-12 rounded-xl border border-primary/20 bg-primary/5 p-6 lg:p-8">
+                <section className="mt-12 border border-accent/30 bg-accent/5 p-6 lg:p-8">
                   <div className="mb-6 flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
                     <h2 className="text-lg font-semibold text-foreground">
@@ -235,7 +230,7 @@ export function BlogPostContent({
                   <ul className="space-y-4">
                     {post.keyTakeaways.map((item, index) => (
                       <li key={item} className="flex gap-4">
-                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                        <span className="flex h-7 w-7 shrink-0 items-center justify-center bg-secondary text-sm font-semibold text-heading">
                           {index + 1}
                         </span>
                         <p className="text-base leading-relaxed text-foreground">{item}</p>
@@ -254,7 +249,7 @@ export function BlogPostContent({
                       {post.faq.map((item) => (
                         <details
                           key={item.question}
-                          className="group rounded-xl border border-border bg-card transition-colors open:border-primary/30"
+                          className="group border border-border bg-card transition-colors open:border-primary/30"
                         >
                           <summary className="flex cursor-pointer items-center justify-between gap-4 p-5 text-lg font-medium text-foreground">
                             <span>{item.question}</span>
@@ -270,7 +265,7 @@ export function BlogPostContent({
                 )}
 
                 {/* CTA Section */}
-                <section className="mt-12 rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10 p-6 lg:p-8">
+                <section className="mt-12 border border-accent/30 bg-secondary/40 p-6 lg:p-8">
                   <h2 className="mb-3 text-2xl font-semibold tracking-tight text-foreground">
                     {post.cta.title}
                   </h2>
@@ -280,7 +275,7 @@ export function BlogPostContent({
                   <div className="flex flex-wrap gap-3">
                     <Link
                       href={localizePath(post.cta.primaryHref, locale)}
-                      className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
+                      className="inline-flex items-center gap-2 bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
                     >
                       <span>{post.cta.primaryLabel}</span>
                       <ArrowRight className="h-4 w-4" />
@@ -289,7 +284,7 @@ export function BlogPostContent({
                       href={post.cta.secondaryHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+                      className="inline-flex items-center gap-2 border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
                     >
                       <span>{post.cta.secondaryLabel}</span>
                       <ArrowUpRight className="h-4 w-4" />
@@ -307,10 +302,10 @@ export function BlogPostContent({
                       {relatedPosts.map((relatedPost) => (
                         <article
                           key={relatedPost.slug}
-                          className="group flex flex-col rounded-xl border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+                          className="group flex flex-col border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
                         >
                           <div className="mb-3 flex items-center gap-3 text-sm text-muted-foreground">
-                            <span className="rounded-full bg-secondary px-2.5 py-0.5 text-xs font-medium text-foreground">
+                            <span className="bg-secondary px-2.5 py-0.5 text-xs font-medium text-foreground">
                               {relatedPost.category}
                             </span>
                             <span className="flex items-center gap-1">
@@ -342,12 +337,12 @@ export function BlogPostContent({
               <aside className="hidden lg:block">
                 <div className="sticky top-24 space-y-6">
                   {/* Author Card */}
-                  <div className="rounded-xl border border-border bg-card p-5">
+                  <div className="border border-border bg-card p-5">
                     <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       {ui.authorLabel}
                     </h3>
                     <div className="flex items-start gap-3">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-secondary text-sm font-semibold text-heading">
                         {getAuthorBadge(post.author.name, post.author.avatarLabel)}
                       </div>
                       <div className="min-w-0">
@@ -358,7 +353,7 @@ export function BlogPostContent({
                             href={getAuthorProfileHref(locale, post.author.profileHref)}
                             className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-primary/80"
                           >
-                            <span>Profile</span>
+                            <span>{ui.authorLabel}</span>
                             <ArrowUpRight className="h-3.5 w-3.5" />
                           </Link>
                         )}
@@ -367,7 +362,7 @@ export function BlogPostContent({
                   </div>
 
                   {/* Table of Contents */}
-                  <div className="rounded-xl border border-border bg-card p-5">
+                  <div className="border border-border bg-card p-5">
                     <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       {ui.tocLabel}
                     </h3>
@@ -376,11 +371,11 @@ export function BlogPostContent({
                         <a
                           key={section.id}
                           href={`#${section.id}`}
-                          className={`block rounded-lg px-3 py-2 text-sm transition-colors ${
+                          className={`block px-3 py-2 text-sm transition-colors ${
                             section.level === 3 ? 'pl-6 text-muted-foreground' : 'font-medium'
                           } ${
                             activeHeading === section.id
-                              ? 'bg-primary/10 text-primary'
+                              ? 'border border-accent/40 text-accent'
                               : 'text-muted-foreground hover:bg-secondary hover:text-foreground'
                           }`}
                         >
@@ -391,7 +386,7 @@ export function BlogPostContent({
                   </div>
 
                   {/* Key Takeaways */}
-                  <div className="rounded-xl border border-primary/20 bg-primary/5 p-5">
+                  <div className="border border-accent/30 bg-accent/5 p-5">
                     <div className="mb-4 flex items-center gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary" />
                       <h3 className="text-xs font-semibold uppercase tracking-wider text-primary">
@@ -401,7 +396,7 @@ export function BlogPostContent({
                     <ul className="space-y-3">
                       {post.keyTakeaways.map((item, index) => (
                         <li key={item} className="flex gap-3">
-                          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/10 text-xs font-semibold text-primary">
+                          <span className="flex h-5 w-5 shrink-0 items-center justify-center bg-secondary text-xs font-semibold text-heading">
                             {index + 1}
                           </span>
                           <p className="text-sm leading-relaxed text-muted-foreground">{item}</p>
@@ -413,7 +408,7 @@ export function BlogPostContent({
                   {/* Back to Blog */}
                   <Link
                     href={blogIndexPath}
-                    className="flex items-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+                    className="flex items-center gap-2 border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
                   >
                     <ArrowLeft className="h-4 w-4" />
                     <span>{ui.backToBlogLabel}</span>
@@ -421,11 +416,10 @@ export function BlogPostContent({
                 </div>
               </aside>
             </div>
-          </div>
-        </article>
+        </div>
+      </article>
 
-        <Footer />
-      </div>
+      <Footer />
     </main>
   );
 }

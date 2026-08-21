@@ -19,23 +19,8 @@ export const defaultRobots = {
 } satisfies Metadata['robots'];
 
 const localeToOgLocale: Record<Locale, string> = {
-  en: 'en_US',
   fr: 'fr_FR',
-};
-
-const localePreviewImage: Record<Locale, { url: string; width: number; height: number; alt: string }> = {
-  en: {
-    url: '/odock-ai.png',
-    width: 1280,
-    height: 720,
-    alt: 'Odock.ai AI governance gateway landing page',
-  },
-  fr: {
-    url: '/odock-ai-fr.png',
-    width: 1280,
-    height: 720,
-    alt: "Odock.ai page d'accueil de la passerelle de gouvernance IA",
-  },
+  en: 'en_US',
 };
 
 function withTrailingSlash(path: string) {
@@ -57,13 +42,6 @@ function normalizeUrl(url: string) {
   return canonicalBase ? `${canonicalBase}${withTrailingSlash(`/${cleanPath}`)}` : withTrailingSlash(`/${cleanPath}`);
 }
 
-function normalizeAssetUrl(url: string) {
-  if (!url) return canonicalBase;
-  if (url.startsWith('http')) return url;
-  const cleanPath = url.startsWith('/') ? url : `/${url}`;
-  return canonicalBase ? `${canonicalBase}${cleanPath}` : cleanPath;
-}
-
 function getSeoConfig(content: SiteContent) {
   return content.seo;
 }
@@ -79,10 +57,7 @@ export function getCanonicalUrl(locale: Locale, pathSuffix = '') {
 export function buildLanguageAlternates(pathSuffix = '') {
   return {
     ...Object.fromEntries(
-      SUPPORTED_LOCALES.map((locale) => [
-        locale,
-        getCanonicalUrl(locale, pathSuffix),
-      ])
+      SUPPORTED_LOCALES.map((locale) => [locale, getCanonicalUrl(locale, pathSuffix)])
     ),
     'x-default': withCanonicalBase(pathSuffix || '/'),
   };
@@ -99,16 +74,8 @@ function buildOgImages(content: SiteContent) {
   }));
 }
 
-function buildPreviewImages(locale: Locale, content: SiteContent) {
-  const localizedImage = localePreviewImage[locale];
-  const images = [
-    {
-      ...localizedImage,
-      url: normalizeAssetUrl(localizedImage.url),
-    },
-    ...(buildOgImages(content) ?? []),
-  ];
-
+function buildPreviewImages(_locale: Locale, content: SiteContent) {
+  const images = buildOgImages(content) ?? [];
   return images.filter(
     (image, index) => images.findIndex((candidate) => candidate.url === image.url) === index
   );
@@ -129,7 +96,7 @@ export function buildRootMetadata(content: SiteContent): Metadata {
       languages: buildLanguageAlternates(),
     },
     robots: (seo.robots as Metadata['robots'] | undefined) ?? defaultRobots,
-    category: 'technology',
+    category: 'health',
     creator: siteName,
     publisher: siteName,
     referrer: 'origin-when-cross-origin',
@@ -137,7 +104,7 @@ export function buildRootMetadata(content: SiteContent): Metadata {
       ...seo.openGraph,
       title: seo.title,
       description: seo.description,
-      locale: localeToOgLocale.en,
+      locale: localeToOgLocale[DEFAULT_LOCALE],
       url: canonical,
       siteName,
       images: buildPreviewImages(DEFAULT_LOCALE, content),
@@ -166,7 +133,7 @@ export function buildMetadata(locale: Locale, content: SiteContent): Metadata {
       languages: buildLanguageAlternates(),
     },
     robots: (seo.robots as Metadata['robots'] | undefined) ?? defaultRobots,
-    category: 'technology',
+    category: 'health',
     creator: siteName,
     publisher: siteName,
     referrer: 'origin-when-cross-origin',
@@ -195,7 +162,8 @@ export function buildSubpageMetadata(
   description: string
 ): Metadata {
   const canonical = getCanonicalUrl(locale, pathSuffix);
-  const seo = getSeoConfig(getSiteContent(locale));
+  const content = getSiteContent(locale);
+  const seo = getSeoConfig(content);
 
   return {
     title,
@@ -208,7 +176,7 @@ export function buildSubpageMetadata(
       languages: buildLanguageAlternates(pathSuffix),
     },
     robots: (seo.robots as Metadata['robots'] | undefined) ?? defaultRobots,
-    category: 'technology',
+    category: 'health',
     creator: siteName,
     publisher: siteName,
     referrer: 'origin-when-cross-origin',
@@ -219,13 +187,13 @@ export function buildSubpageMetadata(
       locale: localeToOgLocale[locale],
       url: canonical,
       siteName,
-      images: buildPreviewImages(locale, getSiteContent(locale)),
+      images: buildPreviewImages(locale, content),
     },
     twitter: {
       ...seo.twitter,
       title,
       description,
-      images: buildPreviewImages(locale, getSiteContent(locale)).map(({ url, alt }) => ({ url, alt })),
+      images: buildPreviewImages(locale, content).map(({ url, alt }) => ({ url, alt })),
     },
   };
 }
@@ -234,22 +202,16 @@ export function buildStructuredData(locale: Locale, content: SiteContent) {
   const pageUrl = getCanonicalUrl(locale);
   const seo = getSeoConfig(content);
   const siteSchema = seo.schema;
+
   const webpage = {
     '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
+    '@type': 'WebPage',
     '@id': `${pageUrl}#webpage`,
     url: pageUrl,
     name: seo.title,
     description: seo.description,
     inLanguage: locale,
     isPartOf: `${canonicalBase}/#website`,
-    about: [
-      'AI governance platform',
-      'AI gateway',
-      'MCP gateway',
-      'AI agents',
-      'EU AI Act readiness',
-    ],
   };
 
   const breadcrumbItems =
@@ -264,7 +226,8 @@ export function buildStructuredData(locale: Locale, content: SiteContent) {
     siteSchema?.organization && Object.keys(siteSchema.organization).length > 0
       ? {
           '@context': 'https://schema.org',
-          '@type': 'Organization',
+          '@type': 'ProfessionalService',
+          '@id': `${canonicalBase}/#organization`,
           ...siteSchema.organization,
           url: normalizeUrl(siteSchema.organization.url),
           logo: normalizeUrl((siteSchema.organization as unknown as Record<string, string>).logo || ''),
@@ -286,35 +249,6 @@ export function buildStructuredData(locale: Locale, content: SiteContent) {
         }
       : null;
 
-  const softwareApplication = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: content.header.brand.name,
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web',
-    url: pageUrl,
-    description: seo.description,
-    inLanguage: locale,
-    publisher: {
-      '@id': `${canonicalBase}/#organization`,
-    },
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      category: 'Open Source',
-    },
-    featureList: [
-      'LLM and MCP gateway',
-      'Virtual API keys and access grants',
-      'Budget reservation and quota enforcement',
-      'Prompt and tool security guardrails',
-      'Routing across approved providers',
-      'Audit-ready usage records',
-      'EU AI Act governance workflows',
-    ],
-  };
-
   const breadcrumbList =
     breadcrumbItems.length > 0
       ? {
@@ -324,268 +258,5 @@ export function buildStructuredData(locale: Locale, content: SiteContent) {
         }
       : null;
 
-  const faq =
-    content.faq.items.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: content.faq.items.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer,
-            },
-          })),
-        }
-      : null;
-
-  return [organization, website, webpage, softwareApplication, breadcrumbList, faq].filter(Boolean);
-}
-
-export function buildEnterpriseStructuredData(locale: Locale, content: SiteContent) {
-  const pageUrl = getCanonicalUrl(locale, '/enterprise');
-  const seo = getSeoConfig(content);
-  const organization =
-    seo.schema?.organization && Object.keys(seo.schema.organization).length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          ...seo.schema.organization,
-          url: normalizeUrl(seo.schema.organization.url),
-          logo: normalizeUrl((seo.schema.organization as unknown as Record<string, string>).logo || ''),
-        }
-      : null;
-
-  const softwareApplication = {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: content.header.brand.name,
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web',
-    url: pageUrl,
-    description: content.enterprisePage.metadata.description,
-    publisher: {
-      '@id': `${canonicalBase}/#organization`,
-    },
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      category: 'Enterprise software',
-    },
-    featureList: [
-      ...content.enterprisePage.capabilities.leftItems.map((item) => item.title),
-      ...content.enterprisePage.capabilities.rightItems.map((item) => item.title),
-    ],
-  };
-
-  const faq =
-    content.enterprisePage.faq.items.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: content.enterprisePage.faq.items.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer,
-            },
-          })),
-        }
-      : null;
-
-  const webpage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${pageUrl}#webpage`,
-    url: pageUrl,
-    name: content.enterprisePage.metadata.title,
-    description: content.enterprisePage.metadata.description,
-    inLanguage: locale,
-    publisher: {
-      '@id': `${canonicalBase}/#organization`,
-    },
-  };
-
-  return [organization, webpage, softwareApplication, faq].filter(Boolean);
-}
-
-export function buildEuStructuredData(locale: Locale, content: SiteContent) {
-  const pageUrl = getCanonicalUrl(locale, '/eu');
-  const seo = getSeoConfig(content);
-  const organization =
-    seo.schema?.organization && Object.keys(seo.schema.organization).length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'Organization',
-          ...seo.schema.organization,
-          url: normalizeUrl(seo.schema.organization.url),
-          logo: normalizeUrl((seo.schema.organization as unknown as Record<string, string>).logo || ''),
-        }
-      : null;
-
-  const faq =
-    content.euPage.faq.items.length > 0
-      ? {
-          '@context': 'https://schema.org',
-          '@type': 'FAQPage',
-          mainEntity: content.euPage.faq.items.map((item) => ({
-            '@type': 'Question',
-            name: item.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: item.answer,
-            },
-          })),
-        }
-      : null;
-
-  const webpage = {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${pageUrl}#webpage`,
-    url: pageUrl,
-    name: content.euPage.metadata.title,
-    description: content.euPage.metadata.description,
-    inLanguage: locale,
-  };
-
-  return [organization, webpage, faq].filter(Boolean);
-}
-
-export function buildMcpGatewayStructuredData(locale: Locale, content: SiteContent) {
-  const pageUrl = getCanonicalUrl(locale, '/mcp-gateway');
-  const seo = getSeoConfig(content);
-
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      '@id': `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: content.mcpGatewayPage.metadata.title,
-      description: content.mcpGatewayPage.metadata.description,
-      isPartOf: canonicalBase || undefined,
-      inLanguage: locale,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'TechArticle',
-      headline: content.mcpGatewayPage.title,
-      description: content.mcpGatewayPage.metadata.description,
-      author: {
-        '@type': 'Organization',
-        name: seo.schema?.organization?.name || content.header.brand.name,
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: seo.schema?.organization?.name || content.header.brand.name,
-      },
-      mainEntityOfPage: pageUrl,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: getCanonicalUrl(locale),
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: content.mcpGatewayPage.badge,
-          item: pageUrl,
-        },
-      ],
-    },
-    ...(content.mcpGatewayPage.sections.faq.items.length > 0
-      ? [
-          {
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: content.mcpGatewayPage.sections.faq.items.map((item) => ({
-              '@type': 'Question',
-              name: item.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer,
-              },
-            })),
-          },
-        ]
-      : []),
-  ];
-}
-
-export function buildLlmGatewayStructuredData(locale: Locale, content: SiteContent) {
-  const pageUrl = getCanonicalUrl(locale, '/llm-gateway');
-  const seo = getSeoConfig(content);
-  const page = content.llmGatewayPage;
-
-  return [
-    {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      '@id': `${pageUrl}#webpage`,
-      url: pageUrl,
-      name: page.metadata.title,
-      description: page.metadata.description,
-      isPartOf: canonicalBase || undefined,
-      inLanguage: locale,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'TechArticle',
-      headline: page.title,
-      description: page.metadata.description,
-      author: {
-        '@type': 'Organization',
-        name: seo.schema?.organization?.name || content.header.brand.name,
-      },
-      publisher: {
-        '@type': 'Organization',
-        name: seo.schema?.organization?.name || content.header.brand.name,
-      },
-      mainEntityOfPage: pageUrl,
-    },
-    {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        {
-          '@type': 'ListItem',
-          position: 1,
-          name: 'Home',
-          item: getCanonicalUrl(locale),
-        },
-        {
-          '@type': 'ListItem',
-          position: 2,
-          name: page.badge,
-          item: pageUrl,
-        },
-      ],
-    },
-    ...(page.sections.faq.items.length > 0
-      ? [
-          {
-            '@context': 'https://schema.org',
-            '@type': 'FAQPage',
-            mainEntity: page.sections.faq.items.map((item) => ({
-              '@type': 'Question',
-              name: item.question,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: item.answer,
-              },
-            })),
-          },
-        ]
-      : []),
-  ];
+  return [organization, website, webpage, breadcrumbList].filter(Boolean);
 }

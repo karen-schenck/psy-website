@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist_Mono } from 'next/font/google';
-import { ThemeProvider } from '@/components/theme-provider';
+import { Libre_Baskerville, Lato } from 'next/font/google';
 import HtmlLangSync from '@/components/html-lang-sync';
 import { DEFAULT_LOCALE, getSiteContent } from '@/lib/i18n';
 import { buildRootMetadata } from '@/lib/seo';
@@ -8,18 +7,24 @@ import '../globals.css';
 
 const baseMetadata = buildRootMetadata(getSiteContent(DEFAULT_LOCALE));
 
-const geistMono = Geist_Mono({
+const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
-  variable: '--font-mono',
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-libre-baskerville',
+  display: 'swap',
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-lato',
   display: 'swap',
 });
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fafafa' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0e14' },
-  ],
-  colorScheme: 'dark light',
+  themeColor: '#F7F3EC',
+  colorScheme: 'light',
   width: 'device-width',
   initialScale: 1,
 };
@@ -27,16 +32,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   ...baseMetadata,
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.svg',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.svg',
-        media: '(prefers-color-scheme: dark)',
-      },
-    ],
+    icon: [{ url: '/icon-light-32x32.svg' }],
   },
 };
 
@@ -46,17 +42,10 @@ export default function DefaultLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang={DEFAULT_LOCALE} suppressHydrationWarning>
-      <body className={`${geistMono.variable} font-mono antialiased bg-background`}>
+    <html lang={DEFAULT_LOCALE}>
+      <body className={`${libreBaskerville.variable} ${lato.variable} font-sans antialiased bg-background`}>
         <HtmlLangSync />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

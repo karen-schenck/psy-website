@@ -5,6 +5,6 @@ export const dynamic = 'force-static';
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://odock.ai/sitemap.xml',
+    sitemap: 'https://karen-schenck.fr/sitemap.xml',
   };
 }

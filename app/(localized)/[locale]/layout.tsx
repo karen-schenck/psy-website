@@ -1,24 +1,29 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist_Mono } from 'next/font/google';
+import { Libre_Baskerville, Lato } from 'next/font/google';
 import { notFound } from 'next/navigation';
-import { ThemeProvider } from '@/components/theme-provider';
 import HtmlLangSync from '@/components/html-lang-sync';
 import { getSiteContent, isLocale, NON_DEFAULT_LOCALES } from '@/lib/i18n';
 import { buildMetadata } from '@/lib/seo';
 import '../../globals.css';
 
-const geistMono = Geist_Mono({
+const libreBaskerville = Libre_Baskerville({
   subsets: ['latin'],
-  variable: '--font-mono',
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-libre-baskerville',
+  display: 'swap',
+});
+
+const lato = Lato({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-lato',
   display: 'swap',
 });
 
 export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#fafafa' },
-    { media: '(prefers-color-scheme: dark)', color: '#0a0e14' },
-  ],
-  colorScheme: 'dark light',
+  themeColor: '#F7F3EC',
+  colorScheme: 'light',
   width: 'device-width',
   initialScale: 1,
 };
@@ -51,17 +56,10 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${geistMono.variable} font-mono antialiased bg-background`}>
+    <html lang={locale}>
+      <body className={`${libreBaskerville.variable} ${lato.variable} font-sans antialiased bg-background`}>
         <HtmlLangSync />
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

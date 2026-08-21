@@ -13,3 +13,6 @@ out/
 node_modules
 .next/
 .DS_Store
+
+# Design inspiration / source docs (not part of the site)
+inspi/

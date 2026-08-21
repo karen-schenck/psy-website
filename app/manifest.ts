@@ -4,20 +4,14 @@ export const dynamic = 'force-static';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Odock.ai',
-    short_name: 'Odock.ai',
-    description:
-      'AI governance platform for AI, MCP, and AI agent traffic.',
+    name: 'Karen Schenck — Psychopraticienne',
+    short_name: 'Karen Schenck',
+    description: 'Psychopraticienne à Antibes. Approche intégrative — TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne.',
     start_url: '/',
     display: 'standalone',
-    background_color: '#0a0e14',
-    theme_color: '#0a0e14',
+    background_color: '#F7F3EC',
+    theme_color: '#F7F3EC',
     icons: [
-      {
-        src: '/icon-dark-32x32.svg',
-        sizes: '32x32',
-        type: 'image/svg+xml',
-      },
       {
         src: '/icon-light-32x32.svg',
         sizes: '32x32',

@@ -1,20 +1,20 @@
 import enContent from '@/data/site-content-en.json';
 import frContent from '@/data/site-content-fr.json';
 
-export const SUPPORTED_LOCALES = ['en', 'fr'] as const;
+export const SUPPORTED_LOCALES = ['fr', 'en'] as const;
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
 
-export const DEFAULT_LOCALE: Locale = 'en';
+export const DEFAULT_LOCALE: Locale = 'fr';
 export const NON_DEFAULT_LOCALES = SUPPORTED_LOCALES.filter(
   (locale): locale is Exclude<Locale, typeof DEFAULT_LOCALE> => locale !== DEFAULT_LOCALE
 );
 
 export const LOCALE_LABELS: Record<Locale, string> = {
-  en: 'EN',
   fr: 'FR',
+  en: 'EN',
 };
 
-export type SiteContent = typeof enContent;
+export type SiteContent = typeof frContent;
 
 type Primitive = string | number | boolean | null;
 export type DeepPartial<T> = {
@@ -25,9 +25,12 @@ export type DeepPartial<T> = {
       : DeepPartial<T[K]>;
 };
 
+// French is the canonical, fully-authored content. English is an overlay that
+// only needs to provide the keys that have been translated so far — anything
+// missing falls back to the French base rather than breaking the build.
 const TRANSLATIONS: Record<Locale, DeepPartial<SiteContent>> = {
-  en: enContent,
   fr: frContent,
+  en: enContent,
 };
 
 export function isLocale(value: string): value is Locale {
@@ -90,7 +93,7 @@ function withTrailingSlash(path: string) {
 
 export function getSiteContent(locale: string): SiteContent {
   const normalized = normalizeLocale(locale);
-  return deepMerge(enContent, TRANSLATIONS[normalized]);
+  return deepMerge(frContent, TRANSLATIONS[normalized]);
 }
 
 export function stripLocalePrefix(pathname: string): string {

@@ -1,77 +1,35 @@
-export function organizationSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Odock.ai',
-    url: 'https://odock.ai',
-    logo: 'https://odock.ai/logo-dark.svg',
-    sameAs: [
-      'https://github.com/odock-ai',
-      'https://x.com/odock_ai',
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'sales',
-      url: 'https://odock.ai/contact/',
-    },
-  };
-}
-
-export function softwareApplicationSchema() {
-  return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    name: 'Odock.ai',
-    applicationCategory: 'DeveloperApplication',
-    operatingSystem: 'Linux, macOS, Windows',
-    url: 'https://odock.ai',
-    description:
-      'AI governance gateway for LLM and MCP traffic. Enforce access policies, security guardrails, budgets, quotas, routing, and compliance controls from one controlled plane.',
-    offers: {
-      '@type': 'Offer',
-      price: '0',
-      priceCurrency: 'USD',
-      description: 'Open-source self-hosted tier available',
-    },
-  };
-}
-
 export function articleSchema({
   title,
   description,
   slug,
   publishedTime,
   modifiedTime,
-  authorName = 'Odock Editorial Team',
+  authorName,
+  canonicalBase,
 }: {
   title: string;
   description: string;
   slug: string;
   publishedTime: string;
   modifiedTime: string;
-  authorName?: string;
+  authorName: string;
+  canonicalBase: string;
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'TechArticle',
+    '@type': 'Article',
     headline: title,
     description,
-    url: `https://odock.ai/blog/${slug}/`,
+    url: `${canonicalBase}/blog/${slug}/`,
     datePublished: publishedTime,
     dateModified: modifiedTime,
-    image: 'https://odock.ai/odock-ai.png',
     author: {
-      '@type': 'Organization',
+      '@type': 'Person',
       name: authorName,
-      url: 'https://odock.ai',
+      url: canonicalBase,
     },
     publisher: {
-      '@type': 'Organization',
-      name: 'Odock.ai',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://odock.ai/logo-dark.svg',
-      },
+      '@id': `${canonicalBase}/#organization`,
     },
   };
 }
