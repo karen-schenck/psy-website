@@ -2,25 +2,30 @@
 
 import { CalendarDays, CreditCard, Info } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
+import { OrganicBlobs } from "@/components/landing/organic-blobs"
+import { Reveal } from "@/components/shared/reveal"
 
 export function ContactContent() {
   const { content } = useLandingContent()
   const { contactPage } = content
 
   return (
-    <section className="px-4 pb-24 pt-28 lg:px-8">
-      <div className="mx-auto max-w-4xl">
-        <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
-          {contactPage.badge}
-        </p>
-        <h1 className="mb-5 font-display text-4xl text-heading md:text-5xl">
-          {contactPage.title}
-        </h1>
-        <p className="max-w-2xl text-base leading-relaxed text-foreground/85 md:text-lg">
-          {contactPage.intro}
-        </p>
+    <section className="relative overflow-hidden px-4 pb-24 pt-28 lg:px-8">
+      <OrganicBlobs variant="soft" className="opacity-40" />
+      <div className="relative mx-auto max-w-4xl">
+        <Reveal>
+          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+            {contactPage.badge}
+          </p>
+          <h1 className="mb-5 font-display text-4xl text-heading md:text-5xl">
+            {contactPage.title}
+          </h1>
+          <p className="max-w-2xl text-base leading-relaxed text-foreground/85 md:text-lg">
+            {contactPage.intro}
+          </p>
+        </Reveal>
 
-        <div className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
+        <Reveal delay={100} className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
           <div className="border border-border bg-card p-6 sm:p-8">
             <div className="mb-6 flex items-center gap-2.5">
               <CalendarDays className="h-5 w-5 text-heading" strokeWidth={1.5} />
@@ -81,9 +86,9 @@ export function ContactContent() {
               </ul>
             </div>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 border-t border-border pt-8">
+        <Reveal delay={150} className="mt-10 border-t border-border pt-8">
           <h2 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
             {contactPage.policyTitle}
           </h2>
@@ -92,7 +97,7 @@ export function ContactContent() {
               <li key={line}>{line}</li>
             ))}
           </ul>
-        </div>
+        </Reveal>
       </div>
     </section>
   )

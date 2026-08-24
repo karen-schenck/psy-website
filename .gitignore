@@ -16,3 +16,4 @@ node_modules
 
 # Design inspiration / source docs (not part of the site)
 inspi/
+.agents/

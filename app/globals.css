@@ -153,3 +153,64 @@ html {
   background-color: rgba(138, 46, 59, 0.16);
   color: var(--foreground);
 }
+
+/* Organic blob backdrop — slow drifting shapes echoing the illustrated
+   moodboard (soft arches, overlapping circles, deep-blue and terracotta
+   accents). Used behind the hero and as a light decorative layer on a few
+   sections. */
+@keyframes drift-a {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(2%, -3%, 0) scale(1.04); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes drift-b {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(-3%, 2%, 0) scale(0.97); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes drift-c {
+  0% { transform: translate3d(0, 0, 0) scale(1); }
+  50% { transform: translate3d(1.5%, 2.5%, 0) scale(1.03); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+@keyframes sprig-draw {
+  from { stroke-dashoffset: var(--sprig-length, 400); opacity: 0; }
+  8% { opacity: 1; }
+  to { stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes sway {
+  0%, 100% { transform: rotate(-1.5deg); }
+  50% { transform: rotate(1.5deg); }
+}
+
+.blob-drift-a { animation: drift-a 22s ease-in-out infinite; transform-origin: center; }
+.blob-drift-b { animation: drift-b 26s ease-in-out infinite; transform-origin: center; }
+.blob-drift-c { animation: drift-c 19s ease-in-out infinite; transform-origin: center; }
+
+/* Same gentle drift, sized for photo cards rather than full-bleed blobs. */
+.animate-float-slow { animation: drift-a 14s ease-in-out infinite; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-slow { animation: none; }
+}
+
+.sprig-path {
+  stroke-dasharray: var(--sprig-length, 400);
+  stroke-dashoffset: 0;
+  animation: sprig-draw 2.4s cubic-bezier(0.65, 0, 0.35, 1) 0.3s both;
+  transform-origin: bottom center;
+}
+.sprig-sway {
+  animation: sway 7s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob-drift-a, .blob-drift-b, .blob-drift-c, .sprig-sway {
+    animation: none;
+  }
+  .sprig-path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}

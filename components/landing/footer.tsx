@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Mail, Phone, MapPin } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
+import { LineArtSprig } from "@/components/landing/line-art-sprig"
 import { localizePath } from "@/lib/i18n"
 
 export function Footer() {
@@ -14,6 +15,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
+            <LineArtSprig color="#F7F3EC" className="mb-4 h-10 w-7 opacity-70" />
             <Link
               href={localizePath("/", locale)}
               prefetch={false}

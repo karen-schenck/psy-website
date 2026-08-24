@@ -15,7 +15,7 @@
     ],
     "openGraph": {
       "images": [
-        { "url": "/images/cabinet-antibes.png", "width": 1536, "height": 1024, "alt": "Karen Schenck's practice in Antibes" }
+        { "url": "/images/cabinet-antibes.webp", "width": 1600, "height": 1067, "alt": "Karen Schenck's practice in Antibes" }
       ]
     }
   },
@@ -89,8 +89,8 @@
       "primaryCtaHref": "/contact",
       "secondaryCtaLabel": "Why seek therapy?",
       "secondaryCtaHref": "/pourquoi-consulter",
-      "imageSrc": "/images/hero-accueil.jpg",
-      "imageAlt": "Vase with autumn branches on a console table, soft light, ivory interior"
+      "imageSrc": "/images/hero-accueil.webp",
+      "imageAlt": "Warm living room with cream armchairs and a wall illustration in navy and terracotta tones"
     },
     "whyConsult": {
       "eyebrow": "Why seek therapy?",
@@ -111,7 +111,7 @@
       "description": "I favour an integrative approach that combines several complementary therapeutic methods. Each course of therapy is shaped around your history, your needs and your own pace.",
       "ctaLabel": "Discover my practice",
       "ctaHref": "/ma-pratique",
-      "imageSrc": "/images/cabinet-antibes.png",
+      "imageSrc": "/images/cabinet-antibes.webp",
       "imageAlt": "Cream armchairs and a wooden bookshelf in a bright room, consultation room atmosphere"
     },
     "practicalInfo": {
@@ -149,8 +149,8 @@
         "whenText": "When these difficulties become hard to manage alone, or take up more and more space in your daily life, therapy can help you understand the mechanisms at play and regain a better balance.",
         "supportTitle": "How therapy can help",
         "supportText": "The goal isn't just to ease symptoms. It's also about identifying the mechanisms that maintain them, in order to support lasting change.",
-        "imageSrc": "/images/pourquoi-anxiete.jpg",
-        "imageAlt": "A hand writing in a notebook, natural light on a wooden table"
+        "imageSrc": "/images/anxiety-layered.svg",
+        "imageAlt": "Line-art illustration of a figure holding their head in their hands, surrounded by a tangle of thoughts, over navy and terracotta shapes"
       },
       {
         "slug": "burn-out",
@@ -161,8 +161,8 @@
         "whenText": "When exhaustion settles in and everyday life becomes hard to manage, therapy can help you understand what led to this situation and gradually regain your footing.",
         "supportTitle": "How therapy can help",
         "supportText": "The goal isn't only to support recovery. It's about identifying the factors that contributed to the exhaustion, to support a lasting recovery and reduce the risk of it happening again.",
-        "imageSrc": "/images/pourquoi-burn-out.jpg",
-        "imageAlt": "Mediterranean vegetation and a coastal sea view in morning light"
+        "imageSrc": "/images/pourquoi-burn-out.webp",
+        "imageAlt": "Line-art illustration of a seated figure, head lowered and shoulders slumped, over navy and terracotta shapes"
       },
       {
         "slug": "difficultes-relationnelles",
@@ -173,8 +173,8 @@
         "whenText": "When these difficulties become recurring or cause lasting distress, therapy can help you better understand what is happening and build more balanced relationships.",
         "supportTitle": "How therapy can help",
         "supportText": "Therapeutic work makes it possible to explore the relational patterns that keep repeating, better understand their origin, and develop new ways of relating to yourself and to others.",
-        "imageSrc": "/images/pourquoi-difficultes-relationnelles.jpg",
-        "imageAlt": "A small branch resting in a stoneware bowl, raw texture and soft light"
+        "imageSrc": "/images/pourquoi-difficultes-relationnelles.webp",
+        "imageAlt": "Line-art illustration of two figures standing back to back, separated by a terracotta leaf, over slate blue and beige shapes"
       },
       {
         "slug": "transitions-de-vie",
@@ -185,8 +185,8 @@
         "whenText": "When these changes become difficult to go through, or cause lasting distress, therapy can help you move forward with more serenity.",
         "supportTitle": "How therapy can help",
         "supportText": "Therapy offers a space to put words to what you are experiencing, better integrate this period of your life, and find bearings suited to your situation.",
-        "imageSrc": "/images/pourquoi-transitions-de-vie.jpg",
-        "imageAlt": "An arched porch and outdoor staircase, sharp light and shadow on a pale wall"
+        "imageSrc": "/images/pourquoi-transitions-de-vie.webp",
+        "imageAlt": "Illustration of a winding path through navy, sand and terracotta hills toward a pale sun, with a line-art seedling"
       }
     ],
     "ctaLabel": "Discover my practice",
@@ -202,7 +202,7 @@
     "badge": "My practice",
     "title": "My practice",
     "intro": "I don't believe a single method can respond to every situation. That is why I chose to combine several complementary therapeutic approaches, drawn on according to your needs and how your therapy evolves. The goal is to better understand the difficulties you face, identify their causes, and build lasting change.",
-    "imageSrc": "/images/cabinet-antibes.png",
+    "imageSrc": "/images/cabinet-antibes.webp",
     "imageAlt": "Cream armchairs and a wooden bookshelf in a bright room, consultation room atmosphere",
     "modalitiesTitle": "Therapeutic approaches",
     "modalities": [
@@ -251,7 +251,7 @@
     "booking": {
       "title": "Book a slot",
       "description": "Choose the day and time that works for you. Confirmation is immediate.",
-      "calendlyUrl": "https://calendly.com/karen-schenck/premier-entretien",
+      "calendlyUrl": "https://calendly.com/youcef-kaddour-pro/30min",
       "ctaLabel": "Book an appointment"
     },
     "practicalInfoTitle": "Practical information",

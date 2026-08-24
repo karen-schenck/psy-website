@@ -16,7 +16,7 @@
     ],
     "openGraph": {
       "images": [
-        { "url": "/images/cabinet-antibes.png", "width": 1536, "height": 1024, "alt": "Cabinet de Karen Schenck, psychopraticienne à Antibes" }
+        { "url": "/images/cabinet-antibes.webp", "width": 1600, "height": 1067, "alt": "Cabinet de Karen Schenck, psychopraticienne à Antibes" }
       ]
     },
     "twitter": { "card": "summary_large_image" },
@@ -26,7 +26,7 @@
       "organization": {
         "name": "Karen Schenck — Psychopraticienne",
         "url": "/",
-        "logo": "/images/cabinet-antibes.png",
+        "logo": "/images/cabinet-antibes.webp",
         "telephone": "+33-4-00-00-00-00",
         "email": "contact@karen-schenck.fr",
         "priceRange": "90€",
@@ -110,8 +110,8 @@
       "primaryCtaHref": "/contact",
       "secondaryCtaLabel": "Pourquoi consulter ?",
       "secondaryCtaHref": "/pourquoi-consulter",
-      "imageSrc": "/images/hero-accueil.jpg",
-      "imageAlt": "Vase et branches de feuillage sur une console, lumière douce, intérieur ivoire"
+      "imageSrc": "/images/hero-accueil.webp",
+      "imageAlt": "Salon chaleureux avec fauteuils crème et illustration murale aux tons bleu nuit et terracotta"
     },
     "whyConsult": {
       "eyebrow": "Pourquoi consulter ?",
@@ -132,7 +132,7 @@
       "description": "Je privilégie une prise en charge intégrative qui associe plusieurs courants thérapeutiques complémentaires. Chaque accompagnement est construit en fonction de votre histoire, de votre demande et de votre rythme.",
       "ctaLabel": "Découvrir ma pratique",
       "ctaHref": "/ma-pratique",
-      "imageSrc": "/images/cabinet-antibes.png",
+      "imageSrc": "/images/cabinet-antibes.webp",
       "imageAlt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation"
     },
     "practicalInfo": {
@@ -170,8 +170,8 @@
         "whenText": "Lorsque ces difficultés deviennent difficiles à gérer seul ou prennent de plus en plus de place dans votre quotidien, un accompagnement thérapeutique peut vous aider à mieux comprendre les mécanismes en jeu et à retrouver un meilleur équilibre.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "L'objectif n'est pas uniquement d'apaiser les symptômes. Il s'agit également d'identifier les mécanismes qui les entretiennent afin de favoriser une évolution durable.",
-        "imageSrc": "/images/pourquoi-anxiete.jpg",
-        "imageAlt": "Main écrivant dans un carnet, lumière naturelle sur une table en bois"
+        "imageSrc": "/images/anxiety-layered.svg",
+        "imageAlt": "Illustration au trait d'une silhouette tenant sa tête entre ses mains, entourée de pensées enchevêtrées, sur des formes bleu nuit et terracotta"
       },
       {
         "slug": "burn-out",
@@ -182,8 +182,8 @@
         "whenText": "Lorsque cet épuisement s'installe et que gérer le quotidien devient compliqué, un accompagnement thérapeutique peut vous aider à mieux comprendre ce qui a conduit à cette situation et à retrouver progressivement vos repères.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "L'objectif n'est pas uniquement de favoriser la récupération. Il s'agit d'identifier les facteurs qui ont contribué à cet épuisement afin de favoriser une récupération durable et de limiter le risque que cette situation se reproduise.",
-        "imageSrc": "/images/pourquoi-burn-out.jpg",
-        "imageAlt": "Végétation méditerranéenne et vue sur la mer depuis la côte, lumière du matin"
+        "imageSrc": "/images/pourquoi-burn-out.webp",
+        "imageAlt": "Illustration au trait d'une silhouette assise, tête baissée et épaules affaissées, sur des formes bleu nuit et terracotta"
       },
       {
         "slug": "difficultes-relationnelles",
@@ -194,8 +194,8 @@
         "whenText": "Lorsque ces difficultés deviennent récurrentes ou génèrent une souffrance durable, un accompagnement thérapeutique peut vous aider à mieux comprendre ce qui se joue et à construire des relations plus équilibrées.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "Le travail thérapeutique permet d'explorer les schémas relationnels qui se répètent, de mieux comprendre leur origine et de développer de nouvelles façons d'entrer en relation avec soi-même et avec les autres.",
-        "imageSrc": "/images/pourquoi-difficultes-relationnelles.jpg",
-        "imageAlt": "Rameau posé dans un bol en grès, matière brute et lumière douce"
+        "imageSrc": "/images/pourquoi-difficultes-relationnelles.webp",
+        "imageAlt": "Illustration au trait de deux silhouettes dos à dos, séparées par une feuille terracotta, sur des formes bleu ardoise et beige"
       },
       {
         "slug": "transitions-de-vie",
@@ -206,8 +206,8 @@
         "whenText": "Lorsque ces changements deviennent difficiles à traverser ou qu'ils génèrent une souffrance persistante, un accompagnement thérapeutique peut vous aider à avancer avec davantage de sérénité.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "La thérapie offre un espace pour mettre des mots sur ce que vous vivez, mieux intégrer cette période de vie et retrouver des repères adaptés à votre situation.",
-        "imageSrc": "/images/pourquoi-transitions-de-vie.jpg",
-        "imageAlt": "Porche voûté et escalier extérieur, ombre portée nette sur un mur clair"
+        "imageSrc": "/images/pourquoi-transitions-de-vie.webp",
+        "imageAlt": "Illustration d'un chemin sinueux traversant des collines bleu nuit, sable et terracotta vers un soleil pâle, avec une jeune pousse au trait"
       }
     ],
     "ctaLabel": "Découvrir ma pratique",
@@ -223,7 +223,7 @@
     "badge": "Ma pratique",
     "title": "Ma pratique",
     "intro": "Je ne crois pas qu'une seule méthode puisse répondre à toutes les situations. C'est pourquoi j'ai choisi d'associer plusieurs approches thérapeutiques complémentaires, mobilisées en fonction de votre demande et de l'évolution de votre accompagnement. L'objectif est de mieux comprendre les difficultés rencontrées, d'en identifier les causes et de construire des changements durables.",
-    "imageSrc": "/images/cabinet-antibes.png",
+    "imageSrc": "/images/cabinet-antibes.webp",
     "imageAlt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation",
     "modalitiesTitle": "Les approches thérapeutiques",
     "modalities": [
@@ -272,7 +272,7 @@
     "booking": {
       "title": "Réserver un créneau",
       "description": "Choisissez le jour et l'heure qui vous conviennent. La confirmation est immédiate.",
-      "calendlyUrl": "https://calendly.com/karen-schenck/premier-entretien",
+      "calendlyUrl": "https://calendly.com/youcef-kaddour-pro/30min",
       "ctaLabel": "Prendre rendez-vous"
     },
     "practicalInfoTitle": "Informations pratiques",

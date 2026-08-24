@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
+import { Reveal } from "@/components/shared/reveal"
 import { localizePath } from "@/lib/i18n"
 
 export function PracticalInfoSection() {
@@ -10,7 +11,7 @@ export function PracticalInfoSection() {
 
   return (
     <section className="border-t border-border py-20 lg:py-28" id="rendez-vous">
-      <div className="mx-auto max-w-4xl px-4 text-center lg:px-8">
+      <Reveal className="mx-auto max-w-4xl px-4 text-center lg:px-8">
         <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
           {practicalInfo.eyebrow}
         </p>
@@ -32,11 +33,11 @@ export function PracticalInfoSection() {
         <Link
           href={localizePath(practicalInfo.ctaHref, locale)}
           prefetch={false}
-          className="inline-flex items-center bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+          className="inline-flex items-center bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:-translate-y-0.5 hover:opacity-90"
         >
           {practicalInfo.ctaLabel}
         </Link>
-      </div>
+      </Reveal>
     </section>
   )
 }

@@ -18,7 +18,11 @@ export function EditorialImage({ src, alt, caption, ratio = "4 / 5", className }
         role="img"
         aria-label={alt}
         className="editorial-image"
-        style={{ aspectRatio: ratio, backgroundImage: `url(${src})` }}
+        style={{
+          aspectRatio: ratio,
+          backgroundImage: `url(${src})`,
+          backgroundColor: src.endsWith(".svg") ? "transparent" : undefined,
+        }}
       />
       {caption ? <figcaption className="editorial-caption">{caption}</figcaption> : null}
     </figure>

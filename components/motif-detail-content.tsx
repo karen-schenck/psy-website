@@ -6,6 +6,8 @@ import { Header } from "@/components/landing/header"
 import { Footer } from "@/components/landing/footer"
 import { BookingCta } from "@/components/landing/booking-cta"
 import { EditorialImage } from "@/components/practice/editorial-image"
+import { OrganicBlobs } from "@/components/landing/organic-blobs"
+import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { localizePath } from "@/lib/i18n"
 
@@ -20,8 +22,9 @@ export function MotifDetailContent({ slug }: { slug: string }) {
     <main className="relative min-h-screen bg-background">
       <Header />
 
-      <article className="px-4 pb-20 pt-28 lg:px-8">
-        <div className="mx-auto max-w-5xl">
+      <article className="relative overflow-hidden px-4 pb-20 pt-28 lg:px-8">
+        <OrganicBlobs variant="soft" className="opacity-40" />
+        <div className="relative mx-auto max-w-5xl">
           <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
             <Link href={localizePath("/pourquoi-consulter", locale)} prefetch={false} className="transition-colors hover:text-foreground">
               {whyConsultPage.badge}
@@ -31,7 +34,7 @@ export function MotifDetailContent({ slug }: { slug: string }) {
           </nav>
 
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-            <div>
+            <Reveal>
               <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
                 {whyConsultPage.badge}
               </p>
@@ -41,20 +44,29 @@ export function MotifDetailContent({ slug }: { slug: string }) {
               <p className="text-base leading-relaxed text-foreground/85 md:text-lg">
                 {motif.intro}
               </p>
-            </div>
+            </Reveal>
 
-            <EditorialImage src={motif.imageSrc} alt={motif.imageAlt} ratio="4 / 5" />
+            <Reveal delay={150}>
+              <div className="animate-float-slow">
+                <EditorialImage
+                  src={motif.imageSrc}
+                  alt={motif.imageAlt}
+                  ratio="4 / 5"
+                  className="shadow-[0_24px_60px_-28px_rgba(63,83,107,0.3)]"
+                />
+              </div>
+            </Reveal>
           </div>
 
           <div className="mt-14 grid gap-10 border-t border-border pt-14 sm:grid-cols-2">
-            <div>
+            <Reveal>
               <h2 className="mb-3 font-display text-2xl text-heading">{motif.whenTitle}</h2>
               <p className="text-sm leading-relaxed text-foreground/85">{motif.whenText}</p>
-            </div>
-            <div>
+            </Reveal>
+            <Reveal delay={100}>
               <h2 className="mb-3 font-display text-2xl text-heading">{motif.supportTitle}</h2>
               <p className="text-sm leading-relaxed text-foreground/85">{motif.supportText}</p>
-            </div>
+            </Reveal>
           </div>
 
           {whyConsultPage.motifs.length > 1 && (
