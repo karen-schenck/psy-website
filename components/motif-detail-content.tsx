@@ -6,6 +6,7 @@ import { Header } from "@/components/landing/header"
 import { Footer } from "@/components/landing/footer"
 import { BookingCta } from "@/components/landing/booking-cta"
 import { EditorialImage } from "@/components/practice/editorial-image"
+import { AnxietyIllustration } from "@/components/anxiety-illustration"
 import { OrganicBlobs } from "@/components/landing/organic-blobs"
 import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
@@ -47,14 +48,18 @@ export function MotifDetailContent({ slug }: { slug: string }) {
             </Reveal>
 
             <Reveal delay={150}>
-              <div className="animate-float-slow">
-                <EditorialImage
-                  src={motif.imageSrc}
-                  alt={motif.imageAlt}
-                  ratio="4 / 5"
-                  className="shadow-[0_24px_60px_-28px_rgba(63,83,107,0.3)]"
-                />
-              </div>
+              {motif.slug === "anxiete" ? (
+                <AnxietyIllustration alt={motif.imageAlt} />
+              ) : (
+                <div className="animate-float-slow">
+                  <EditorialImage
+                    src={motif.imageSrc}
+                    alt={motif.imageAlt}
+                    ratio="4 / 5"
+                    className="shadow-[0_24px_60px_-28px_rgba(63,83,107,0.3)]"
+                  />
+                </div>
+              )}
             </Reveal>
           </div>
 
