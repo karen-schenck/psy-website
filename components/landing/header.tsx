@@ -13,14 +13,19 @@ import {
 } from "@/components/ui/drawer"
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { ChevronRight, Menu } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { ChevronDown, ChevronRight, Menu } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { PetalMark } from "@/components/landing/petal-mark"
 import { localizePath } from "@/lib/i18n"
@@ -114,14 +119,23 @@ export function Header() {
             {navItems.map((item) => (
               <NavigationMenuItem key={item.label}>
                 {item.children?.length ? (
-                  <>
-                    <NavigationMenuTrigger className="h-9 rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 hover:text-heading data-[state=open]:bg-panel">
-                      {item.label}
-                    </NavigationMenuTrigger>
-                    <NavigationMenuContent className="w-72 rounded-xl">
-                      <div className="flex flex-col gap-0.5 p-1.5">
+                  <DropdownMenu modal={false}>
+                    <DropdownMenuTrigger asChild>
+                      <button
+                        type="button"
+                        className="group inline-flex h-9 items-center rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
+                      >
+                        {item.label}
+                        <ChevronDown
+                          aria-hidden="true"
+                          className="ml-1 size-3 transition-transform duration-200 group-data-[state=open]:rotate-180"
+                        />
+                      </button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="center" sideOffset={6} className="w-72 rounded-xl p-1.5">
+                      <DropdownMenuGroup className="flex flex-col gap-0.5">
                         {item.children.map((child) => (
-                          <NavigationMenuLink key={child.label} asChild>
+                          <DropdownMenuItem key={child.label} asChild className="p-0 focus:bg-panel">
                             <Link
                               href={localizePath(child.href, locale)}
                               prefetch={false}
@@ -129,11 +143,11 @@ export function Header() {
                             >
                               {child.label}
                             </Link>
-                          </NavigationMenuLink>
+                          </DropdownMenuItem>
                         ))}
-                      </div>
-                    </NavigationMenuContent>
-                  </>
+                      </DropdownMenuGroup>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 ) : item.href ? (
                   <NavigationMenuLink asChild>
                     <NavLink

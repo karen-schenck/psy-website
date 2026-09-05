@@ -36,7 +36,7 @@
       },
       {
         "label": "My approach",
-        "href": "/#approche"
+        "href": "/ma-pratique"
       },
       {
         "label": "Why consult",
@@ -65,8 +65,8 @@
         ]
       },
       {
-        "label": "For you",
-        "href": "/#informations"
+        "label": "Information",
+        "href": "/informations-pratiques"
       },
       {
         "label": "Blog",
@@ -103,6 +103,10 @@
           {
             "label": "My Practice",
             "href": "/ma-pratique"
+          },
+          {
+            "label": "Practical information",
+            "href": "/informations-pratiques"
           },
           {
             "label": "Blog",
@@ -276,8 +280,6 @@
     },
     "about": {
       "eyebrow": "Who I am",
-      "ctaLabel": "My background and training",
-      "ctaHref": "/ma-pratique",
       "imageSrc": "/images/hero-accueil.webp",
       "imageAlt": "An illustrated journal, a cup of tea and a plant on a light wooden desk in the morning light"
     },
@@ -398,6 +400,18 @@
       "ctaLabel": "Book an appointment",
       "ctaHref": "/contact"
     }
+  },
+  "practicalInfoPage": {
+    "metadata": {
+      "title": "Practical Information | Karen Schenck",
+      "description": "Practical information for consultations with Karen Schenck in Antibes: format, session length, fees, payment and cancellation policy."
+    },
+    "badge": "For you",
+    "title": "Practical information",
+    "intro": "Find consultation formats, fees and everything useful to know before booking an appointment.",
+    "locationTitle": "The practice",
+    "phoneLabel": "Telephone",
+    "mapTitle": "Practice location"
   },
   "contactPage": {
     "metadata": {

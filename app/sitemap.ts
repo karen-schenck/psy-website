@@ -37,6 +37,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
     })),
     { path: '/ma-pratique', priority: 0.8, changeFrequency: 'monthly' },
+    { path: '/informations-pratiques', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
     { path: '/contact', priority: 0.6, changeFrequency: 'monthly' },
     { path: '/mentions-legales', priority: 0.3, changeFrequency: 'yearly' },

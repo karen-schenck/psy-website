@@ -1,10 +1,8 @@
 "use client"
 
-import Link from "next/link"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { PetalMark } from "@/components/landing/petal-mark"
 import { Reveal } from "@/components/shared/reveal"
-import { localizePath } from "@/lib/i18n"
 
 /**
  * Who Karen is, on the one-pager: her own words from /ma-pratique beside a
@@ -12,7 +10,7 @@ import { localizePath } from "@/lib/i18n"
  * of the image the way the reference layout signs its panels.
  */
 export function AboutSection() {
-  const { content, locale } = useLandingContent()
+  const { content } = useLandingContent()
   const { about } = content.home
   const { journey } = content.practicePage
 
@@ -42,13 +40,6 @@ export function AboutSection() {
               {paragraph}
             </p>
           ))}
-          <Link
-            href={localizePath(about.ctaHref, locale)}
-            prefetch={false}
-            className="btn btn-outline mt-3"
-          >
-            {about.ctaLabel}
-          </Link>
         </Reveal>
       </div>
     </section>

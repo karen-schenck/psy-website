@@ -8,9 +8,7 @@ import { localizePath } from "@/lib/i18n"
 
 /**
  * Everything a visitor needs before booking, in one panel: the practical
- * facts as a grid, then payment methods and the cancellation terms — the same
- * copy the contact page carries, so the one-pager answers the question without
- * a second hop.
+ * facts as a grid, followed by payment methods and cancellation terms.
  */
 export function PracticalInfoSection() {
   const { content, locale } = useLandingContent()

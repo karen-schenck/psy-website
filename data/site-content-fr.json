@@ -64,7 +64,7 @@
       },
       {
         "label": "Mon approche",
-        "href": "/#approche"
+        "href": "/ma-pratique"
       },
       {
         "label": "Pourquoi consulter",
@@ -93,8 +93,8 @@
         ]
       },
       {
-        "label": "Pour vous",
-        "href": "/#informations"
+        "label": "Informations",
+        "href": "/informations-pratiques"
       },
       {
         "label": "Blog",
@@ -131,6 +131,10 @@
           {
             "label": "Ma pratique",
             "href": "/ma-pratique"
+          },
+          {
+            "label": "Informations pratiques",
+            "href": "/informations-pratiques"
           },
           {
             "label": "Blog",
@@ -304,8 +308,6 @@
     },
     "about": {
       "eyebrow": "Qui je suis",
-      "ctaLabel": "Mon parcours et mes formations",
-      "ctaHref": "/ma-pratique",
       "imageSrc": "/images/hero-accueil.webp",
       "imageAlt": "Un carnet illustré, une tasse de thé et une plante sur un bureau en bois clair, dans la lumière du matin"
     },
@@ -426,6 +428,18 @@
       "ctaLabel": "Prendre rendez-vous",
       "ctaHref": "/contact"
     }
+  },
+  "practicalInfoPage": {
+    "metadata": {
+      "title": "Informations pratiques | Karen Schenck",
+      "description": "Retrouvez les informations pratiques pour vos consultations avec Karen Schenck à Antibes : modalités, durée, tarif, paiement et conditions d'annulation."
+    },
+    "badge": "Pour vous",
+    "title": "Informations pratiques",
+    "intro": "Retrouvez ici les modalités des consultations, les tarifs et les informations utiles avant de prendre rendez-vous.",
+    "locationTitle": "Le cabinet",
+    "phoneLabel": "Téléphone",
+    "mapTitle": "Localisation du cabinet"
   },
   "contactPage": {
     "metadata": {
