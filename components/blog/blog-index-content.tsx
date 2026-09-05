@@ -68,8 +68,8 @@ export function BlogIndexContent({
       <Header />
 
       {/* Hero Section */}
-      <section className="px-4 pb-16 pt-28 lg:px-8 lg:pt-36">
-        <div className="mx-auto max-w-6xl">
+      <section className="site-gutter pb-16 pt-28 lg:pt-36">
+        <div className="w-full">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
             <Link href="/" className="transition-colors hover:text-foreground">{ui.homeLabel}</Link>
@@ -111,8 +111,8 @@ export function BlogIndexContent({
       </section>
 
       {/* Featured Article */}
-      <section className="px-4 pb-16 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+      <section className="site-gutter pb-16">
+        <div className="w-full">
           <div className="mb-6 flex items-center gap-3">
             <div className="h-px flex-1 bg-border" />
             <span className="text-xs font-medium uppercase tracking-widest text-accent">
@@ -211,8 +211,8 @@ export function BlogIndexContent({
       </section>
 
       {/* All Articles Grid */}
-      <section className="px-4 pb-24 lg:px-8">
-        <div className="mx-auto max-w-6xl">
+      <section className="site-gutter pb-24">
+        <div className="w-full">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
               <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">

@@ -114,8 +114,8 @@ export function BlogPostContent({
 
       <Header />
 
-      <article className="px-4 pb-24 pt-24 lg:px-8 lg:pt-32">
-        <div className="mx-auto max-w-6xl">
+      <article className="site-gutter pb-24 pt-24 lg:pt-32">
+        <div className="w-full">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
             <Link href="/" className="transition-colors hover:text-foreground">{ui.homeLabel}</Link>
@@ -125,7 +125,7 @@ export function BlogPostContent({
             <span className="text-foreground line-clamp-1">{post.title}</span>
           </nav>
 
-            <div className="grid gap-12 lg:grid-cols-[1fr_280px]">
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,48rem)_280px] lg:justify-center xl:gap-16">
               {/* Main Content */}
               <div className="min-w-0">
                 {/* Article Header */}

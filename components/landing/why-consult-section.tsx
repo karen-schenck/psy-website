@@ -4,6 +4,7 @@ import Link from "next/link"
 import { Brain, Flame, Users, Compass, ArrowRight } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { Reveal } from "@/components/shared/reveal"
+import { ParallaxImage } from "@/components/shared/parallax"
 import { localizePath } from "@/lib/i18n"
 
 const ICONS = { brain: Brain, flame: Flame, users: Users, compass: Compass } as const
@@ -21,20 +22,27 @@ export function WhyConsultSection() {
 
   return (
     <section className="border-t border-border py-20 lg:py-28" id="pourquoi-consulter">
-      <div className="mx-auto max-w-6xl px-4 lg:px-8">
-        <Reveal className="mb-14 max-w-2xl">
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
-            {whyConsult.eyebrow}
-          </p>
-          <h2 className="mb-4 font-display text-3xl text-heading sm:text-4xl">
-            {whyConsult.title}
-          </h2>
-          <p className="text-base leading-relaxed text-foreground/85">
-            {whyConsult.description}
-          </p>
-        </Reveal>
+      <div className="site-container">
+        {/* At full width the section head reads better split than stacked: the
+            title holds the left gutter, the description answers it across the
+            page rather than trailing underneath. */}
+        <div className="mb-14 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-end lg:gap-x-[clamp(2.5rem,5vw,7rem)] lg:mb-20">
+          <Reveal>
+            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
+              {whyConsult.eyebrow}
+            </p>
+            <h2 className="max-w-[20ch] font-display text-[clamp(1.6rem,1.1rem+1.6vw,2.6rem)] leading-[1.15] text-heading">
+              {whyConsult.title}
+            </h2>
+          </Reveal>
+          <Reveal delay={90}>
+            <p className="max-w-[46ch] text-base leading-relaxed text-foreground/85 lg:pb-1">
+              {whyConsult.description}
+            </p>
+          </Reveal>
+        </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4 xl:gap-7">
           {whyConsult.items.map((item, index) => {
             const Icon = ICONS[item.icon as keyof typeof ICONS]
             return (
@@ -44,10 +52,11 @@ export function WhyConsultSection() {
                   prefetch={false}
                   className="group flex h-full flex-col overflow-hidden border border-border bg-card transition-all hover:-translate-y-1 hover:border-heading/40 hover:shadow-[0_20px_40px_-24px_rgba(63,83,107,0.35)]"
                 >
-                  <div
-                    className="relative aspect-[4/3] w-full bg-secondary bg-cover bg-center"
-                    style={{ backgroundImage: `url(${THUMBNAILS[item.slug]})` }}
-                  >
+                  {/* The photo drifts inside its own frame as the row crosses
+                      the viewport — enough to give the grid depth, far too
+                      little to notice as motion. */}
+                  <div className="relative aspect-[4/3] w-full overflow-hidden bg-secondary">
+                    <ParallaxImage src={THUMBNAILS[item.slug]} speed={0.07} overshoot="24%" />
                     <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-background/10 to-transparent" />
                     <Icon
                       className="absolute bottom-3 left-3 h-6 w-6 text-heading"

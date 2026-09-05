@@ -16,9 +16,9 @@ export function PracticeContent() {
     <main className="relative min-h-screen bg-background">
       <Header />
 
-      <section className="relative overflow-hidden px-4 pb-16 pt-28 lg:px-8">
+      <section className="site-gutter relative overflow-hidden pb-16 pt-28">
         <OrganicBlobs variant="soft" className="opacity-45" />
-        <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+        <div className="relative grid gap-12 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)] lg:items-center lg:gap-[clamp(2.5rem,5vw,7rem)]">
           <Reveal>
             <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
               {practicePage.badge}
@@ -45,7 +45,7 @@ export function PracticeContent() {
       </section>
 
       <section className="border-t border-border py-16 lg:py-24">
-        <div className="mx-auto grid max-w-6xl gap-12 px-4 lg:grid-cols-[0.8fr_1.2fr] lg:items-start lg:px-8">
+        <div className="site-gutter grid gap-12 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:items-start lg:gap-[clamp(2.5rem,5vw,7rem)]">
           <Reveal className="hidden lg:block">
             <EditorialImage
               src="/images/pratique-outils.webp"
@@ -71,7 +71,7 @@ export function PracticeContent() {
       </section>
 
       <section className="border-t border-border bg-secondary/40 py-16 lg:py-24">
-        <Reveal className="mx-auto max-w-3xl px-4 lg:px-8">
+        <Reveal className="mx-auto max-w-[46rem] px-5 sm:px-8">
           <h2 className="mb-5 font-display text-2xl text-heading sm:text-3xl">
             {practicePage.journey.title}
           </h2>
@@ -84,7 +84,7 @@ export function PracticeContent() {
       </section>
 
       <section className="border-t border-border py-16 lg:py-24">
-        <Reveal className="mx-auto max-w-3xl px-4 lg:px-8">
+        <Reveal className="mx-auto max-w-[46rem] px-5 sm:px-8">
           <h2 className="mb-5 font-display text-2xl text-heading sm:text-3xl">
             {practicePage.firstSession.title}
           </h2>

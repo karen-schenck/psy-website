@@ -12,7 +12,7 @@ export function Footer() {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-6xl px-4 py-16 lg:px-8">
+      <div className="site-container py-16">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2 lg:col-span-1">
             <LineArtSprig color="#F7F3EC" className="mb-4 h-10 w-7 opacity-70" />

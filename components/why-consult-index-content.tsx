@@ -20,7 +20,7 @@ export function WhyConsultIndexContent() {
     <main className="relative min-h-screen bg-background">
       <Header />
 
-      <section className="relative overflow-hidden px-4 pb-16 pt-28 lg:px-8">
+      <section className="site-gutter relative overflow-hidden pb-16 pt-28">
         <OrganicBlobs variant="soft" className="opacity-50" />
         <div className="relative mx-auto max-w-3xl">
           <Reveal>
@@ -38,7 +38,7 @@ export function WhyConsultIndexContent() {
       </section>
 
       <section className="pb-20 lg:pb-28">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:grid-cols-2 lg:px-8">
+        <div className="site-gutter grid gap-6 sm:grid-cols-2 xl:gap-8">
           {whyConsultPage.motifs.map((motif, index) => {
             const Icon = ICONS[motif.slug as keyof typeof ICONS]
             return (

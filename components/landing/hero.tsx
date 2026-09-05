@@ -5,6 +5,7 @@ import { ArrowUpRight, ChevronDown, MapPin, Phone } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { OrganicBlobs } from "@/components/landing/organic-blobs"
 import { LineArtSprig } from "@/components/landing/line-art-sprig"
+import { Parallax } from "@/components/shared/parallax"
 import { localizePath } from "@/lib/i18n"
 
 /**
@@ -18,6 +19,15 @@ import { localizePath } from "@/lib/i18n"
  * chips open the matching "pourquoi consulter" page, the location card opens
  * the practice in Maps, and the pill dials the practice.
  *
+ * The section is full-bleed: copy sits against the left gutter, the portrait
+ * against the right one, and from `lg` up the portrait is sized off the
+ * viewport *height* rather than its column, so widening the screen can never
+ * push it past the fold.
+ *
+ * Depth comes from two layers drifting at different rates against the scroll —
+ * the blob backdrop furthest away, the portrait just behind the page. The copy
+ * itself never moves: text under a live transform loses its subpixel grid.
+ *
  * Source order is the mobile order — copy, portrait, contact, practical facts
  * — and explicit row/column placement rebuilds the split layout from `lg` up,
  * where the chips and contact cards become floating layers (`lg:contents` lets
@@ -30,10 +40,12 @@ export function Hero() {
 
   return (
     <section id="hero" className="relative flex min-h-svh flex-col overflow-hidden pt-16">
-      <OrganicBlobs variant="soft" className="opacity-60" />
+      <Parallax speed={0.16} className="pointer-events-none absolute inset-x-0 -top-[20%] h-[140%]">
+        <OrganicBlobs variant="soft" className="opacity-60" />
+      </Parallax>
 
-      <div className="relative mx-auto flex w-full max-w-6xl flex-1 flex-col justify-center px-4 pt-10 pb-14 sm:pt-14 sm:pb-16 lg:px-8 lg:pt-6 lg:pb-10">
-        <div className="grid gap-y-12 lg:grid-cols-[1.04fr_0.96fr] lg:grid-rows-[auto_auto] lg:items-center lg:gap-x-14 lg:gap-y-10">
+      <div className="site-container relative flex w-full flex-1 flex-col justify-center pt-10 pb-14 sm:pt-14 sm:pb-16 lg:pt-6 lg:pb-10">
+        <div className="grid gap-y-12 lg:grid-cols-[minmax(0,1fr)_auto] lg:grid-rows-[auto_auto] lg:items-center lg:gap-x-[clamp(2.5rem,5vw,7rem)] lg:gap-y-10">
           {/* ── Copy ─────────────────────────────────────────────── */}
           <div className="lg:col-start-1 lg:row-start-1">
             <div className="mb-5 flex items-center gap-2 animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700">
@@ -46,14 +58,14 @@ export function Hero() {
             </div>
 
             <h1
-              className="mb-5 max-w-2xl font-display text-[1.75rem] leading-[1.2] text-heading sm:text-[2.5rem] sm:leading-[1.14] lg:text-[2.9rem] lg:leading-[1.1] animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700"
+              className="mb-5 max-w-[38rem] font-display text-[clamp(1.75rem,1.2rem+2.2vw,3.25rem)] leading-[1.14] text-heading lg:leading-[1.08] animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700"
               style={{ animationDelay: "120ms" }}
             >
               {hero.title}
             </h1>
 
             <p
-              className="mb-8 max-w-xl text-base leading-relaxed text-foreground/90 sm:text-lg animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700"
+              className="mb-8 max-w-[34rem] text-base leading-relaxed text-foreground/90 sm:text-lg animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700"
               style={{ animationDelay: "220ms" }}
             >
               {hero.subtitle}
@@ -81,9 +93,9 @@ export function Hero() {
           </div>
 
           {/* ── Portrait ─────────────────────────────────────────── */}
-          <div
-            className="relative w-full lg:col-start-2 lg:row-span-2 lg:row-start-1 animate-in fade-in fill-mode-both duration-1000"
-            style={{ animationDelay: "180ms" }}
+          <Parallax
+            speed={0.06}
+            className="relative w-full lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:w-auto lg:justify-self-end"
           >
             {/* What she helps with — a wrapped row above the portrait while
                 the layout is stacked, a floating stack over the arch from
@@ -122,7 +134,10 @@ export function Hero() {
               </ul>
             </div>
 
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-[21rem] sm:max-w-[24rem] md:max-w-[26rem] lg:max-w-none">
+            <div
+              className="relative mx-auto aspect-[4/5] w-full max-w-[21rem] sm:max-w-[24rem] md:max-w-[26rem] lg:mx-0 lg:h-[min(70svh,48rem)] lg:w-[min(56svh,38.4rem)] lg:max-w-none animate-in fade-in fill-mode-both duration-1000"
+              style={{ animationDelay: "180ms" }}
+            >
               {/* Soft arch ground and its offset outline — the moodboard's arch
                   motif in beige sable and slate blue. The outline's own bottom
                   edge doubles as the horizon line Karen stands on. */}
@@ -188,11 +203,11 @@ export function Hero() {
                 </span>
               </a>
             </div>
-          </div>
+          </Parallax>
 
           {/* ── Practical facts ──────────────────────────────────── */}
           <dl
-            className="flex flex-wrap gap-x-10 gap-y-5 border-t border-border pt-6 lg:col-start-1 lg:row-start-2 animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700"
+            className="flex max-w-[38rem] flex-wrap gap-x-10 gap-y-5 border-t border-border pt-6 lg:col-start-1 lg:row-start-2 animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700"
             style={{ animationDelay: "420ms" }}
           >
             {hero.trust.map((item) => (

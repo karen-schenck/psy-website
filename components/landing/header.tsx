@@ -87,7 +87,7 @@ export function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 lg:px-8">
+      <div className="site-container flex h-16 items-center justify-between">
         <Link
           href={localizePath("/", locale)}
           prefetch={false}

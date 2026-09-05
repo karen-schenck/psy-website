@@ -10,7 +10,7 @@ export function ContactContent() {
   const { contactPage } = content
 
   return (
-    <section className="relative overflow-hidden px-4 pb-24 pt-28 lg:px-8">
+    <section className="site-gutter relative overflow-hidden pb-24 pt-28">
       <OrganicBlobs variant="soft" className="opacity-40" />
       <div className="relative mx-auto max-w-4xl">
         <Reveal>

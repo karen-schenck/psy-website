@@ -22,7 +22,7 @@ export function MotifDetailContent({ slug }: { slug: string }) {
     <main className="relative min-h-screen bg-background">
       <Header />
 
-      <article className="relative overflow-hidden px-4 pb-20 pt-28 lg:px-8">
+      <article className="site-gutter relative overflow-hidden pb-20 pt-28">
         <OrganicBlobs variant="soft" className="opacity-40" />
         <div className="relative mx-auto max-w-5xl">
           <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">

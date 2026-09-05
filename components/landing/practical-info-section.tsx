@@ -11,21 +11,23 @@ export function PracticalInfoSection() {
 
   return (
     <section className="border-t border-border py-20 lg:py-28" id="rendez-vous">
-      <Reveal className="mx-auto max-w-4xl px-4 text-center lg:px-8">
+      <Reveal className="site-container text-center">
         <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
           {practicalInfo.eyebrow}
         </p>
-        <h2 className="mb-10 font-display text-3xl text-heading sm:text-4xl">
+        <h2 className="mb-12 font-display text-[clamp(1.6rem,1.1rem+1.6vw,2.6rem)] leading-[1.15] text-heading">
           {practicalInfo.title}
         </h2>
 
-        <dl className="mx-auto mb-10 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-6 border-y border-border py-8 sm:grid-cols-5">
+        {/* One row of facts across the full page, rather than a narrow block
+            floating in the middle of it. */}
+        <dl className="mb-12 grid grid-cols-2 gap-x-8 gap-y-8 border-y border-border py-10 sm:grid-cols-3 lg:grid-cols-5">
           {practicalInfo.items.map((item) => (
             <div key={item.label}>
-              <dt className="mb-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+              <dt className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
                 {item.label}
               </dt>
-              <dd className="font-display text-base text-foreground">{item.value}</dd>
+              <dd className="font-display text-base text-foreground lg:text-lg">{item.value}</dd>
             </div>
           ))}
         </dl>

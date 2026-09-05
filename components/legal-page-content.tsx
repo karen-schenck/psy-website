@@ -21,7 +21,7 @@ export function LegalPageContent({
   return (
     <main className="relative min-h-screen bg-background">
       <Header />
-      <section className="px-4 pb-20 pt-28 lg:px-8">
+      <section className="site-gutter pb-20 pt-28">
         <div className="mx-auto max-w-3xl">
           <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
             {pageContent.badge}

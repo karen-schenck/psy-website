@@ -70,6 +70,22 @@
   }
 }
 
+/* Full-bleed layout. Sections span the whole viewport and the gutter grows
+   with it, instead of every section being pinched into one narrow centre
+   column. Readability is protected from the inside — headings and body copy
+   carry their own max-widths — so wide screens gain air, not long lines. */
+.site-container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 4vw, 7rem);
+}
+
+/* Same gutter, for bands that place their own edge-to-edge grid and only need
+   the inner text column inset. */
+.site-gutter {
+  padding-inline: clamp(1.25rem, 4vw, 7rem);
+}
+
 /* Editorial photo slot: shows the beige ground and, once a real photo is
    dropped at the referenced path, the image — no broken-icon fallback. */
 .editorial-image {
