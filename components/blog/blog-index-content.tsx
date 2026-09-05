@@ -2,8 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, Clock, Calendar, Tag, ChevronRight, Sparkles } from 'lucide-react';
-import { Header } from '@/components/landing/header';
-import { Footer } from '@/components/landing/footer';
+import { SiteShell } from '@/components/shared/site-shell';
 import { BlogPostGrid } from '@/components/blog/blog-post-grid';
 import type { BlogPost, BlogUi } from '@/lib/blog';
 
@@ -64,11 +63,10 @@ export function BlogIndexContent({
   ];
 
   return (
-    <main className="relative min-h-screen bg-background">
-      <Header />
+    <SiteShell>
 
       {/* Hero Section */}
-      <section className="site-gutter pb-16 pt-28 lg:pt-36">
+      <section className="site-container pt-10 lg:pt-14">
         <div className="w-full">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
@@ -95,7 +93,7 @@ export function BlogIndexContent({
           <div className="flex flex-wrap items-center gap-6 border-t border-border pt-8 lg:gap-12">
             {archiveStats.map((stat) => (
               <div key={stat.label} className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-border bg-card">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-panel">
                   <stat.icon className="h-4 w-4 text-heading" />
                 </div>
                 <div>
@@ -111,7 +109,7 @@ export function BlogIndexContent({
       </section>
 
       {/* Featured Article */}
-      <section className="site-gutter pb-16">
+      <section className="site-container py-14 lg:py-20">
         <div className="w-full">
           <div className="mb-6 flex items-center gap-3">
             <div className="h-px flex-1 bg-border" />
@@ -121,14 +119,14 @@ export function BlogIndexContent({
             <div className="h-px flex-1 bg-border" />
           </div>
 
-          <article className="group relative overflow-hidden border border-border bg-card transition-colors hover:border-heading/40">
+          <article className="group relative overflow-hidden rounded-[var(--radius-panel)] bg-panel">
             <div className="grid gap-0 lg:grid-cols-[1.2fr_1fr]">
               {/* Content Side */}
               <div className="flex flex-col justify-between p-8 lg:p-12">
                 <div>
                   {/* Meta */}
                   <div className="mb-6 flex flex-wrap items-center gap-4">
-                    <span className="border border-accent/40 px-3 py-1 text-xs font-medium text-accent">
+                    <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
                       {featuredPost.category}
                     </span>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
@@ -156,7 +154,7 @@ export function BlogIndexContent({
                     {featuredPost.keywords.slice(0, 4).map((keyword) => (
                       <span
                         key={keyword}
-                        className="border border-border bg-secondary/50 px-3 py-1 text-xs text-muted-foreground"
+                        className="rounded-full bg-shell px-3 py-1 text-xs text-muted-foreground"
                       >
                         {keyword}
                       </span>
@@ -167,7 +165,7 @@ export function BlogIndexContent({
                 {/* Author & CTA */}
                 <div className="flex flex-wrap items-center justify-between gap-4 border-t border-border pt-6">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-11 w-11 items-center justify-center border border-border bg-secondary text-sm font-semibold text-heading">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-panel-strong text-sm font-semibold text-heading">
                       {getAuthorBadge(featuredPost.author.name, featuredPost.author.avatarLabel)}
                     </div>
                     <div>
@@ -178,7 +176,7 @@ export function BlogIndexContent({
 
                   <Link
                     href={featuredPostHref}
-                    className="inline-flex items-center gap-2 bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+                    className="btn btn-primary px-5 py-3"
                   >
                     <span>{ui.readArticleLabel}</span>
                     <ArrowRight className="h-4 w-4" />
@@ -187,7 +185,7 @@ export function BlogIndexContent({
               </div>
 
               {/* Key Takeaways Side */}
-              <div className="border-t border-border bg-secondary/30 p-8 lg:border-l lg:border-t-0 lg:p-12">
+              <div className="bg-panel-strong p-8 lg:p-12">
                 <div className="mb-6 flex items-center gap-2">
                   <Sparkles className="h-4 w-4 text-accent" />
                   <h3 className="text-sm font-medium uppercase tracking-wider text-accent">
@@ -197,7 +195,7 @@ export function BlogIndexContent({
                 <ul className="space-y-4">
                   {featuredPost.keyTakeaways.map((item, index) => (
                     <li key={item} className="flex gap-4">
-                      <span className="flex h-7 w-7 shrink-0 items-center justify-center border border-border bg-background text-xs font-semibold text-heading">
+                      <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-shell text-xs font-semibold text-heading">
                         {index + 1}
                       </span>
                       <p className="text-sm leading-relaxed text-muted-foreground">{item}</p>
@@ -211,7 +209,7 @@ export function BlogIndexContent({
       </section>
 
       {/* All Articles Grid */}
-      <section className="site-gutter pb-24">
+      <section className="site-container pb-14 lg:pb-20">
         <div className="w-full">
           <div className="mb-8 flex items-end justify-between gap-4">
             <div>
@@ -232,7 +230,6 @@ export function BlogIndexContent({
         </div>
       </section>
 
-      <Footer />
-    </main>
+    </SiteShell>
   );
 }

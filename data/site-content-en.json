@@ -15,30 +15,70 @@
     ],
     "openGraph": {
       "images": [
-        { "url": "/images/cabinet-antibes.webp", "width": 1600, "height": 1067, "alt": "Karen Schenck's practice in Antibes" }
+        {
+          "url": "/images/cabinet-antibes.webp",
+          "width": 1600,
+          "height": 1067,
+          "alt": "Karen Schenck's practice in Antibes"
+        }
       ]
     }
   },
   "header": {
-    "brand": { "name": "Karen Schenck", "logoAlt": "Karen Schenck — Psychotherapist in Antibes" },
+    "brand": {
+      "name": "Karen Schenck",
+      "logoAlt": "Karen Schenck — Psychotherapist in Antibes"
+    },
     "navLinks": [
-      { "label": "Home", "href": "/" },
       {
-        "label": "Why Seek Therapy",
-        "href": "/pourquoi-consulter",
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "My approach",
+        "href": "/#approche"
+      },
+      {
+        "label": "Why consult",
+        "href": "/#pourquoi-consulter",
         "children": [
-          { "label": "Anxiety", "href": "/pourquoi-consulter/anxiete" },
-          { "label": "Professional Burnout", "href": "/pourquoi-consulter/burn-out" },
-          { "label": "Relationship Difficulties", "href": "/pourquoi-consulter/difficultes-relationnelles" },
-          { "label": "Life Transitions", "href": "/pourquoi-consulter/transitions-de-vie" }
+          {
+            "label": "Anxiety",
+            "href": "/pourquoi-consulter/anxiete"
+          },
+          {
+            "label": "Professional burnout",
+            "href": "/pourquoi-consulter/burn-out"
+          },
+          {
+            "label": "Relationship difficulties",
+            "href": "/pourquoi-consulter/difficultes-relationnelles"
+          },
+          {
+            "label": "Life transitions",
+            "href": "/pourquoi-consulter/transitions-de-vie"
+          },
+          {
+            "label": "All reasons to consult",
+            "href": "/pourquoi-consulter"
+          }
         ]
       },
-      { "label": "My Practice", "href": "/ma-pratique" },
-      { "label": "Blog", "href": "/blog" }
+      {
+        "label": "For you",
+        "href": "/#informations"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      }
     ],
     "ctaLabel": "Book an appointment",
     "ctaHref": "/contact",
-    "mobileMenu": { "openAriaLabel": "Open menu", "closeAriaLabel": "Close menu" }
+    "mobileMenu": {
+      "openAriaLabel": "Open menu",
+      "closeAriaLabel": "Close menu"
+    }
   },
   "footer": {
     "tagline": "Psychotherapist in Antibes. Integrative approach — CBT, Gestalt therapy, Schema Therapy and Jungian psychology.",
@@ -52,26 +92,59 @@
       {
         "title": "Navigation",
         "links": [
-          { "label": "Home", "href": "/" },
-          { "label": "Why Seek Therapy", "href": "/pourquoi-consulter" },
-          { "label": "My Practice", "href": "/ma-pratique" },
-          { "label": "Blog", "href": "/blog" },
-          { "label": "Contact & Fees", "href": "/contact" }
+          {
+            "label": "Home",
+            "href": "/"
+          },
+          {
+            "label": "Why Seek Therapy",
+            "href": "/pourquoi-consulter"
+          },
+          {
+            "label": "My Practice",
+            "href": "/ma-pratique"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Contact & Fees",
+            "href": "/contact"
+          }
         ]
       },
       {
         "title": "Why Seek Therapy",
         "links": [
-          { "label": "Anxiety", "href": "/pourquoi-consulter/anxiete" },
-          { "label": "Professional Burnout", "href": "/pourquoi-consulter/burn-out" },
-          { "label": "Relationship Difficulties", "href": "/pourquoi-consulter/difficultes-relationnelles" },
-          { "label": "Life Transitions", "href": "/pourquoi-consulter/transitions-de-vie" }
+          {
+            "label": "Anxiety",
+            "href": "/pourquoi-consulter/anxiete"
+          },
+          {
+            "label": "Professional Burnout",
+            "href": "/pourquoi-consulter/burn-out"
+          },
+          {
+            "label": "Relationship Difficulties",
+            "href": "/pourquoi-consulter/difficultes-relationnelles"
+          },
+          {
+            "label": "Life Transitions",
+            "href": "/pourquoi-consulter/transitions-de-vie"
+          }
         ]
       }
     ],
     "legalLinks": [
-      { "label": "Legal Notice", "href": "/mentions-legales" },
-      { "label": "Privacy", "href": "/confidentialite" }
+      {
+        "label": "Legal Notice",
+        "href": "/mentions-legales"
+      },
+      {
+        "label": "Privacy",
+        "href": "/confidentialite"
+      }
     ],
     "copyright": "Karen Schenck — Psychotherapist. All rights reserved."
   },
@@ -81,12 +154,6 @@
       "name": "Karen Schenck",
       "title": "Understand what is at play within you, and move forward more freely",
       "subtitle": "An integrative approach — CBT, Gestalt therapy, Schema Therapy and Jungian psychology — shaped with you, around your own history and your own pace.",
-      "focusLabel": "I can support you with",
-      "focusItems": [
-        { "label": "Anxiety and stress", "href": "/pourquoi-consulter/anxiete" },
-        { "label": "Professional burnout", "href": "/pourquoi-consulter/burn-out" },
-        { "label": "Life transitions", "href": "/pourquoi-consulter/transitions-de-vie" }
-      ],
       "note": {
         "title": "Practice in Antibes",
         "text": "In person or by video call",
@@ -95,14 +162,23 @@
       },
       "callLabel": "Call the practice",
       "trust": [
-        { "label": "Session", "value": "45 minutes" },
-        { "label": "Fee", "value": "€90" },
-        { "label": "Languages", "value": "French · English" }
+        {
+          "label": "Session",
+          "value": "45 minutes"
+        },
+        {
+          "label": "Fee",
+          "value": "€90"
+        },
+        {
+          "label": "Languages",
+          "value": "French · English"
+        }
       ],
       "primaryCtaLabel": "Book an appointment",
       "primaryCtaHref": "/contact",
       "secondaryCtaLabel": "Why seek therapy?",
-      "secondaryCtaHref": "/pourquoi-consulter",
+      "secondaryCtaHref": "/#pourquoi-consulter",
       "imageSrc": "/images/karen-hero.webp",
       "imageAlt": "Karen Schenck, psychotherapist in Antibes, seated with her hand resting under her chin, smiling"
     },
@@ -111,10 +187,30 @@
       "title": "There is no single reason to start therapy",
       "description": "Some people are going through a difficult period. Others want to identify what is holding them back, or break out of difficulties that keep repeating themselves.",
       "items": [
-        { "icon": "brain", "slug": "anxiete", "title": "Anxiety", "description": "Anxiety and chronic stress." },
-        { "icon": "flame", "slug": "burn-out", "title": "Professional burnout", "description": "Professional exhaustion." },
-        { "icon": "users", "slug": "difficultes-relationnelles", "title": "Relationship difficulties", "description": "Recurring relationship difficulties." },
-        { "icon": "compass", "slug": "transitions-de-vie", "title": "Life transitions", "description": "Periods of transition or life change." }
+        {
+          "icon": "brain",
+          "slug": "anxiete",
+          "title": "Anxiety",
+          "description": "Anxiety and chronic stress."
+        },
+        {
+          "icon": "flame",
+          "slug": "burn-out",
+          "title": "Professional burnout",
+          "description": "Professional exhaustion."
+        },
+        {
+          "icon": "users",
+          "slug": "difficultes-relationnelles",
+          "title": "Relationship difficulties",
+          "description": "Recurring relationship difficulties."
+        },
+        {
+          "icon": "compass",
+          "slug": "transitions-de-vie",
+          "title": "Life transitions",
+          "description": "Periods of transition or life change."
+        }
       ],
       "ctaLabel": "Why seek therapy",
       "ctaHref": "/pourquoi-consulter"
@@ -125,24 +221,73 @@
       "description": "I favour an integrative approach that combines several complementary therapeutic methods. Each course of therapy is shaped around your history, your needs and your own pace.",
       "ctaLabel": "Discover my practice",
       "ctaHref": "/ma-pratique",
-      "imageSrc": "/images/cabinet-antibes.webp",
-      "imageAlt": "Cream armchairs and a wooden bookshelf in a bright room, consultation room atmosphere"
+      "gallery": [
+        {
+          "src": "/images/cabinet-antibes.webp",
+          "alt": "Cream armchairs and a wooden bookcase in a bright interior, the atmosphere of a consulting room"
+        },
+        {
+          "src": "/images/accompagnement-mains.webp",
+          "alt": "Line illustration of two open hands around a young shoot, over beige, night-blue and terracotta shapes"
+        },
+        {
+          "src": "/images/pratique-outils.webp",
+          "alt": "Books on CBT, Gestalt, schema therapy and Jungian psychology on a shelf, next to a vase and a branch"
+        }
+      ]
     },
     "practicalInfo": {
       "eyebrow": "Practical information",
       "title": "Book an appointment",
       "items": [
-        { "label": "Practice", "value": "Antibes" },
-        { "label": "Consultations", "value": "In person or by video" },
-        { "label": "Languages", "value": "French · English" },
-        { "label": "Duration", "value": "45 minutes" },
-        { "label": "Fee", "value": "€90" }
+        {
+          "label": "Practice",
+          "value": "Antibes"
+        },
+        {
+          "label": "Consultations",
+          "value": "In person or by video"
+        },
+        {
+          "label": "Languages",
+          "value": "French · English"
+        },
+        {
+          "label": "Duration",
+          "value": "45 minutes"
+        },
+        {
+          "label": "Fee",
+          "value": "€90"
+        }
       ],
       "ctaLabel": "Book an appointment",
       "ctaHref": "/contact"
     },
     "quote": {
       "text": "Understanding what is at play within you, to move forward with more clarity and freedom."
+    },
+    "modalities": {
+      "eyebrow": "The approaches",
+      "title": "Four traditions, one course of therapy",
+      "description": "No single method answers every situation. These four approaches are drawn on together, according to what you bring and how the work unfolds.",
+      "ctaLabel": "Read more about my practice",
+      "ctaHref": "/ma-pratique"
+    },
+    "about": {
+      "eyebrow": "Who I am",
+      "ctaLabel": "My background and training",
+      "ctaHref": "/ma-pratique",
+      "imageSrc": "/images/hero-accueil.webp",
+      "imageAlt": "An illustrated journal, a cup of tea and a plant on a light wooden desk in the morning light"
+    },
+    "booking": {
+      "eyebrow": "First step",
+      "title": "A first conversation, with no commitment",
+      "description": "The first session is a meeting: understanding what brings you here, answering your questions and deciding together whether this is the right fit.",
+      "ctaLabel": "Book an appointment",
+      "ctaHref": "/contact",
+      "secondaryCtaLabel": "Send a message"
     }
   },
   "whyConsultPage": {
@@ -270,14 +415,33 @@
     },
     "practicalInfoTitle": "Practical information",
     "practicalInfo": [
-      { "label": "Practice", "value": "Antibes" },
-      { "label": "Consultations", "value": "In person or by video" },
-      { "label": "Session length", "value": "45 minutes" },
-      { "label": "Fee", "value": "€90" },
-      { "label": "Languages", "value": "French · English" }
+      {
+        "label": "Practice",
+        "value": "Antibes"
+      },
+      {
+        "label": "Consultations",
+        "value": "In person or by video"
+      },
+      {
+        "label": "Session length",
+        "value": "45 minutes"
+      },
+      {
+        "label": "Fee",
+        "value": "€90"
+      },
+      {
+        "label": "Languages",
+        "value": "French · English"
+      }
     ],
     "paymentTitle": "Payment methods",
-    "payment": ["Card", "Cash", "Bank transfer"],
+    "payment": [
+      "Card",
+      "Cash",
+      "Bank transfer"
+    ],
     "policyTitle": "Additional information",
     "policy": [
       "Consultations take place by appointment only.",
@@ -331,9 +495,18 @@
         "title": "Information we collect",
         "intro": "Only the information you choose to share is collected, so we can respond to your request and keep the site running smoothly.",
         "bullets": [
-          { "label": "Booking a session:", "text": "name, email and information provided through Calendly to schedule the consultation." },
-          { "label": "Contact form:", "text": "name, email and message." },
-          { "label": "Analytics:", "text": "aggregated traffic data, only if you enable it." }
+          {
+            "label": "Booking a session:",
+            "text": "name, email and information provided through Calendly to schedule the consultation."
+          },
+          {
+            "label": "Contact form:",
+            "text": "name, email and message."
+          },
+          {
+            "label": "Analytics:",
+            "text": "aggregated traffic data, only if you enable it."
+          }
         ]
       },
       "usage": {

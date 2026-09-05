@@ -3,7 +3,6 @@
 import dynamic from "next/dynamic"
 import { useState } from "react"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import {
   Drawer,
   DrawerContent,
@@ -23,12 +22,13 @@ import {
 } from "@/components/ui/navigation-menu"
 import { ChevronRight, Menu } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
+import { PetalMark } from "@/components/landing/petal-mark"
 import { localizePath } from "@/lib/i18n"
 import { cn } from "@/lib/utils"
 
 /**
- * Native anchor for in-page hash targets: fires `hashchange`, which
- * `LazySection` listens for to eagerly render lazily-loaded sections.
+ * Native anchor for in-page hash targets — the one-pager's nav is mostly
+ * hashes, and a client-side <Link> would swallow the scroll.
  */
 function NavLink({
   href,
@@ -64,7 +64,7 @@ const LocaleSwitcher = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div aria-hidden="true" className="h-8 min-w-16 border border-border" />
+      <div aria-hidden="true" className="h-9 min-w-16 rounded-md border border-border" />
     ),
   }
 )
@@ -78,23 +78,35 @@ type NavItem = {
   }>
 }
 
+/**
+ * The bar riding the top edge of the shell: botanical mark and two-line name
+ * on the left, the section nav in the middle, a sand-filled booking button on
+ * the right. It sticks to the top of the viewport, not of a scroll container —
+ * the shell clips rather than scrolls precisely so this keeps working.
+ */
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [activeMobileGroup, setActiveMobileGroup] = useState<NavItem | null>(null)
   const { content, locale } = useLandingContent()
   const navItems = content.header.navLinks as NavItem[]
   const ctaHref = localizePath(content.header.ctaHref, locale)
+  const [firstName, ...restOfName] = content.header.brand.name.split(" ")
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm">
-      <div className="site-container flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 border-b border-border/70 bg-shell/90 backdrop-blur-md">
+      <div className="site-container flex h-[4.5rem] items-center justify-between gap-6">
         <Link
           href={localizePath("/", locale)}
           prefetch={false}
           aria-label={content.header.brand.name}
-          className="shrink-0 font-display text-xl italic tracking-tight text-heading"
+          className="group flex shrink-0 items-center gap-3"
         >
-          {content.header.brand.name}
+          <PetalMark className="h-8 w-8 shrink-0 text-accent transition-transform duration-500 group-hover:rotate-45" />
+          <span className="font-display text-[15px] leading-[1.15] text-heading">
+            {firstName}
+            <br />
+            {restOfName.join(" ")}
+          </span>
         </Link>
 
         <NavigationMenu viewport={false} className="hidden lg:flex lg:flex-none">
@@ -103,17 +115,17 @@ export function Header() {
               <NavigationMenuItem key={item.label}>
                 {item.children?.length ? (
                   <>
-                    <NavigationMenuTrigger className="h-9 bg-transparent px-3 text-[13px] font-medium uppercase tracking-[0.08em] text-foreground/80">
+                    <NavigationMenuTrigger className="h-9 rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 hover:text-heading data-[state=open]:bg-panel">
                       {item.label}
                     </NavigationMenuTrigger>
-                    <NavigationMenuContent className="w-64">
-                      <div className="flex flex-col gap-1 p-1">
+                    <NavigationMenuContent className="w-72 rounded-xl">
+                      <div className="flex flex-col gap-0.5 p-1.5">
                         {item.children.map((child) => (
                           <NavigationMenuLink key={child.label} asChild>
                             <Link
                               href={localizePath(child.href, locale)}
                               prefetch={false}
-                              className="px-3 py-2 text-[13px] text-foreground/80 hover:text-accent"
+                              className="rounded-md px-3 py-2 text-[13px] text-foreground/80 transition-colors hover:bg-panel hover:text-accent"
                             >
                               {child.label}
                             </Link>
@@ -124,16 +136,15 @@ export function Header() {
                   </>
                 ) : item.href ? (
                   <NavigationMenuLink asChild>
-                    <Link
+                    <NavLink
                       href={localizePath(item.href, locale)}
-                      prefetch={false}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "h-9 bg-transparent px-3 text-[13px] font-medium uppercase tracking-[0.08em] text-foreground/80"
+                        "h-9 rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 hover:bg-panel hover:text-heading"
                       )}
                     >
                       {item.label}
-                    </Link>
+                    </NavLink>
                   </NavigationMenuLink>
                 ) : null}
               </NavigationMenuItem>
@@ -143,11 +154,9 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <LocaleSwitcher />
-          <Button size="sm" className="text-[13px] font-semibold" asChild>
-            <Link href={ctaHref} prefetch={false}>
-              {content.header.ctaLabel}
-            </Link>
-          </Button>
+          <Link href={ctaHref} prefetch={false} className="btn btn-sand px-6 py-3">
+            {content.header.ctaLabel}
+          </Link>
         </div>
 
         <div className="flex items-center gap-2 lg:hidden">
@@ -162,13 +171,14 @@ export function Header() {
           >
             <DrawerTrigger
               aria-label={content.header.mobileMenu.openAriaLabel}
-              className="p-2"
+              className="rounded-md p-2 transition-colors hover:bg-panel"
             >
               <Menu className="h-5 w-5 text-foreground" />
             </DrawerTrigger>
             <DrawerContent className="max-w-sm">
               <DrawerHeader className="border-b border-border">
-                <DrawerTitle className="font-display text-lg italic text-heading">
+                <DrawerTitle className="flex items-center gap-2.5 font-display text-lg text-heading">
+                  <PetalMark className="h-6 w-6 text-accent" />
                   {content.header.brand.name}
                 </DrawerTitle>
                 <DrawerDescription className="sr-only">
@@ -181,7 +191,7 @@ export function Header() {
                     <button
                       key={item.label}
                       type="button"
-                      className="flex items-center justify-between border-b border-border py-3 text-left text-[13px] font-medium uppercase tracking-[0.08em] text-foreground/80"
+                      className="flex items-center justify-between border-b border-border py-3.5 text-left text-sm font-medium text-foreground/80"
                       onClick={() => {
                         setActiveMobileGroup(item)
                         setMobileMenuOpen(false)
@@ -194,18 +204,21 @@ export function Header() {
                     <NavLink
                       key={item.label}
                       href={localizePath(item.href, locale)}
-                      className="border-b border-border py-3 text-[13px] font-medium uppercase tracking-[0.08em] text-foreground/80"
+                      className="border-b border-border py-3.5 text-sm font-medium text-foreground/80"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       {item.label}
                     </NavLink>
                   ) : null
                 )}
-                <Button size="sm" className="mt-4 text-[13px] font-semibold" asChild>
-                  <Link href={ctaHref} prefetch={false}>
-                    {content.header.ctaLabel}
-                  </Link>
-                </Button>
+                <Link
+                  href={ctaHref}
+                  prefetch={false}
+                  className="btn btn-primary mt-6 w-full"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {content.header.ctaLabel}
+                </Link>
               </nav>
             </DrawerContent>
           </Drawer>
@@ -221,7 +234,7 @@ export function Header() {
       >
         <DrawerContent className="max-w-sm">
           <DrawerHeader className="border-b border-border">
-            <DrawerTitle className="font-display text-lg italic text-heading">
+            <DrawerTitle className="font-display text-lg text-heading">
               {activeMobileGroup?.label}
             </DrawerTitle>
             <DrawerDescription className="sr-only">
@@ -233,7 +246,7 @@ export function Header() {
               <NavLink
                 key={child.label}
                 href={localizePath(child.href, locale)}
-                className="border-b border-border py-3 text-[13px] text-foreground/80"
+                className="border-b border-border py-3.5 text-sm text-foreground/80"
                 onClick={() => {
                   setActiveMobileGroup(null)
                   setMobileMenuOpen(false)

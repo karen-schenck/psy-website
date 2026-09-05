@@ -1,46 +1,44 @@
 "use client"
 
-import { CalendarDays, CreditCard, Info } from "lucide-react"
+import { CalendarDays, CreditCard, Info, Mail, MapPin, Phone } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
-import { OrganicBlobs } from "@/components/landing/organic-blobs"
+import { PageHeader } from "@/components/shared/page-header"
 import { Reveal } from "@/components/shared/reveal"
 
+/**
+ * Booking page: the scheduler on the left, everything a visitor checks before
+ * booking — facts, payment, terms and the direct lines to the practice — in
+ * rounded cards down the right.
+ */
 export function ContactContent() {
   const { content } = useLandingContent()
-  const { contactPage } = content
+  const { contactPage, footer } = content
 
   return (
-    <section className="site-gutter relative overflow-hidden pb-24 pt-28">
-      <OrganicBlobs variant="soft" className="opacity-40" />
-      <div className="relative mx-auto max-w-4xl">
-        <Reveal>
-          <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
-            {contactPage.badge}
-          </p>
-          <h1 className="mb-5 font-display text-4xl text-heading md:text-5xl">
-            {contactPage.title}
-          </h1>
-          <p className="max-w-2xl text-base leading-relaxed text-foreground/85 md:text-lg">
-            {contactPage.intro}
-          </p>
-        </Reveal>
+    <>
+      <PageHeader
+        eyebrow={contactPage.badge}
+        title={contactPage.title}
+        intro={contactPage.intro}
+      />
 
-        <Reveal delay={100} className="mt-12 grid gap-10 lg:grid-cols-[1.15fr_0.85fr]">
-          <div className="border border-border bg-card p-6 sm:p-8">
-            <div className="mb-6 flex items-center gap-2.5">
-              <CalendarDays className="h-5 w-5 text-heading" strokeWidth={1.5} />
+      <section className="site-container py-14 lg:py-20">
+        <div className="grid gap-4 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
+          <Reveal className="rounded-[var(--radius-panel)] bg-panel p-6 sm:p-8 lg:p-10">
+            <div className="mb-5 flex items-center gap-2.5">
+              <CalendarDays className="h-5 w-5 text-accent" strokeWidth={1.5} />
               <h2 className="font-display text-xl text-heading">{contactPage.booking.title}</h2>
             </div>
-            <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+            <p className="mb-6 text-sm leading-relaxed text-foreground/75">
               {contactPage.booking.description}
             </p>
             {/* Calendly inline embed — replace calendlyUrl in contactPage.booking
                 once the real scheduling link is available. */}
-            <div className="border border-border bg-secondary/30 p-4">
+            <div className="overflow-hidden rounded-2xl bg-shell p-3">
               <iframe
                 title="Calendly"
                 src={`${contactPage.booking.calendlyUrl}?embed_domain=karen-schenck.fr&embed_type=Inline&background_color=F7F3EC&text_color=3F3A37&primary_color=3F536B`}
-                className="h-[640px] w-full border-0"
+                className="h-[640px] w-full rounded-xl border-0"
                 loading="lazy"
               />
             </div>
@@ -48,17 +46,17 @@ export function ContactContent() {
               href={contactPage.booking.calendlyUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center bg-primary px-7 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              className="btn btn-primary mt-6"
             >
               {contactPage.booking.ctaLabel}
             </a>
-          </div>
+          </Reveal>
 
-          <div className="space-y-8">
-            <div className="border border-border bg-card p-6">
+          <div className="grid content-start gap-4">
+            <Reveal delay={80} className="rounded-[var(--radius-panel)] bg-panel p-6 sm:p-8">
               <div className="mb-5 flex items-center gap-2.5">
-                <Info className="h-4 w-4 text-heading" strokeWidth={1.5} />
-                <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                <Info className="h-4 w-4 text-accent" strokeWidth={1.5} />
+                <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
                   {contactPage.practicalInfoTitle}
                 </h2>
               </div>
@@ -70,35 +68,67 @@ export function ContactContent() {
                   </div>
                 ))}
               </dl>
-            </div>
+            </Reveal>
 
-            <div className="border border-border bg-card p-6">
+            <Reveal delay={140} className="rounded-[var(--radius-panel)] bg-panel p-6 sm:p-8">
               <div className="mb-5 flex items-center gap-2.5">
-                <CreditCard className="h-4 w-4 text-heading" strokeWidth={1.5} />
-                <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                <CreditCard className="h-4 w-4 text-accent" strokeWidth={1.5} />
+                <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
                   {contactPage.paymentTitle}
                 </h2>
               </div>
-              <ul className="space-y-2 text-sm text-foreground">
+              <ul className="space-y-2 text-sm text-foreground/85">
                 {contactPage.payment.map((method) => (
                   <li key={method}>{method}</li>
                 ))}
               </ul>
-            </div>
-          </div>
-        </Reveal>
+            </Reveal>
 
-        <Reveal delay={150} className="mt-10 border-t border-border pt-8">
-          <h2 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+            <Reveal delay={200} className="rounded-[var(--radius-panel)] bg-panel-strong p-6 sm:p-8">
+              <h2 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+                {footer.practicalInfo.title}
+              </h2>
+              <ul className="space-y-3 text-sm text-foreground/85">
+                <li className="flex items-start gap-2.5">
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
+                  <span>{footer.practicalInfo.address}</span>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Phone className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
+                  <a
+                    href={`tel:${footer.practicalInfo.phone.replace(/\s/g, "")}`}
+                    className="transition-colors hover:text-heading"
+                  >
+                    {footer.practicalInfo.phone}
+                  </a>
+                </li>
+                <li className="flex items-start gap-2.5">
+                  <Mail className="mt-0.5 h-4 w-4 shrink-0 text-accent" strokeWidth={1.5} />
+                  <a
+                    href={`mailto:${footer.practicalInfo.email}`}
+                    className="transition-colors hover:text-heading"
+                  >
+                    {footer.practicalInfo.email}
+                  </a>
+                </li>
+              </ul>
+            </Reveal>
+          </div>
+        </div>
+
+        <Reveal delay={160} className="mt-4 rounded-[var(--radius-panel)] bg-panel p-6 sm:p-8 lg:p-10">
+          <h2 className="mb-5 text-[11px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
             {contactPage.policyTitle}
           </h2>
-          <ul className="space-y-2.5 text-sm leading-relaxed text-muted-foreground">
+          <ul className="grid gap-3 text-sm leading-relaxed text-foreground/75 sm:grid-cols-3">
             {contactPage.policy.map((line) => (
-              <li key={line}>{line}</li>
+              <li key={line} className="rounded-xl bg-shell p-5">
+                {line}
+              </li>
             ))}
           </ul>
         </Reveal>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
