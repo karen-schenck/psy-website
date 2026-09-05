@@ -13,6 +13,7 @@ import {
 import { LOCALE_LABELS, SUPPORTED_LOCALES, localizePath, stripLocalePrefix } from '@/lib/i18n';
 import { persistPreferredLocale } from '@/lib/i18n-client';
 import { useLandingContent } from '@/components/providers/landing-content-provider';
+import { cn } from '@/lib/utils';
 
 export function LocaleSwitcher() {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ export function LocaleSwitcher() {
         <Button
           variant="outline"
           size="sm"
-          className="h-8 min-w-16 justify-between gap-2 border-border/70 bg-card/60 px-3 text-[10px] uppercase tracking-[0.18em]"
+          className="h-8 min-w-16 justify-between gap-2 border-border/70 bg-card/60 px-3 text-[10px] uppercase tracking-[0.18em] hover:bg-panel hover:text-foreground data-[state=open]:bg-panel data-[state=open]:text-foreground"
         >
           <span>{LOCALE_LABELS[locale]}</span>
           <ChevronDown className="h-3.5 w-3.5" />
@@ -40,9 +41,10 @@ export function LocaleSwitcher() {
             <DropdownMenuItem
               key={targetLocale}
               asChild
-              className={`justify-center px-3 text-[10px] uppercase tracking-[0.18em] ${
-                isActive ? 'bg-accent text-foreground' : 'text-muted-foreground'
-              }`}
+              className={cn(
+                'justify-center px-3 text-[10px] uppercase tracking-[0.18em] focus:bg-panel focus:text-foreground',
+                isActive ? 'bg-panel text-accent' : 'text-muted-foreground'
+              )}
             >
               <Link
                 href={href}

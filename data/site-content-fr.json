@@ -195,12 +195,12 @@
       "callLabel": "Appeler le cabinet",
       "trust": [
         {
-          "label": "Séance",
-          "value": "45 minutes"
+          "label": "Consultations",
+          "value": "Cabinet · Visio"
         },
         {
-          "label": "Tarif",
-          "value": "90 €"
+          "label": "Approche",
+          "value": "Intégrative"
         },
         {
           "label": "Langues",

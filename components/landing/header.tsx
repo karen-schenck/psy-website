@@ -123,7 +123,7 @@ export function Header() {
                     <DropdownMenuTrigger asChild>
                       <button
                         type="button"
-                        className="group inline-flex h-9 items-center rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 outline-none focus-visible:ring-2 focus-visible:ring-ring/50"
+                        className="group inline-flex h-9 items-center rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 outline-none transition-colors hover:bg-panel hover:text-heading focus:bg-panel focus:text-heading focus-visible:ring-2 focus-visible:ring-ring/50 data-[state=open]:bg-panel data-[state=open]:text-heading"
                       >
                         {item.label}
                         <ChevronDown
@@ -135,7 +135,11 @@ export function Header() {
                     <DropdownMenuContent align="center" sideOffset={6} className="w-72 rounded-xl p-1.5">
                       <DropdownMenuGroup className="flex flex-col gap-0.5">
                         {item.children.map((child) => (
-                          <DropdownMenuItem key={child.label} asChild className="p-0 focus:bg-panel">
+                          <DropdownMenuItem
+                            key={child.label}
+                            asChild
+                            className="p-0 focus:bg-panel focus:text-foreground"
+                          >
                             <Link
                               href={localizePath(child.href, locale)}
                               prefetch={false}
@@ -154,7 +158,7 @@ export function Header() {
                       href={localizePath(item.href, locale)}
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "h-9 rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 hover:bg-panel hover:text-heading"
+                        "h-9 rounded-md bg-transparent px-3.5 text-[13px] font-medium text-foreground/75 hover:bg-panel hover:text-heading focus:bg-panel focus:text-heading data-[active=true]:bg-panel data-[active=true]:text-heading"
                       )}
                     >
                       {item.label}

@@ -5,6 +5,7 @@ import { ArrowUpRight, MapPin, Phone } from "lucide-react"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { PetalBloom } from "@/components/landing/petal-mark"
 import { Parallax } from "@/components/shared/parallax"
+import { Button } from "@/components/ui/button"
 import { localizePath } from "@/lib/i18n"
 
 /**
@@ -77,7 +78,7 @@ export function Hero() {
             {/* Practical facts and the two live affordances — the cabinet on
                 Maps and the phone — kept in one quiet row under the buttons. */}
             <dl
-              className="mt-10 flex flex-wrap gap-x-10 gap-y-5 border-t border-border pt-7 animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700"
+              className="mt-10 hidden flex-wrap gap-x-10 gap-y-5 border-t border-border pt-7 animate-in fade-in slide-in-from-bottom-4 fill-mode-both duration-700 lg:flex"
               style={{ animationDelay: "420ms" }}
             >
               {hero.trust.map((item) => (
@@ -91,7 +92,7 @@ export function Hero() {
             </dl>
 
             <div
-              className="mt-7 flex flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-3 fill-mode-both duration-700"
+              className="mt-7 hidden flex-wrap gap-3 animate-in fade-in slide-in-from-bottom-3 fill-mode-both duration-700 lg:flex"
               style={{ animationDelay: "520ms" }}
             >
               <a
@@ -164,6 +165,36 @@ export function Hero() {
                 decoding="async"
                 className="absolute inset-0 h-full w-full object-contain object-bottom drop-shadow-[0_28px_40px_rgba(63,83,107,0.16)]"
               />
+
+              <div className="absolute bottom-6 right-2 z-10 flex flex-col gap-3 sm:right-4 lg:hidden">
+                <Button
+                  asChild
+                  size="icon-lg"
+                  className="size-12 rounded-full border border-border bg-card/90 text-accent shadow-lg backdrop-blur-sm hover:bg-card"
+                >
+                  <a
+                    href={hero.note.mapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={hero.note.linkLabel}
+                  >
+                    <MapPin aria-hidden="true" strokeWidth={1.75} />
+                  </a>
+                </Button>
+
+                <Button
+                  asChild
+                  size="icon-lg"
+                  className="size-12 rounded-full bg-primary text-primary-foreground shadow-lg hover:bg-accent"
+                >
+                  <a
+                    href={`tel:${phone.replace(/\s/g, "")}`}
+                    aria-label={`${hero.callLabel} : ${phone}`}
+                  >
+                    <Phone aria-hidden="true" strokeWidth={1.75} />
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
