@@ -190,8 +190,28 @@ html {
 /* Same gentle drift, sized for photo cards rather than full-bleed blobs. */
 .animate-float-slow { animation: drift-a 14s ease-in-out infinite; transform-origin: center; }
 
+/* Barely-there bob for the hero chips, so the floating layer feels alive
+   without ever competing with the headline. Only while the chips actually
+   float (`lg` and up); stacked in the flow on smaller screens they stay put.
+   The hover lift lives on the inner link, so the two transforms never fight. */
+@keyframes chip-bob {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -5px, 0); }
+}
+
+@media (min-width: 64rem) {
+  .chip-float { animation: chip-bob 7s ease-in-out infinite; }
+}
+
+/* Hold still as soon as the pointer or keyboard reaches a chip, so it is never
+   a moving target. */
+.chip-float:hover,
+.chip-float:focus-within {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .animate-float-slow { animation: none; }
+  .animate-float-slow, .chip-float { animation: none; }
 }
 
 .sprig-path {

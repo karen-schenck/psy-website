@@ -78,19 +78,33 @@
   "home": {
     "hero": {
       "eyebrow": "Psychotherapist in Antibes",
-      "title": "Karen Schenck",
-      "subtitle": "Cognitive Behavioural Therapy (CBT), Gestalt therapy, Schema Therapy and Jungian psychology.",
-      "chips": [
-        "Practice in Antibes",
-        "In person or by video",
-        "French · English"
+      "name": "Karen Schenck",
+      "title": "Understand what is at play within you, and move forward more freely",
+      "subtitle": "An integrative approach — CBT, Gestalt therapy, Schema Therapy and Jungian psychology — shaped with you, around your own history and your own pace.",
+      "focusLabel": "I can support you with",
+      "focusItems": [
+        { "label": "Anxiety and stress", "href": "/pourquoi-consulter/anxiete" },
+        { "label": "Professional burnout", "href": "/pourquoi-consulter/burn-out" },
+        { "label": "Life transitions", "href": "/pourquoi-consulter/transitions-de-vie" }
+      ],
+      "note": {
+        "title": "Practice in Antibes",
+        "text": "In person or by video call",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Antibes%2C+06600%2C+France",
+        "linkLabel": "View the practice on Google Maps"
+      },
+      "callLabel": "Call the practice",
+      "trust": [
+        { "label": "Session", "value": "45 minutes" },
+        { "label": "Fee", "value": "€90" },
+        { "label": "Languages", "value": "French · English" }
       ],
       "primaryCtaLabel": "Book an appointment",
       "primaryCtaHref": "/contact",
       "secondaryCtaLabel": "Why seek therapy?",
       "secondaryCtaHref": "/pourquoi-consulter",
-      "imageSrc": "/images/hero-accueil.webp",
-      "imageAlt": "Warm living room with cream armchairs and a wall illustration in navy and terracotta tones"
+      "imageSrc": "/images/karen-hero.webp",
+      "imageAlt": "Karen Schenck, psychotherapist in Antibes, seated with her hand resting under her chin, smiling"
     },
     "whyConsult": {
       "eyebrow": "Why seek therapy?",
@@ -161,7 +175,7 @@
         "whenText": "When exhaustion settles in and everyday life becomes hard to manage, therapy can help you understand what led to this situation and gradually regain your footing.",
         "supportTitle": "How therapy can help",
         "supportText": "The goal isn't only to support recovery. It's about identifying the factors that contributed to the exhaustion, to support a lasting recovery and reduce the risk of it happening again.",
-        "imageSrc": "/images/pourquoi-burn-out.webp",
+        "imageSrc": "/images/burnout-animated.svg",
         "imageAlt": "Line-art illustration of a seated figure, head lowered and shoulders slumped, over navy and terracotta shapes"
       },
       {
@@ -173,7 +187,7 @@
         "whenText": "When these difficulties become recurring or cause lasting distress, therapy can help you better understand what is happening and build more balanced relationships.",
         "supportTitle": "How therapy can help",
         "supportText": "Therapeutic work makes it possible to explore the relational patterns that keep repeating, better understand their origin, and develop new ways of relating to yourself and to others.",
-        "imageSrc": "/images/pourquoi-difficultes-relationnelles.webp",
+        "imageSrc": "/images/couple-animated.svg",
         "imageAlt": "Line-art illustration of two figures standing back to back, separated by a terracotta leaf, over slate blue and beige shapes"
       },
       {

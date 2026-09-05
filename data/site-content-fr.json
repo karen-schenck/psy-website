@@ -99,19 +99,33 @@
   "home": {
     "hero": {
       "eyebrow": "Psychopraticienne à Antibes",
-      "title": "Karen Schenck",
-      "subtitle": "Thérapies Cognitives et Comportementales (TCC), Gestalt-thérapie, thérapie des schémas et psychologie jungienne.",
-      "chips": [
-        "Cabinet à Antibes",
-        "Cabinet ou visioconférence",
-        "Français · Anglais"
+      "name": "Karen Schenck",
+      "title": "Comprendre ce qui se joue en vous, pour avancer plus librement",
+      "subtitle": "Un accompagnement intégratif — TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne — construit avec vous, en fonction de votre histoire et de votre rythme.",
+      "focusLabel": "Je vous accompagne sur",
+      "focusItems": [
+        { "label": "Anxiété et stress", "href": "/pourquoi-consulter/anxiete" },
+        { "label": "Burn-out professionnel", "href": "/pourquoi-consulter/burn-out" },
+        { "label": "Transitions de vie", "href": "/pourquoi-consulter/transitions-de-vie" }
+      ],
+      "note": {
+        "title": "Cabinet à Antibes",
+        "text": "En cabinet ou en visioconférence",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Antibes%2C+06600%2C+France",
+        "linkLabel": "Voir le cabinet sur Google Maps"
+      },
+      "callLabel": "Appeler le cabinet",
+      "trust": [
+        { "label": "Séance", "value": "45 minutes" },
+        { "label": "Tarif", "value": "90 €" },
+        { "label": "Langues", "value": "Français · Anglais" }
       ],
       "primaryCtaLabel": "Prendre rendez-vous",
       "primaryCtaHref": "/contact",
       "secondaryCtaLabel": "Pourquoi consulter ?",
       "secondaryCtaHref": "/pourquoi-consulter",
-      "imageSrc": "/images/hero-accueil.webp",
-      "imageAlt": "Salon chaleureux avec fauteuils crème et illustration murale aux tons bleu nuit et terracotta"
+      "imageSrc": "/images/karen-hero.webp",
+      "imageAlt": "Karen Schenck, psychopraticienne à Antibes, assise, la main sous le menton, le regard souriant"
     },
     "whyConsult": {
       "eyebrow": "Pourquoi consulter ?",
@@ -182,7 +196,7 @@
         "whenText": "Lorsque cet épuisement s'installe et que gérer le quotidien devient compliqué, un accompagnement thérapeutique peut vous aider à mieux comprendre ce qui a conduit à cette situation et à retrouver progressivement vos repères.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "L'objectif n'est pas uniquement de favoriser la récupération. Il s'agit d'identifier les facteurs qui ont contribué à cet épuisement afin de favoriser une récupération durable et de limiter le risque que cette situation se reproduise.",
-        "imageSrc": "/images/pourquoi-burn-out.webp",
+        "imageSrc": "/images/burnout-animated.svg",
         "imageAlt": "Illustration au trait d'une silhouette assise, tête baissée et épaules affaissées, sur des formes bleu nuit et terracotta"
       },
       {
@@ -194,7 +208,7 @@
         "whenText": "Lorsque ces difficultés deviennent récurrentes ou génèrent une souffrance durable, un accompagnement thérapeutique peut vous aider à mieux comprendre ce qui se joue et à construire des relations plus équilibrées.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "Le travail thérapeutique permet d'explorer les schémas relationnels qui se répètent, de mieux comprendre leur origine et de développer de nouvelles façons d'entrer en relation avec soi-même et avec les autres.",
-        "imageSrc": "/images/pourquoi-difficultes-relationnelles.webp",
+        "imageSrc": "/images/couple-animated.svg",
         "imageAlt": "Illustration au trait de deux silhouettes dos à dos, séparées par une feuille terracotta, sur des formes bleu ardoise et beige"
       },
       {
