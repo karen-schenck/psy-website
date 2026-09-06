@@ -120,8 +120,9 @@ function getLocalizedAuthorUrl(locale: Locale, pathOrUrl?: string) {
   return withCanonicalBase(getLocalizedPath(locale, pathOrUrl));
 }
 
-function getLocalizedOpenGraphImage(_locale: Locale) {
-  return `${canonicalBase || ''}/images/cabinet-antibes.png`;
+function getLocalizedOpenGraphImage(locale: Locale) {
+  const image = locale === 'fr' ? '/karen-fr.png' : '/karen-en.png';
+  return `${canonicalBase || ''}${image}`;
 }
 
 function parseLocaleBodies(body: string) {
@@ -303,8 +304,8 @@ export function buildBlogIndexMetadata(locale: Locale): Metadata {
       images: [
         {
           url: getLocalizedOpenGraphImage(locale),
-          width: 1536,
-          height: 1024,
+          width: 1761,
+          height: 937,
           alt: `${brandName} blog`,
         },
       ],
@@ -348,8 +349,8 @@ export function buildBlogPostMetadata(locale: Locale, post: BlogPost): Metadata 
       images: [
         {
           url: getLocalizedOpenGraphImage(locale),
-          width: 1536,
-          height: 1024,
+          width: 1761,
+          height: 937,
           alt: post.title,
         },
       ],

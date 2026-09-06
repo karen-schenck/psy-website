@@ -1,44 +1,35 @@
 "use client"
 
 import Link from "next/link"
-import { Brain, Flame, Users, Compass, ArrowRight } from "lucide-react"
-import { Header } from "@/components/landing/header"
-import { Footer } from "@/components/landing/footer"
+import { Brain, Flame, Users, Compass, ArrowUpRight } from "lucide-react"
+import { SiteShell } from "@/components/shared/site-shell"
+import { PageHeader } from "@/components/shared/page-header"
 import { BookingCta } from "@/components/landing/booking-cta"
-import { OrganicBlobs } from "@/components/landing/organic-blobs"
 import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { localizePath } from "@/lib/i18n"
 
-const ICONS = { anxiete: Brain, "burn-out": Flame, "difficultes-relationnelles": Users, "transitions-de-vie": Compass } as const
+const ICONS = {
+  anxiete: Brain,
+  "burn-out": Flame,
+  "difficultes-relationnelles": Users,
+  "transitions-de-vie": Compass,
+} as const
 
 export function WhyConsultIndexContent() {
   const { content, locale } = useLandingContent()
   const { whyConsultPage } = content
 
   return (
-    <main className="relative min-h-screen bg-background">
-      <Header />
+    <SiteShell>
+      <PageHeader
+        eyebrow={whyConsultPage.badge}
+        title={whyConsultPage.title}
+        intro={whyConsultPage.intro}
+      />
 
-      <section className="relative overflow-hidden px-4 pb-16 pt-28 lg:px-8">
-        <OrganicBlobs variant="soft" className="opacity-50" />
-        <div className="relative mx-auto max-w-3xl">
-          <Reveal>
-            <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.16em] text-accent">
-              {whyConsultPage.badge}
-            </p>
-            <h1 className="mb-6 font-display text-4xl text-heading md:text-5xl">
-              {whyConsultPage.title}
-            </h1>
-            <p className="text-base leading-relaxed text-foreground/85 md:text-lg">
-              {whyConsultPage.intro}
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="pb-20 lg:pb-28">
-        <div className="mx-auto grid max-w-6xl gap-6 px-4 sm:grid-cols-2 lg:px-8">
+      <section className="site-container py-14 lg:py-20">
+        <div className="grid gap-5 sm:grid-cols-2">
           {whyConsultPage.motifs.map((motif, index) => {
             const Icon = ICONS[motif.slug as keyof typeof ICONS]
             return (
@@ -46,19 +37,24 @@ export function WhyConsultIndexContent() {
                 <Link
                   href={localizePath(`/pourquoi-consulter/${motif.slug}`, locale)}
                   prefetch={false}
-                  className="group flex h-full flex-col overflow-hidden border border-border bg-card transition-all hover:-translate-y-1 hover:border-heading/40 hover:shadow-[0_24px_48px_-28px_rgba(63,83,107,0.35)] sm:flex-row"
+                  className="group flex h-full flex-col overflow-hidden rounded-2xl bg-panel transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_28px_50px_-32px_rgba(63,83,107,0.65)] sm:flex-row"
                 >
                   <div
-                    className="relative aspect-[4/3] w-full shrink-0 bg-secondary bg-cover bg-center sm:aspect-auto sm:w-2/5"
+                    role="presentation"
+                    className="aspect-[4/3] w-full shrink-0 bg-secondary bg-cover bg-center sm:aspect-auto sm:w-2/5"
                     style={{ backgroundImage: `url(${motif.imageSrc})` }}
                   />
-                  <div className="flex flex-1 flex-col justify-between gap-8 p-8 sm:p-10">
-                    <Icon className="h-7 w-7 text-heading" strokeWidth={1.5} />
+                  <div className="flex flex-1 flex-col justify-between gap-6 p-7 lg:p-9">
+                    <Icon className="h-7 w-7 text-accent" strokeWidth={1.4} />
                     <div>
-                      <h2 className="mb-2 font-display text-2xl text-foreground">{motif.title}</h2>
-                      <p className="text-sm leading-relaxed text-muted-foreground">{motif.teaser}</p>
+                      <h2 className="mb-2 font-display text-xl text-heading">{motif.title}</h2>
+                      <p className="text-[13.5px] leading-relaxed text-foreground/75">{motif.teaser}</p>
                     </div>
-                    <ArrowRight className="h-4 w-4 text-accent opacity-0 transition-all group-hover:translate-x-1 group-hover:opacity-100" />
+                    <ArrowUpRight
+                      aria-hidden="true"
+                      className="h-4 w-4 -translate-x-1 text-accent opacity-0 transition-[transform,opacity] duration-300 group-hover:translate-x-0 group-hover:opacity-100"
+                      strokeWidth={1.75}
+                    />
                   </div>
                 </Link>
               </Reveal>
@@ -69,13 +65,12 @@ export function WhyConsultIndexContent() {
 
       <BookingCta
         locale={locale}
+        eyebrow={content.home.booking.eyebrow}
         title={content.home.practicalInfo.title}
         description={content.home.approach.description}
         ctaLabel={whyConsultPage.bookingLabel}
         ctaHref={whyConsultPage.bookingHref}
       />
-
-      <Footer />
-    </main>
+    </SiteShell>
   )
 }

@@ -16,18 +16,28 @@
     ],
     "openGraph": {
       "images": [
-        { "url": "/images/cabinet-antibes.webp", "width": 1600, "height": 1067, "alt": "Cabinet de Karen Schenck, psychopraticienne à Antibes" }
+        {
+          "url": "/karen-fr.png",
+          "width": 1761,
+          "height": 937,
+          "alt": "Karen Schenck, psychopraticienne à Antibes — accompagnement intégratif en cabinet ou en visioconférence"
+        }
       ]
     },
-    "twitter": { "card": "summary_large_image" },
-    "robots": { "index": true, "follow": true },
+    "twitter": {
+      "card": "summary_large_image"
+    },
+    "robots": {
+      "index": true,
+      "follow": true
+    },
     "schema": {
       "breadcrumbs": [],
       "organization": {
         "name": "Karen Schenck — Psychopraticienne",
         "url": "/",
-        "logo": "/images/cabinet-antibes.webp",
-        "telephone": "+33-4-00-00-00-00",
+        "logo": "/images/logo-karen-schenck.png",
+        "telephone": "+33-6-84-37-60-62",
         "email": "contact@karen-schenck.fr",
         "priceRange": "90€",
         "address": {
@@ -37,91 +47,202 @@
           "addressCountry": "FR"
         }
       },
-      "website": { "name": "Karen Schenck — Psychopraticienne" }
+      "website": {
+        "name": "Karen Schenck — Psychopraticienne"
+      }
     }
   },
   "header": {
-    "brand": { "name": "Karen Schenck", "logoAlt": "Karen Schenck — Psychopraticienne à Antibes" },
+    "brand": {
+      "name": "Karen Schenck",
+      "logoAlt": "Karen Schenck — Psychopraticienne à Antibes"
+    },
     "navLinks": [
-      { "label": "Accueil", "href": "/" },
+      {
+        "label": "Accueil",
+        "href": "/"
+      },
+      {
+        "label": "Mon approche",
+        "href": "/ma-pratique"
+      },
       {
         "label": "Pourquoi consulter",
-        "href": "/pourquoi-consulter",
+        "href": "/#pourquoi-consulter",
         "children": [
-          { "label": "Anxiété", "href": "/pourquoi-consulter/anxiete" },
-          { "label": "Burn-out professionnel", "href": "/pourquoi-consulter/burn-out" },
-          { "label": "Difficultés relationnelles", "href": "/pourquoi-consulter/difficultes-relationnelles" },
-          { "label": "Transitions de vie", "href": "/pourquoi-consulter/transitions-de-vie" }
+          {
+            "label": "Toutes les raisons de consulter",
+            "href": "/pourquoi-consulter"
+          },
+          {
+            "label": "Anxiété",
+            "href": "/pourquoi-consulter/anxiete"
+          },
+          {
+            "label": "Burn-out professionnel",
+            "href": "/pourquoi-consulter/burn-out"
+          },
+          {
+            "label": "Difficultés relationnelles",
+            "href": "/pourquoi-consulter/difficultes-relationnelles"
+          },
+          {
+            "label": "Transitions de vie",
+            "href": "/pourquoi-consulter/transitions-de-vie"
+          }
         ]
       },
-      { "label": "Ma pratique", "href": "/ma-pratique" },
-      { "label": "Blog", "href": "/blog" }
+      {
+        "label": "Informations",
+        "href": "/informations-pratiques"
+      },
+      {
+        "label": "Blog",
+        "href": "/blog"
+      }
     ],
     "ctaLabel": "Prendre rendez-vous",
     "ctaHref": "/contact",
-    "mobileMenu": { "openAriaLabel": "Ouvrir le menu", "closeAriaLabel": "Fermer le menu" }
+    "mobileMenu": {
+      "openAriaLabel": "Ouvrir le menu",
+      "closeAriaLabel": "Fermer le menu"
+    }
   },
   "footer": {
     "tagline": "Psychopraticienne à Antibes. Approche intégrative — TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne.",
     "practicalInfo": {
       "title": "Cabinet",
       "address": "Antibes, Alpes-Maritimes",
-      "phone": "+33 4 00 00 00 00",
+      "phone": "+33 6 84 37 60 62",
       "email": "contact@karen-schenck.fr"
     },
     "columns": [
       {
         "title": "Navigation",
         "links": [
-          { "label": "Accueil", "href": "/" },
-          { "label": "Pourquoi consulter", "href": "/pourquoi-consulter" },
-          { "label": "Ma pratique", "href": "/ma-pratique" },
-          { "label": "Blog", "href": "/blog" },
-          { "label": "Contact & Tarifs", "href": "/contact" }
+          {
+            "label": "Accueil",
+            "href": "/"
+          },
+          {
+            "label": "Pourquoi consulter",
+            "href": "/pourquoi-consulter"
+          },
+          {
+            "label": "Ma pratique",
+            "href": "/ma-pratique"
+          },
+          {
+            "label": "Informations pratiques",
+            "href": "/informations-pratiques"
+          },
+          {
+            "label": "Blog",
+            "href": "/blog"
+          },
+          {
+            "label": "Contact & Tarifs",
+            "href": "/contact"
+          }
         ]
       },
       {
         "title": "Pourquoi consulter",
         "links": [
-          { "label": "Anxiété", "href": "/pourquoi-consulter/anxiete" },
-          { "label": "Burn-out professionnel", "href": "/pourquoi-consulter/burn-out" },
-          { "label": "Difficultés relationnelles", "href": "/pourquoi-consulter/difficultes-relationnelles" },
-          { "label": "Transitions de vie", "href": "/pourquoi-consulter/transitions-de-vie" }
+          {
+            "label": "Anxiété",
+            "href": "/pourquoi-consulter/anxiete"
+          },
+          {
+            "label": "Burn-out professionnel",
+            "href": "/pourquoi-consulter/burn-out"
+          },
+          {
+            "label": "Difficultés relationnelles",
+            "href": "/pourquoi-consulter/difficultes-relationnelles"
+          },
+          {
+            "label": "Transitions de vie",
+            "href": "/pourquoi-consulter/transitions-de-vie"
+          }
         ]
       }
     ],
     "legalLinks": [
-      { "label": "Mentions légales", "href": "/mentions-legales" },
-      { "label": "Confidentialité", "href": "/confidentialite" }
+      {
+        "label": "Mentions légales",
+        "href": "/mentions-legales"
+      },
+      {
+        "label": "Confidentialité",
+        "href": "/confidentialite"
+      }
     ],
     "copyright": "Karen Schenck — Psychopraticienne. Tous droits réservés."
   },
   "home": {
     "hero": {
       "eyebrow": "Psychopraticienne à Antibes",
-      "title": "Karen Schenck",
-      "subtitle": "Thérapies Cognitives et Comportementales (TCC), Gestalt-thérapie, thérapie des schémas et psychologie jungienne.",
-      "chips": [
-        "Cabinet à Antibes",
-        "Cabinet ou visioconférence",
-        "Français · Anglais"
+      "name": "Karen Schenck",
+      "title": "Comprendre ce qui se joue en vous, pour avancer plus librement",
+      "subtitle": "Un accompagnement intégratif — TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne — construit avec vous, en fonction de votre histoire et de votre rythme.",
+      "note": {
+        "title": "Cabinet à Antibes",
+        "text": "En cabinet ou en visioconférence",
+        "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Antibes%2C+06600%2C+France",
+        "linkLabel": "Voir le cabinet sur Google Maps"
+      },
+      "callLabel": "Appeler le cabinet",
+      "trust": [
+        {
+          "label": "Consultations",
+          "value": "Cabinet · Visio"
+        },
+        {
+          "label": "Approche",
+          "value": "Intégrative"
+        },
+        {
+          "label": "Langues",
+          "value": "Français · Anglais"
+        }
       ],
       "primaryCtaLabel": "Prendre rendez-vous",
       "primaryCtaHref": "/contact",
       "secondaryCtaLabel": "Pourquoi consulter ?",
-      "secondaryCtaHref": "/pourquoi-consulter",
-      "imageSrc": "/images/hero-accueil.webp",
-      "imageAlt": "Salon chaleureux avec fauteuils crème et illustration murale aux tons bleu nuit et terracotta"
+      "secondaryCtaHref": "/#pourquoi-consulter",
+      "imageSrc": "/images/karen-hero.webp",
+      "imageAlt": "Karen Schenck, psychopraticienne à Antibes, assise, la main sous le menton, le regard souriant"
     },
     "whyConsult": {
       "eyebrow": "Pourquoi consulter ?",
       "title": "Il n'existe pas une seule raison de consulter",
       "description": "Certaines personnes traversent une période difficile. D'autres souhaitent identifier les blocages qui freinent leur évolution ou sortir de difficultés qui se répètent.",
       "items": [
-        { "icon": "brain", "slug": "anxiete", "title": "Anxiété", "description": "L'anxiété et le stress chronique." },
-        { "icon": "flame", "slug": "burn-out", "title": "Burn-out professionnel", "description": "L'épuisement professionnel." },
-        { "icon": "users", "slug": "difficultes-relationnelles", "title": "Difficultés relationnelles", "description": "Des difficultés relationnelles récurrentes." },
-        { "icon": "compass", "slug": "transitions-de-vie", "title": "Transitions de vie", "description": "Des périodes de transition ou de changement de vie." }
+        {
+          "icon": "brain",
+          "slug": "anxiete",
+          "title": "Anxiété",
+          "description": "L'anxiété et le stress chronique."
+        },
+        {
+          "icon": "flame",
+          "slug": "burn-out",
+          "title": "Burn-out professionnel",
+          "description": "L'épuisement professionnel."
+        },
+        {
+          "icon": "users",
+          "slug": "difficultes-relationnelles",
+          "title": "Difficultés relationnelles",
+          "description": "Des difficultés relationnelles récurrentes."
+        },
+        {
+          "icon": "compass",
+          "slug": "transitions-de-vie",
+          "title": "Transitions de vie",
+          "description": "Des périodes de transition ou de changement de vie."
+        }
       ],
       "ctaLabel": "Découvrir pourquoi consulter",
       "ctaHref": "/pourquoi-consulter"
@@ -132,24 +253,71 @@
       "description": "Je privilégie une prise en charge intégrative qui associe plusieurs courants thérapeutiques complémentaires. Chaque accompagnement est construit en fonction de votre histoire, de votre demande et de votre rythme.",
       "ctaLabel": "Découvrir ma pratique",
       "ctaHref": "/ma-pratique",
-      "imageSrc": "/images/cabinet-antibes.webp",
-      "imageAlt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation"
+      "gallery": [
+        {
+          "src": "/images/carnet-accompagnement.webp",
+          "alt": "Carnet de psychothérapie beige posé sur une table, intitulé « Comprendre, avancer », avec un stylo, un carnet bordeaux, un verre d'eau et une plante"
+        },
+        {
+          "src": "/images/accompagnement-mains.webp",
+          "alt": "Illustration au trait de deux mains ouvertes autour d'une jeune pousse, sur des formes beige, bleu nuit et terracotta"
+        }, 
+        {
+          "src": "/images/cabinet-antibes.webp",
+          "alt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation"
+        }
+      ]
     },
     "practicalInfo": {
       "eyebrow": "Informations pratiques",
       "title": "Prendre rendez-vous",
       "items": [
-        { "label": "Cabinet", "value": "Antibes" },
-        { "label": "Consultations", "value": "Cabinet ou visioconférence" },
-        { "label": "Langues", "value": "Français · Anglais" },
-        { "label": "Durée", "value": "45 minutes" },
-        { "label": "Tarif", "value": "90 €" }
+        {
+          "label": "Cabinet",
+          "value": "Antibes"
+        },
+        {
+          "label": "Consultations",
+          "value": "Cabinet ou visioconférence"
+        },
+        {
+          "label": "Langues",
+          "value": "Français · Anglais"
+        },
+        {
+          "label": "Durée",
+          "value": "45 minutes"
+        },
+        {
+          "label": "Tarif",
+          "value": "90 €"
+        }
       ],
       "ctaLabel": "Prendre rendez-vous",
       "ctaHref": "/contact"
     },
     "quote": {
       "text": "Comprendre ce qui se joue en vous, pour avancer avec plus de clarté et de liberté."
+    },
+    "modalities": {
+      "eyebrow": "Les approches",
+      "title": "Quatre courants, un seul accompagnement",
+      "description": "Aucune méthode ne répond à elle seule à toutes les situations. Ces quatre approches sont mobilisées ensemble, en fonction de votre demande et de l'évolution de votre accompagnement.",
+      "ctaLabel": "Découvrir ma pratique en détail",
+      "ctaHref": "/ma-pratique"
+    },
+    "about": {
+      "eyebrow": "Qui je suis",
+      "imageSrc": "/images/hero-accueil.webp",
+      "imageAlt": "Un carnet illustré, une tasse de thé et une plante sur un bureau en bois clair, dans la lumière du matin"
+    },
+    "booking": {
+      "eyebrow": "Premier pas",
+      "title": "Un premier échange, sans engagement",
+      "description": "Le premier entretien est un temps de rencontre : comprendre votre demande, répondre à vos questions et décider ensemble si cette démarche vous correspond.",
+      "ctaLabel": "Prendre rendez-vous",
+      "ctaHref": "/contact",
+      "secondaryCtaLabel": "Écrire un message"
     }
   },
   "whyConsultPage": {
@@ -182,7 +350,7 @@
         "whenText": "Lorsque cet épuisement s'installe et que gérer le quotidien devient compliqué, un accompagnement thérapeutique peut vous aider à mieux comprendre ce qui a conduit à cette situation et à retrouver progressivement vos repères.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "L'objectif n'est pas uniquement de favoriser la récupération. Il s'agit d'identifier les facteurs qui ont contribué à cet épuisement afin de favoriser une récupération durable et de limiter le risque que cette situation se reproduise.",
-        "imageSrc": "/images/pourquoi-burn-out.webp",
+        "imageSrc": "/images/burnout-animated.svg",
         "imageAlt": "Illustration au trait d'une silhouette assise, tête baissée et épaules affaissées, sur des formes bleu nuit et terracotta"
       },
       {
@@ -194,7 +362,7 @@
         "whenText": "Lorsque ces difficultés deviennent récurrentes ou génèrent une souffrance durable, un accompagnement thérapeutique peut vous aider à mieux comprendre ce qui se joue et à construire des relations plus équilibrées.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "Le travail thérapeutique permet d'explorer les schémas relationnels qui se répètent, de mieux comprendre leur origine et de développer de nouvelles façons d'entrer en relation avec soi-même et avec les autres.",
-        "imageSrc": "/images/pourquoi-difficultes-relationnelles.webp",
+        "imageSrc": "/images/couple-animated.svg",
         "imageAlt": "Illustration au trait de deux silhouettes dos à dos, séparées par une feuille terracotta, sur des formes bleu ardoise et beige"
       },
       {
@@ -206,7 +374,7 @@
         "whenText": "Lorsque ces changements deviennent difficiles à traverser ou qu'ils génèrent une souffrance persistante, un accompagnement thérapeutique peut vous aider à avancer avec davantage de sérénité.",
         "supportTitle": "L'accompagnement thérapeutique",
         "supportText": "La thérapie offre un espace pour mettre des mots sur ce que vous vivez, mieux intégrer cette période de vie et retrouver des repères adaptés à votre situation.",
-        "imageSrc": "/images/pourquoi-transitions-de-vie.webp",
+        "imageSrc": "/images/transition.svg",
         "imageAlt": "Illustration d'un chemin sinueux traversant des collines bleu nuit, sable et terracotta vers un soleil pâle, avec une jeune pousse au trait"
       }
     ],
@@ -223,7 +391,7 @@
     "badge": "Ma pratique",
     "title": "Ma pratique",
     "intro": "Je ne crois pas qu'une seule méthode puisse répondre à toutes les situations. C'est pourquoi j'ai choisi d'associer plusieurs approches thérapeutiques complémentaires, mobilisées en fonction de votre demande et de l'évolution de votre accompagnement. L'objectif est de mieux comprendre les difficultés rencontrées, d'en identifier les causes et de construire des changements durables.",
-    "imageSrc": "/images/cabinet-antibes.webp",
+    "imageSrc": "/images/pratique-outils.webp",
     "imageAlt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation",
     "modalitiesTitle": "Les approches thérapeutiques",
     "modalities": [
@@ -261,6 +429,18 @@
       "ctaHref": "/contact"
     }
   },
+  "practicalInfoPage": {
+    "metadata": {
+      "title": "Informations pratiques | Karen Schenck",
+      "description": "Retrouvez les informations pratiques pour vos consultations avec Karen Schenck à Antibes : modalités, durée, tarif, paiement et conditions d'annulation."
+    },
+    "badge": "Pour vous",
+    "title": "Informations pratiques",
+    "intro": "Retrouvez ici les modalités des consultations, les tarifs et les informations utiles avant de prendre rendez-vous.",
+    "locationTitle": "Le cabinet",
+    "phoneLabel": "Téléphone",
+    "mapTitle": "Localisation du cabinet"
+  },
   "contactPage": {
     "metadata": {
       "title": "Contact & Tarifs — Prendre rendez-vous | Karen Schenck",
@@ -277,14 +457,33 @@
     },
     "practicalInfoTitle": "Informations pratiques",
     "practicalInfo": [
-      { "label": "Cabinet", "value": "Antibes" },
-      { "label": "Consultations", "value": "En cabinet ou en visioconférence" },
-      { "label": "Durée d'une séance", "value": "45 minutes" },
-      { "label": "Tarif", "value": "90 €" },
-      { "label": "Langues", "value": "Français · Anglais" }
+      {
+        "label": "Cabinet",
+        "value": "Antibes"
+      },
+      {
+        "label": "Consultations",
+        "value": "En cabinet ou en visioconférence"
+      },
+      {
+        "label": "Durée d'une séance",
+        "value": "45 minutes"
+      },
+      {
+        "label": "Tarif",
+        "value": "90 €"
+      },
+      {
+        "label": "Langues",
+        "value": "Français · Anglais"
+      }
     ],
     "paymentTitle": "Moyens de paiement",
-    "payment": ["Carte bancaire", "Espèces", "Virement bancaire"],
+    "payment": [
+      "Carte bancaire",
+      "Espèces",
+      "Virement bancaire"
+    ],
     "policyTitle": "Informations complémentaires",
     "policy": [
       "Les consultations se déroulent exclusivement sur rendez-vous.",
@@ -340,9 +539,18 @@
         "title": "Informations collectées",
         "intro": "Seules les informations que vous transmettez volontairement sont collectées, afin de répondre à votre demande et d'assurer le bon fonctionnement du site.",
         "bullets": [
-          { "label": "Prise de rendez-vous :", "text": "nom, e-mail et informations transmises via Calendly pour organiser la consultation." },
-          { "label": "Formulaire de contact :", "text": "nom, e-mail et message." },
-          { "label": "Mesure d'audience :", "text": "données de fréquentation agrégées, uniquement si vous l'activez." }
+          {
+            "label": "Prise de rendez-vous :",
+            "text": "nom, e-mail et informations transmises via Calendly pour organiser la consultation."
+          },
+          {
+            "label": "Formulaire de contact :",
+            "text": "nom, e-mail et message."
+          },
+          {
+            "label": "Mesure d'audience :",
+            "text": "données de fréquentation agrégées, uniquement si vous l'activez."
+          }
         ]
       },
       "usage": {

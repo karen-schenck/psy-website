@@ -1,24 +1,28 @@
 "use client"
 
 import { useLandingContent } from "@/components/providers/landing-content-provider"
-import { LineArtSprig } from "@/components/landing/line-art-sprig"
+import { PetalMark } from "@/components/landing/petal-mark"
 import { Reveal } from "@/components/shared/reveal"
 
+/**
+ * The one burgundy note in the page: a rounded panel carrying Karen's line,
+ * with two blown-up petal marks bleeding off its corners.
+ */
 export function QuoteBlock() {
   const { content } = useLandingContent()
 
   return (
-    <section className="relative overflow-hidden bg-accent py-16 lg:py-20">
-      <LineArtSprig
-        color="#F7F3EC"
-        className="pointer-events-none absolute -top-4 left-6 h-24 w-16 opacity-[0.14] sm:left-12"
-      />
-      <LineArtSprig
-        color="#F7F3EC"
-        className="pointer-events-none absolute -bottom-6 right-6 h-28 w-20 rotate-180 opacity-[0.14] sm:right-12"
-      />
-      <Reveal className="relative mx-auto max-w-3xl px-4 text-center lg:px-8">
-        <p className="font-display text-2xl italic leading-snug text-accent-foreground sm:text-3xl">
+    <section className="site-container py-10 lg:py-14">
+      <Reveal className="relative overflow-hidden rounded-[var(--radius-panel)] bg-accent px-6 py-16 text-center sm:px-12 lg:py-24">
+        <PetalMark
+          className="pointer-events-none absolute -left-10 -top-12 h-44 w-44 text-accent-foreground/10"
+          strokeWidth={1.6}
+        />
+        <PetalMark
+          className="pointer-events-none absolute -bottom-16 -right-12 h-52 w-52 text-accent-foreground/10"
+          strokeWidth={1.6}
+        />
+        <p className="relative mx-auto max-w-[44rem] font-display text-[clamp(1.35rem,1rem+1.4vw,2.25rem)] italic leading-[1.32] text-accent-foreground">
           &ldquo;{content.home.quote.text}&rdquo;
         </p>
       </Reveal>

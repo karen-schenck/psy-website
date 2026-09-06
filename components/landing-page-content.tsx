@@ -1,25 +1,43 @@
-import { Header } from '@/components/landing/header';
-import { Hero } from '@/components/landing/hero';
-import { WhyConsultSection } from '@/components/landing/why-consult-section';
-import { ApproachTeaser } from '@/components/landing/approach-teaser';
-import { QuoteBlock } from '@/components/landing/quote-block';
-import { PracticalInfoSection } from '@/components/landing/practical-info-section';
-import { Footer } from '@/components/landing/footer';
+"use client"
 
+import { SiteShell } from "@/components/shared/site-shell"
+import { Hero } from "@/components/landing/hero"
+import { ApproachTeaser } from "@/components/landing/approach-teaser"
+import { WhyConsultSection } from "@/components/landing/why-consult-section"
+import { ModalitiesSection } from "@/components/landing/modalities-section"
+import { AboutSection } from "@/components/landing/about-section"
+import { QuoteBlock } from "@/components/landing/quote-block"
+import { BookingCta } from "@/components/landing/booking-cta"
+import { useLandingContent } from "@/components/providers/landing-content-provider"
+
+/**
+ * The home page introduces Karen, her approach and the reasons to consult.
+ * Detailed practice and practical information live on their own routes.
+ */
 export function LandingPageContent({
   structuredData: _structuredData,
 }: {
-  structuredData?: unknown[];
+  structuredData?: unknown[]
 }) {
+  const { content, locale } = useLandingContent()
+  const { booking } = content.home
   return (
-    <main className="relative min-h-screen bg-background">
-      <Header />
+    <SiteShell>
       <Hero />
-      <WhyConsultSection />
       <ApproachTeaser />
+      <WhyConsultSection />
       <QuoteBlock />
-      <PracticalInfoSection />
-      <Footer />
-    </main>
-  );
+
+      <ModalitiesSection />
+      <AboutSection />
+      <BookingCta
+        locale={locale}
+        eyebrow={booking.eyebrow}
+        title={booking.title}
+        description={booking.description}
+        ctaLabel={booking.ctaLabel}
+        ctaHref={booking.ctaHref}
+      />
+    </SiteShell>
+  )
 }

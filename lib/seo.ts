@@ -23,10 +23,17 @@ const localeToOgLocale: Record<Locale, string> = {
   en: 'en_US',
 };
 
+// Asset URLs (images, feeds) must keep their extension as the last segment —
+// the trailing slash the page routes want would make them 404.
+function isFilePath(pathname: string) {
+  return /\.[a-z0-9]+$/i.test(pathname.split('/').pop() ?? '');
+}
+
 function withTrailingSlash(path: string) {
   if (!path || path === '/') return '/';
   const [pathname, fragment] = path.split('#');
-  const normalizedPathname = pathname.endsWith('/') ? pathname : `${pathname}/`;
+  const normalizedPathname =
+    pathname.endsWith('/') || isFilePath(pathname) ? pathname : `${pathname}/`;
   return fragment ? `${normalizedPathname}#${fragment}` : normalizedPathname;
 }
 

@@ -52,7 +52,7 @@ export function BlogPostGrid({
         {visiblePosts.map((post) => (
           <article
             key={post.slug}
-            className="group relative flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+            className="group relative flex flex-col overflow-hidden rounded-2xl bg-panel transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_28px_50px_-32px_rgba(63,83,107,0.65)]"
           >
             {/* Top accent line */}
             <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-primary/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -60,7 +60,7 @@ export function BlogPostGrid({
             <div className="flex flex-1 flex-col p-6">
               {/* Meta row */}
               <div className="mb-4 flex items-center justify-between gap-3">
-                <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                <span className="rounded-full bg-shell px-3 py-1 text-xs font-medium text-accent">
                   {post.category}
                 </span>
                 <div className="flex items-center gap-3 text-xs text-muted-foreground">
@@ -72,7 +72,7 @@ export function BlogPostGrid({
               </div>
 
               {/* Title */}
-              <h3 className="mb-3 text-xl font-semibold leading-snug tracking-tight text-foreground transition-colors group-hover:text-primary">
+              <h3 className="mb-3 font-display text-lg leading-snug text-heading transition-colors group-hover:text-accent">
                 <Link href={post.href} className="after:absolute after:inset-0">
                   {post.title}
                 </Link>
@@ -86,7 +86,7 @@ export function BlogPostGrid({
               {/* Footer */}
               <div className="mt-auto flex flex-col items-start gap-4 border-t border-border pt-5 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-xs font-semibold text-foreground">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-shell text-xs font-semibold text-heading">
                     {getAuthorBadge(post.author)}
                   </div>
                   <div className="min-w-0">
@@ -98,7 +98,7 @@ export function BlogPostGrid({
                   </div>
                 </div>
 
-                <span className="flex items-center gap-1 text-sm font-medium text-primary transition-all group-hover:gap-2">
+                <span className="flex items-center gap-1 text-sm font-medium text-accent transition-all group-hover:gap-2">
                   {readArticleLabel}
                   <ArrowRight className="h-4 w-4" />
                 </span>
@@ -113,7 +113,7 @@ export function BlogPostGrid({
           <button
             type="button"
             onClick={() => setVisibleCount((count) => count + 6)}
-            className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-6 py-3 text-sm font-medium text-foreground transition-all hover:border-primary/30 hover:bg-secondary/50"
+            className="btn btn-outline"
           >
             <span>{loadMoreLabel}</span>
             <ChevronDown className="h-4 w-4" />

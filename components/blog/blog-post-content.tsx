@@ -3,8 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Clock, Calendar, ChevronRight, CheckCircle2 } from 'lucide-react';
-import { Header } from '@/components/landing/header';
-import { Footer } from '@/components/landing/footer';
+import { SiteShell } from '@/components/shared/site-shell';
 import { BlogMarkdown } from '@/components/blog/blog-markdown';
 import type { BlogPost, BlogUi } from '@/lib/blog';
 import { localizePath, type Locale } from '@/lib/i18n';
@@ -47,7 +46,7 @@ function ReadingProgress() {
   }, []);
 
   return (
-    <div className="fixed left-0 right-0 top-14 z-40 h-1 bg-border/50">
+    <div className="fixed left-0 right-0 top-[4.5rem] z-40 h-1 bg-border/50">
       <div
         className="h-full bg-primary transition-all duration-150 ease-out"
         style={{ width: `${progress}%` }}
@@ -109,13 +108,11 @@ export function BlogPostContent({
   }, [hasMermaidChart]);
 
   return (
-    <main className="relative min-h-screen bg-background">
+    <SiteShell>
       <ReadingProgress />
 
-      <Header />
-
-      <article className="px-4 pb-24 pt-24 lg:px-8 lg:pt-32">
-        <div className="mx-auto max-w-6xl">
+      <article className="site-container py-10 lg:py-14">
+        <div className="w-full">
           {/* Breadcrumb */}
           <nav className="mb-8 flex items-center gap-2 text-sm text-muted-foreground" aria-label="Breadcrumb">
             <Link href="/" className="transition-colors hover:text-foreground">{ui.homeLabel}</Link>
@@ -125,14 +122,14 @@ export function BlogPostContent({
             <span className="text-foreground line-clamp-1">{post.title}</span>
           </nav>
 
-            <div className="grid gap-12 lg:grid-cols-[1fr_280px]">
+            <div className="grid gap-12 lg:grid-cols-[minmax(0,48rem)_280px] lg:justify-center xl:gap-16">
               {/* Main Content */}
               <div className="min-w-0">
                 {/* Article Header */}
                 <header className="mb-12">
                   {/* Category & Meta */}
                   <div className="mb-6 flex flex-wrap items-center gap-4">
-                    <span className="border border-accent/40 px-4 py-1.5 text-sm font-medium text-accent">
+                    <span className="rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent">
                       {post.category}
                     </span>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
@@ -163,9 +160,9 @@ export function BlogPostContent({
                   </p>
 
                   {/* Author Card */}
-                  <div className="flex flex-wrap items-center gap-6 border border-border bg-card p-5">
+                  <div className="flex flex-wrap items-center gap-6 rounded-2xl bg-panel p-5">
                     <div className="flex items-center gap-4">
-                      <div className="flex h-14 w-14 items-center justify-center bg-secondary text-lg font-semibold text-heading">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-panel-strong text-lg font-semibold text-heading">
                         {getAuthorBadge(post.author.name, post.author.avatarLabel)}
                       </div>
                       <div>
@@ -190,7 +187,7 @@ export function BlogPostContent({
                 </header>
 
                 {/* Key Takeaways - Mobile */}
-                <section className="mb-10 border border-accent/30 bg-accent/5 p-6 lg:hidden">
+                <section className="mb-10 rounded-2xl bg-panel-strong p-6 lg:hidden">
                   <div className="mb-4 flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
                     <h2 className="text-sm font-semibold uppercase tracking-wider text-primary">
@@ -200,7 +197,7 @@ export function BlogPostContent({
                   <ul className="space-y-3">
                     {post.keyTakeaways.map((item, index) => (
                       <li key={item} className="flex gap-3 text-sm leading-relaxed text-foreground">
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center bg-secondary text-xs font-semibold text-heading">
+                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-shell text-xs font-semibold text-heading">
                           {index + 1}
                         </span>
                         <span>{item}</span>
@@ -210,7 +207,7 @@ export function BlogPostContent({
                 </section>
 
                 {/* Intro */}
-                <section className="mb-10 border border-border bg-card p-6 lg:p-8">
+                <section className="mb-10 rounded-2xl bg-panel p-6 lg:p-8">
                   <p className="text-base leading-8 text-muted-foreground lg:text-lg lg:leading-8">
                     {post.intro}
                   </p>
@@ -220,7 +217,7 @@ export function BlogPostContent({
                 <BlogMarkdown markdown={post.body} />
 
                 {/* Key Takeaways - Bottom */}
-                <section className="mt-12 border border-accent/30 bg-accent/5 p-6 lg:p-8">
+                <section className="mt-12 rounded-2xl bg-panel-strong p-6 lg:p-8">
                   <div className="mb-6 flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-primary" />
                     <h2 className="text-lg font-semibold text-foreground">
@@ -230,7 +227,7 @@ export function BlogPostContent({
                   <ul className="space-y-4">
                     {post.keyTakeaways.map((item, index) => (
                       <li key={item} className="flex gap-4">
-                        <span className="flex h-7 w-7 shrink-0 items-center justify-center bg-secondary text-sm font-semibold text-heading">
+                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-shell text-sm font-semibold text-heading">
                           {index + 1}
                         </span>
                         <p className="text-base leading-relaxed text-foreground">{item}</p>
@@ -249,7 +246,7 @@ export function BlogPostContent({
                       {post.faq.map((item) => (
                         <details
                           key={item.question}
-                          className="group border border-border bg-card transition-colors open:border-primary/30"
+                          className="group overflow-hidden rounded-2xl bg-panel"
                         >
                           <summary className="flex cursor-pointer items-center justify-between gap-4 p-5 text-lg font-medium text-foreground">
                             <span>{item.question}</span>
@@ -265,7 +262,7 @@ export function BlogPostContent({
                 )}
 
                 {/* CTA Section */}
-                <section className="mt-12 border border-accent/30 bg-secondary/40 p-6 lg:p-8">
+                <section className="mt-12 rounded-2xl bg-panel-strong p-6 lg:p-8">
                   <h2 className="mb-3 text-2xl font-semibold tracking-tight text-foreground">
                     {post.cta.title}
                   </h2>
@@ -275,7 +272,7 @@ export function BlogPostContent({
                   <div className="flex flex-wrap gap-3">
                     <Link
                       href={localizePath(post.cta.primaryHref, locale)}
-                      className="inline-flex items-center gap-2 bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/20"
+                      className="btn btn-primary px-5 py-3"
                     >
                       <span>{post.cta.primaryLabel}</span>
                       <ArrowRight className="h-4 w-4" />
@@ -284,7 +281,7 @@ export function BlogPostContent({
                       href={post.cta.secondaryHref}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 border border-border bg-card px-5 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+                      className="btn btn-outline px-5 py-3"
                     >
                       <span>{post.cta.secondaryLabel}</span>
                       <ArrowUpRight className="h-4 w-4" />
@@ -302,7 +299,7 @@ export function BlogPostContent({
                       {relatedPosts.map((relatedPost) => (
                         <article
                           key={relatedPost.slug}
-                          className="group flex flex-col border border-border bg-card p-5 transition-all hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5"
+                          className="group flex flex-col rounded-2xl bg-panel p-5 transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_28px_50px_-32px_rgba(63,83,107,0.65)]"
                         >
                           <div className="mb-3 flex items-center gap-3 text-sm text-muted-foreground">
                             <span className="bg-secondary px-2.5 py-0.5 text-xs font-medium text-foreground">
@@ -337,12 +334,12 @@ export function BlogPostContent({
               <aside className="hidden lg:block">
                 <div className="sticky top-24 space-y-6">
                   {/* Author Card */}
-                  <div className="border border-border bg-card p-5">
+                  <div className="rounded-2xl bg-panel p-5">
                     <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       {ui.authorLabel}
                     </h3>
                     <div className="flex items-start gap-3">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center bg-secondary text-sm font-semibold text-heading">
+                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-panel-strong text-sm font-semibold text-heading">
                         {getAuthorBadge(post.author.name, post.author.avatarLabel)}
                       </div>
                       <div className="min-w-0">
@@ -362,7 +359,7 @@ export function BlogPostContent({
                   </div>
 
                   {/* Table of Contents */}
-                  <div className="border border-border bg-card p-5">
+                  <div className="rounded-2xl bg-panel p-5">
                     <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                       {ui.tocLabel}
                     </h3>
@@ -386,7 +383,7 @@ export function BlogPostContent({
                   </div>
 
                   {/* Key Takeaways */}
-                  <div className="border border-accent/30 bg-accent/5 p-5">
+                  <div className="rounded-2xl bg-panel-strong p-5">
                     <div className="mb-4 flex items-center gap-2">
                       <CheckCircle2 className="h-4 w-4 text-primary" />
                       <h3 className="text-xs font-semibold uppercase tracking-wider text-primary">
@@ -396,7 +393,7 @@ export function BlogPostContent({
                     <ul className="space-y-3">
                       {post.keyTakeaways.map((item, index) => (
                         <li key={item} className="flex gap-3">
-                          <span className="flex h-5 w-5 shrink-0 items-center justify-center bg-secondary text-xs font-semibold text-heading">
+                          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-shell text-xs font-semibold text-heading">
                             {index + 1}
                           </span>
                           <p className="text-sm leading-relaxed text-muted-foreground">{item}</p>
@@ -408,7 +405,7 @@ export function BlogPostContent({
                   {/* Back to Blog */}
                   <Link
                     href={blogIndexPath}
-                    className="flex items-center gap-2 border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition-colors hover:border-primary/30 hover:text-primary"
+                    className="btn btn-outline"
                   >
                     <ArrowLeft className="h-4 w-4" />
                     <span>{ui.backToBlogLabel}</span>
@@ -419,7 +416,6 @@ export function BlogPostContent({
         </div>
       </article>
 
-      <Footer />
-    </main>
+    </SiteShell>
   );
 }
