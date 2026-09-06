@@ -17,10 +17,10 @@
     "openGraph": {
       "images": [
         {
-          "url": "/images/cabinet-antibes.webp",
-          "width": 1600,
-          "height": 1067,
-          "alt": "Cabinet de Karen Schenck, psychopraticienne à Antibes"
+          "url": "/karen-fr.png",
+          "width": 1761,
+          "height": 937,
+          "alt": "Karen Schenck, psychopraticienne à Antibes — accompagnement intégratif en cabinet ou en visioconférence"
         }
       ]
     },
@@ -36,8 +36,8 @@
       "organization": {
         "name": "Karen Schenck — Psychopraticienne",
         "url": "/",
-        "logo": "/images/cabinet-antibes.webp",
-        "telephone": "+33-4-00-00-00-00",
+        "logo": "/images/logo-karen-schenck.png",
+        "telephone": "+33-6-84-37-60-62",
         "email": "contact@karen-schenck.fr",
         "priceRange": "90€",
         "address": {
@@ -71,6 +71,10 @@
         "href": "/#pourquoi-consulter",
         "children": [
           {
+            "label": "Toutes les raisons de consulter",
+            "href": "/pourquoi-consulter"
+          },
+          {
             "label": "Anxiété",
             "href": "/pourquoi-consulter/anxiete"
           },
@@ -85,10 +89,6 @@
           {
             "label": "Transitions de vie",
             "href": "/pourquoi-consulter/transitions-de-vie"
-          },
-          {
-            "label": "Toutes les raisons de consulter",
-            "href": "/pourquoi-consulter"
           }
         ]
       },
@@ -113,7 +113,7 @@
     "practicalInfo": {
       "title": "Cabinet",
       "address": "Antibes, Alpes-Maritimes",
-      "phone": "+33 4 00 00 00 00",
+      "phone": "+33 6 84 37 60 62",
       "email": "contact@karen-schenck.fr"
     },
     "columns": [
@@ -255,16 +255,16 @@
       "ctaHref": "/ma-pratique",
       "gallery": [
         {
-          "src": "/images/cabinet-antibes.webp",
-          "alt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation"
+          "src": "/images/carnet-accompagnement.webp",
+          "alt": "Carnet de psychothérapie beige posé sur une table, intitulé « Comprendre, avancer », avec un stylo, un carnet bordeaux, un verre d'eau et une plante"
         },
         {
           "src": "/images/accompagnement-mains.webp",
           "alt": "Illustration au trait de deux mains ouvertes autour d'une jeune pousse, sur des formes beige, bleu nuit et terracotta"
-        },
+        }, 
         {
-          "src": "/images/pratique-outils.webp",
-          "alt": "Livres de TCC, Gestalt, thérapie des schémas et psychologie jungienne alignés sur une étagère, à côté d'un vase et d'un rameau"
+          "src": "/images/cabinet-antibes.webp",
+          "alt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation"
         }
       ]
     },
@@ -391,7 +391,7 @@
     "badge": "Ma pratique",
     "title": "Ma pratique",
     "intro": "Je ne crois pas qu'une seule méthode puisse répondre à toutes les situations. C'est pourquoi j'ai choisi d'associer plusieurs approches thérapeutiques complémentaires, mobilisées en fonction de votre demande et de l'évolution de votre accompagnement. L'objectif est de mieux comprendre les difficultés rencontrées, d'en identifier les causes et de construire des changements durables.",
-    "imageSrc": "/images/cabinet-antibes.webp",
+    "imageSrc": "/images/pratique-outils.webp",
     "imageAlt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation",
     "modalitiesTitle": "Les approches thérapeutiques",
     "modalities": [

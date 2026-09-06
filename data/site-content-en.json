@@ -16,10 +16,10 @@
     "openGraph": {
       "images": [
         {
-          "url": "/images/cabinet-antibes.webp",
-          "width": 1600,
-          "height": 1067,
-          "alt": "Karen Schenck's practice in Antibes"
+          "url": "/karen-en.png",
+          "width": 1761,
+          "height": 937,
+          "alt": "Karen Schenck, integrative psychotherapist in Antibes — in-person or online consultations"
         }
       ]
     }
@@ -43,6 +43,10 @@
         "href": "/#pourquoi-consulter",
         "children": [
           {
+            "label": "All reasons to consult",
+            "href": "/pourquoi-consulter"
+          },
+          {
             "label": "Anxiety",
             "href": "/pourquoi-consulter/anxiete"
           },
@@ -57,10 +61,6 @@
           {
             "label": "Life transitions",
             "href": "/pourquoi-consulter/transitions-de-vie"
-          },
-          {
-            "label": "All reasons to consult",
-            "href": "/pourquoi-consulter"
           }
         ]
       },
@@ -85,7 +85,7 @@
     "practicalInfo": {
       "title": "Practice",
       "address": "Antibes, French Riviera",
-      "phone": "+33 4 00 00 00 00",
+      "phone": "+33 6 84 37 60 62",
       "email": "contact@karen-schenck.fr"
     },
     "columns": [
@@ -227,16 +227,17 @@
       "ctaHref": "/ma-pratique",
       "gallery": [
         {
-          "src": "/images/cabinet-antibes.webp",
-          "alt": "Cream armchairs and a wooden bookcase in a bright interior, the atmosphere of a consulting room"
+          "src": "/images/carnet-accompagnement.webp",
+          "alt": "Beige psychotherapy notebook titled « Comprendre, avancer » resting on a table with a pen, a burgundy notebook, a glass of water and a plant"
         },
         {
           "src": "/images/accompagnement-mains.webp",
           "alt": "Line illustration of two open hands around a young shoot, over beige, night-blue and terracotta shapes"
         },
+        
         {
-          "src": "/images/pratique-outils.webp",
-          "alt": "Books on CBT, Gestalt, schema therapy and Jungian psychology on a shelf, next to a vase and a branch"
+          "src": "/images/cabinet-antibes.webp",
+          "alt": "Cream armchairs and a wooden bookcase in a bright interior, the atmosphere of a consulting room"
         }
       ]
     },
@@ -363,7 +364,7 @@
     "badge": "My practice",
     "title": "My practice",
     "intro": "I don't believe a single method can respond to every situation. That is why I chose to combine several complementary therapeutic approaches, drawn on according to your needs and how your therapy evolves. The goal is to better understand the difficulties you face, identify their causes, and build lasting change.",
-    "imageSrc": "/images/cabinet-antibes.webp",
+    "imageSrc": "/images/pratique-outils.webp",
     "imageAlt": "Cream armchairs and a wooden bookshelf in a bright room, consultation room atmosphere",
     "modalitiesTitle": "Therapeutic approaches",
     "modalities": [

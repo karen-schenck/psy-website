@@ -1,181 +1,231 @@
-# Odock.ai — Full Content Index for LLM Crawlers
-# https://odock.ai
+# Karen Schenck — Index de contenu complet pour les agents et crawlers LLM
+# https://karen-schenck.fr
 
-## What Odock is
+## Qui est Karen Schenck
 
-Odock.ai is an open-source AI governance gateway that sits between applications
-and LLM providers or MCP servers. Every request passes through a six-stage
-lifecycle: authenticate, authorize, inspect, reserve budget, route, record.
+Karen Schenck est psychopraticienne à Antibes (Alpes-Maritimes, France). Elle
+reçoit des adultes en cabinet ou en visioconférence, en français et en anglais.
 
-Odock is OpenAI-compatible. Migration requires zero code changes — teams point
-existing API calls to the Odock endpoint and issue virtual API keys.
+Après quinze années consacrées à comprendre et à répondre aux besoins
+spécifiques de ses clients, elle a choisi de se consacrer à l'accompagnement
+thérapeutique. Ses formations en TCC, Gestalt-thérapie, thérapie des schémas et
+psychologie jungienne nourrissent aujourd'hui une pratique intégrative, adaptée
+à chaque personne et à sa situation.
 
-## Who it is for
+Ligne directrice de la pratique : « Comprendre ce qui se joue en vous, pour
+avancer avec plus de clarté et de liberté. »
 
-- Platform engineering teams managing multi-provider LLM infrastructure
-- Security teams enforcing prompt injection protection, DLP, and access controls
-- FinOps teams enforcing AI spend budgets and quotas per team or project
-- Compliance teams needing audit-ready logs for EU AI Act high-risk provisions
+## L'approche intégrative
 
-## Key capabilities
+Aucune méthode ne répond à elle seule à toutes les situations. C'est pourquoi
+quatre approches complémentaires sont associées, mobilisées en fonction de la
+demande et de l'évolution de l'accompagnement. L'objectif est de mieux
+comprendre les difficultés rencontrées, d'en identifier les causes et de
+construire des changements durables.
 
-- Virtual API keys with scoped access per team, user, project, or tenant
-- Budget and quota enforcement before upstream calls fire (not post-hoc)
-- MCP server governance: tool allowlists, access policies, audit trails
-- Prompt injection protection and data leakage controls at the gateway layer
-- Multi-provider routing, failover, and load balancing (OpenAI, Anthropic, etc.)
-- EU AI Act compliance support: structured audit evidence for every request
-- Plugin architecture for custom workflow steps
-- Deployment: cloud-hosted, self-hosted, or hybrid (VPC data plane)
+### Les Thérapies Cognitives et Comportementales (TCC)
+Les TCC s'intéressent aux interactions entre les pensées, les émotions et les
+comportements. Certaines façons de penser ou de réagir peuvent, sans que nous en
+ayons conscience, entretenir les difficultés rencontrées. En mettant en lumière
+ces mécanismes et en proposant des outils concrets, les TCC permettent de sortir
+progressivement de ces fonctionnements et de construire des réponses plus
+adaptées au quotidien.
 
-## Documentation
+### La Gestalt-thérapie
+La Gestalt-thérapie privilégie le travail dans l'ici et maintenant. Elle s'appuie
+sur l'expérience vécue, les émotions, les sensations corporelles ainsi que sur la
+qualité du contact avec soi-même, les autres et l'environnement. Cette approche
+invite à développer une présence plus consciente à ce qui est vécu et à
+expérimenter de nouvelles façons d'être en relation.
 
-Full documentation: https://docs.odock.ai/docs/getting-started
+### La thérapie des schémas
+La thérapie des schémas explore les modes de fonctionnement qui se construisent
+au fil de la vie, notamment dans l'enfance, et qui continuent d'influencer les
+émotions, les comportements ou les relations. En identifiant leur origine et leur
+impact dans le présent, elle permet de faire évoluer des schémas devenus
+inadaptés et d'installer progressivement de nouveaux repères.
 
-## Key pages
+### La psychologie jungienne
+La psychologie jungienne apporte un éclairage complémentaire sur les difficultés
+rencontrées. Son objectif est de rendre progressivement conscients certains
+processus inconscients qui influencent notre manière de penser, de ressentir et
+d'agir. En favorisant une meilleure connaissance de soi, cette approche accompagne
+le processus d'individuation, c'est-à-dire le développement de la personnalité
+vers un fonctionnement plus conscient, plus cohérent et plus en accord avec
+soi-même.
 
-- Homepage: https://odock.ai
-- Enterprise: https://odock.ai/enterprise/
-- EU AI Act compliance: https://odock.ai/eu/
-- MCP Gateway: https://odock.ai/mcp-gateway/
-- LLM Gateway: https://odock.ai/llm-gateway/
-- Blog: https://odock.ai/blog/
-- AI gateway comparisons (LiteLLM, Kong, Cloudflare, Portkey, Envoy, Odock): https://odock.ai/compare/
-- GitHub: https://github.com/odock-ai
+## Motifs de consultation
 
-## Contact
+Il n'existe pas une seule raison de consulter. Certaines personnes traversent une
+période difficile. D'autres souhaitent identifier les blocages qui freinent leur
+évolution ou sortir de difficultés qui se répètent.
 
-Demo requests: https://odock.ai/contact/
-Email: hello@odock.ai
+### Anxiété
+URL : https://karen-schenck.fr/pourquoi-consulter/anxiete/
+Les inquiétudes prennent de plus en plus de place. Difficulté à arrêter de
+penser, à se détendre ou à retrouver un sommeil réparateur ; sentiment d'être
+souvent en alerte sans toujours comprendre pourquoi. Avec le temps, cet état de
+tension permanent peut devenir envahissant et avoir des répercussions sur la vie
+personnelle, professionnelle et relationnelle.
+Quand consulter : lorsque ces difficultés deviennent difficiles à gérer seul ou
+prennent de plus en plus de place au quotidien.
+L'accompagnement : l'objectif n'est pas uniquement d'apaiser les symptômes, mais
+d'identifier les mécanismes qui les entretiennent afin de favoriser une évolution
+durable.
 
-## Blog articles
+### Burn-out professionnel
+URL : https://karen-schenck.fr/pourquoi-consulter/burn-out/
+Sentiment de ne plus avoir d'énergie, même pour les tâches les plus simples. La
+fatigue ne disparaît plus avec le repos. Difficultés de concentration, sentiment
+d'être dépassé, irritabilité, démotivation. L'épuisement professionnel peut
+progressivement affecter la santé, les relations et la qualité de vie.
+Quand consulter : lorsque cet épuisement s'installe et que gérer le quotidien
+devient compliqué.
+L'accompagnement : au-delà de la récupération, il s'agit d'identifier les
+facteurs qui ont contribué à cet épuisement, pour une récupération durable et
+pour limiter le risque de récidive.
 
-### From Chatbots to Delegated Work: Why Agentic AI Needs a Runtime Control Plane
-URL: https://odock.ai/blog/from-chatbots-to-delegated-work-why-agentic-ai-needs-a-runtime-control-plane/
-Summary: Explains the 2026 shift from short chatbot interactions to delegated,
-long-running agentic work. Covers why agents need runtime identity, tool
-governance, pre-execution budget reservation, routing controls, and durable
-usage evidence before enterprises scale autonomous workflows.
+### Difficultés relationnelles
+URL : https://karen-schenck.fr/pourquoi-consulter/difficultes-relationnelles/
+Sentiment de revivre les mêmes situations malgré les efforts pour que les choses
+changent. Les conflits se répètent, il devient difficile de poser des limites, de
+trouver sa place dans la relation ou de construire des liens sereins. Certaines
+expériences peuvent aussi fragiliser la confiance en soi ou dans les autres.
+Quand consulter : lorsque ces difficultés deviennent récurrentes ou génèrent une
+souffrance durable.
+L'accompagnement : explorer les schémas relationnels qui se répètent, comprendre
+leur origine et développer de nouvelles façons d'entrer en relation avec
+soi-même et avec les autres.
 
-### AI Act Transparency and GPAI Enforcement: What Changed After August 2026
-URL: https://odock.ai/blog/ai-act-transparency-and-gpai-enforcement-what-changed-after-august-2026/
-Summary: Covers what changed when EU AI Act enforcement and transparency
-obligations became operational on 2 August 2026. Explains why AI teams now need
-runtime evidence for identity, access, model and tool usage, policy outcomes,
-safety checks, logs, and oversight.
+### Transitions de vie
+URL : https://karen-schenck.fr/pourquoi-consulter/transitions-de-vie/
+Certains événements viennent bousculer les repères construits au fil du temps.
+Ces grandes étapes peuvent susciter des questionnements, des doutes, mais aussi
+un profond sentiment d'incertitude ou de tristesse. Ces périodes demandent
+parfois du temps pour retrouver un nouvel équilibre.
+Quand consulter : lorsque ces changements deviennent difficiles à traverser ou
+génèrent une souffrance persistante.
+L'accompagnement : un espace pour mettre des mots sur ce qui est vécu, mieux
+intégrer cette période de vie et retrouver des repères adaptés.
 
-### A2A, MCP, and the Agent Standards Race: Why Interoperability Needs Governance
-URL: https://odock.ai/blog/a2a-mcp-and-the-agent-standards-race-why-interoperability-needs-governance/
-Summary: Explains the agent interoperability wave around A2A and MCP. Shows why
-standardized agent-to-agent communication and agent-to-tool execution require a
-governance layer with scoped identities, tool-level access controls, semantic
-payload filters, upstream auth injection, and audit records.
+## Le premier entretien
 
-### EU AI Act 2026: What the August 2 Deadline Actually Means for AI Teams
-URL: https://odock.ai/blog/eu-ai-act-2026-what-the-august-deadline-means-for-ai-teams/
-Summary: A plain-language guide to the EU AI Act in 2026: what became applicable on
-2 August 2026, how the Omnibus package postponed most Annex III high-risk
-obligations to December 2027, the penalty tiers, and how an AI governance gateway
-produces the access control, logging, and audit evidence the Act requires.
+Le premier entretien est un temps de rencontre et d'échange, sans engagement. Il
+permet de mieux comprendre la demande, d'évoquer le parcours, de répondre aux
+questions et de déterminer ensemble si cette démarche correspond aux attentes.
+Si tel est le cas, les modalités de l'accompagnement sont définies ensemble.
 
-### Why the AI Gateway Became Mandatory Infrastructure in 2026
-URL: https://odock.ai/blog/why-the-ai-gateway-became-mandatory-infrastructure-in-2026/
-Summary: Provider sprawl, MCP agent traffic, and tightening regulation turned the
-AI gateway from optimization into requirement. Defines what enterprise-grade means
-in 2026 (low overhead, hierarchical governance, audit-grade logging, multi-provider
-failover, MCP tool governance) and why security must be native to the request lifecycle.
+## Informations pratiques
 
-### The 6 MCP Security Risks Every Enterprise Faces in 2026
-URL: https://odock.ai/blog/mcp-security-risks-enterprise-ai-agents-2026/
-Summary: The six recurring MCP security risks for enterprise AI agents, over-privileged
-access, indirect prompt injection, tool poisoning and rug pulls, credential sprawl,
-audit blind spots, and unbounded consumption, and how each is closed at the gateway
-by treating MCP access as scoped, inspected, recorded capability access.
+- Cabinet : Antibes, Alpes-Maritimes (06600), France
+- Consultations : en cabinet ou en visioconférence
+- Durée d'une séance : 45 minutes
+- Tarif : 90 €
+- Langues : français, anglais
+- Consultations exclusivement sur rendez-vous
+- Moyens de paiement : carte bancaire, espèces, virement bancaire
+- Acompte : 50 € à la réservation, intégralement remboursé en cas d'annulation ou
+  de report effectué au moins 24 heures avant la consultation
+- Les consultations en visioconférence se déroulent dans les mêmes conditions
+  qu'au cabinet
+- Prise de rendez-vous en ligne, confirmation immédiate :
+  https://karen-schenck.fr/contact/
+- Téléphone : +33 6 84 37 60 62
+- Email : contact@karen-schenck.fr
 
-### What Is an LLM Gateway and Why AI Teams Need One Before Production
-URL: https://odock.ai/blog/what-is-an-llm-gateway-and-why-ai-teams-need-one/
-Summary: Explains what an LLM gateway does, why governance becomes necessary after
-the prototype phase, and how Odock centralizes provider access, security, budgets,
-and observability behind one endpoint.
+## Pages du site
 
-### How to Control LLM Costs with Virtual API Keys, Budgets, and Quotas
-URL: https://odock.ai/blog/how-to-control-llm-costs-with-virtual-api-keys-budgets-and-quotas/
-Summary: Explains the operational model for AI cost governance — virtual API keys
-for attribution, budget reservations before upstream calls, and real-time quota
-enforcement.
+- Accueil : https://karen-schenck.fr/
+- Ma pratique : https://karen-schenck.fr/ma-pratique/
+- Pourquoi consulter : https://karen-schenck.fr/pourquoi-consulter/
+- Anxiété : https://karen-schenck.fr/pourquoi-consulter/anxiete/
+- Burn-out professionnel : https://karen-schenck.fr/pourquoi-consulter/burn-out/
+- Difficultés relationnelles : https://karen-schenck.fr/pourquoi-consulter/difficultes-relationnelles/
+- Transitions de vie : https://karen-schenck.fr/pourquoi-consulter/transitions-de-vie/
+- Informations pratiques : https://karen-schenck.fr/informations-pratiques/
+- Contact & tarifs : https://karen-schenck.fr/contact/
+- Blog : https://karen-schenck.fr/blog/
+- Mentions légales : https://karen-schenck.fr/mentions-legales/
+- Politique de confidentialité : https://karen-schenck.fr/confidentialite/
 
-### Prompt Injection, Data Leakage, and Why LLM Guardrails Must Live in the Gateway
-URL: https://odock.ai/blog/prompt-injection-data-leakage-and-llm-security-guardrails/
-Summary: Why application-level AI security is insufficient at scale, and how
-centralizing prompt injection protection, jailbreak filtering, and DLP controls
-at the gateway layer ensures consistent, auditable enforcement.
+Chaque page existe en anglais sous le préfixe /en/ — par exemple
+https://karen-schenck.fr/en/ma-pratique/.
 
-### LiteLLM, Kong, Cloudflare, Portkey, and Odock: An Honest AI Gateway Comparison
-URL: https://odock.ai/blog/litellm-kong-cloudflare-portkey-vs-odock-ai-gateway-comparison/
-Summary: Compares major AI gateways on philosophy, architecture, and feature set.
-Odock's differentiator is modular AI workflow governance vs. routing-first or
-API-management-first approaches.
+## Articles du blog
 
-### MCP Server Governance: How to Give AI Agents Tool Access Without Losing Control
-URL: https://odock.ai/blog/mcp-server-governance-for-ai-agents/
-Summary: How to govern MCP tool access for AI agents — allowlists, access
-policies, audit trails, and permission scoping at the infrastructure layer.
+### Comprendre l'anxiété : quand les inquiétudes prennent trop de place
+URL : https://karen-schenck.fr/blog/comprendre-anxiete/
+Catégorie : Anxiété · Publié le 2026-06-15 · 6 min de lecture
+Résumé : L'anxiété chronique s'installe souvent progressivement, sans événement
+déclencheur évident. L'article explique ses mécanismes — ruminations, vigilance
+permanente, sommeil perturbé — et les pistes d'accompagnement thérapeutique.
+À retenir :
+- L'anxiété chronique s'installe souvent progressivement, sans cause unique identifiable.
+- Elle se maintient par des mécanismes de pensée et d'évitement qui deviennent automatiques avec le temps.
+- Un accompagnement vise à comprendre ces mécanismes, pas seulement à apaiser les symptômes ponctuellement.
 
-### AI Security in 2026: Prompt Injection, Tool Poisoning, and the New Agentic Risk Stack
-URL: https://odock.ai/blog/ai-security-in-2026-prompt-injection-tool-poisoning-and-agentic-risk/
-Summary: A dated 2025-2026 comparison of the latest OWASP and MCP security
-guidance against Odock's runtime controls for prompt injection, leakage,
-capability governance, and unbounded consumption.
+### Les premiers signes du burn-out professionnel
+URL : https://karen-schenck.fr/blog/les-premiers-signes-du-burn-out/
+Catégorie : Burn-out professionnel · Publié le 2026-06-29 · 6 min de lecture
+Résumé : L'épuisement professionnel ne survient pas du jour au lendemain. Il se
+construit par étapes, souvent invisibles au début. L'article détaille comment
+reconnaître les premiers signes — fatigue persistante, irritabilité, perte de
+motivation — et quand consulter.
+À retenir :
+- Le burn-out se développe progressivement, à travers des signes physiques, émotionnels et comportementaux qui s'accumulent.
+- La fatigue qui ne disparaît plus avec le repos est un des signaux les plus révélateurs.
+- Un accompagnement aide à identifier les facteurs à l'origine de l'épuisement, pour une récupération durable.
 
-### How to Build a Lifecycle-Aware AI Security Engine
-URL: https://odock.ai/blog/how-to-build-a-lifecycle-aware-ai-security-engine/
-Summary: Explains why modern AI security must be staged across request,
-identity, token, tool, and response phases, and compares that architecture
-with Odock's SafetySec and gateway enforcement model.
+### Pourquoi revit-on parfois les mêmes schémas relationnels ?
+URL : https://karen-schenck.fr/blog/schemas-relationnels-repetitifs/
+Catégorie : Difficultés relationnelles · Publié le 2026-07-13 · 7 min de lecture
+Résumé : Conflits qui se répètent, difficulté à poser des limites, sentiment de
+revivre toujours les mêmes situations : l'article explore l'origine des schémas
+relationnels et la façon d'en sortir pour construire des liens plus équilibrés.
+À retenir :
+- Les schémas relationnels se construisent tôt dans la vie et continuent d'influencer nos relations à l'âge adulte, souvent sans qu'on en ait conscience.
+- Leur répétition n'est pas une fatalité, mais le résultat de mécanismes qui peuvent être identifiés et travaillés.
+- La thérapie des schémas et la Gestalt-thérapie permettent d'explorer ces répétitions et de développer de nouvelles façons d'entrer en relation.
 
-### How to Design Multi-Provider LLM Routing and Failover Before an Outage
-URL: https://odock.ai/blog/how-to-design-multi-provider-llm-routing-and-failover/
-Summary: A practical guide to multi-provider routing strategies, failover
-configuration, and why permissions, budgets, and observability must be in place
-before failover is meaningful.
+## English summary
 
-### What to Log, Monitor, and Trace in Production LLM Applications
-URL: https://odock.ai/blog/what-to-log-monitor-and-trace-in-production-llm-apps/
-Summary: A production observability guide covering what to log (quality, latency,
-cost, safety, routing), how to trace requests across providers and tools, and
-how gateway-level logging differs from application-level logging.
+Karen Schenck is an integrative psychotherapist practising in Antibes, on the
+French Riviera. She works with adults in person at her practice or by video, in
+French and in English.
 
-### Shadow AI in 2026: Why Banning Tools Fails and Governed Enablement Wins
-URL: https://odock.ai/blog/shadow-ai-2026-how-to-govern-unsanctioned-ai-tool-use/
-Summary: 2026 data shows 67% of employees use AI tools at work against 18% of
-organisations with a formal AI security policy, and shadow AI detections up 4x
-in a year. Explains why blocking access fails and how governed enablement,
-routing all usage through a gateway with identity, logging, and guardrails,
-closes the gap instead.
+Her practice draws on four complementary approaches, combined according to each
+person's situation: Cognitive Behavioural Therapy (CBT), Gestalt therapy, Schema
+Therapy and Jungian psychology. No single method answers every situation, so the
+approaches are used together and adjusted as the work progresses.
 
-### AI Agents Are Non-Human Identities Now: The 2026 Credential Sprawl Problem
-URL: https://odock.ai/blog/ai-agent-identity-and-non-human-identity-security-in-2026/
-Summary: Non-human identities now outnumber humans 144 to 1 in cloud-native
-environments. Explains why an AI agent's credential behaves differently from a
-static service account, and how gateway-issued scoped virtual keys with
-in-place rotation and revocation close the agent identity lifecycle gap.
+Common reasons for consulting: anxiety, professional burnout, relationship
+difficulties, and life transitions.
 
-### ISO 42001 vs NIST AI RMF vs EU AI Act: One Gateway, Three Frameworks
-URL: https://odock.ai/blog/iso-42001-vs-nist-ai-rmf-vs-eu-ai-act-ai-governance-frameworks-compared/
-Summary: Compares the voluntary NIST AI RMF risk methodology, the certifiable
-ISO 42001 management system, and the binding EU AI Act, and maps how one
-gateway's access control, logging, and policy layers produce evidence that
-satisfies all three simultaneously.
+Practical details: sessions last 45 minutes and cost €90, by appointment only,
+in person or by video, in French or English. Payment by card, cash or bank
+transfer. A €50 deposit is taken at booking and is fully refunded for
+cancellations or reschedules made at least 24 hours in advance.
 
-### The Great Model Churn of 2026: Why Model-Agnostic Routing Stopped Being Optional
-URL: https://odock.ai/blog/the-great-model-churn-of-2026-why-model-agnostic-routing-matters/
-Summary: New models ship roughly every three days in 2026 and open-weight models
-now lead specific benchmarks outright. Explains why hardcoding a model name is a
-liability and how a model-agnostic gateway catalog absorbs the release velocity.
+The first session is a no-commitment conversation: understanding what brings you
+in, answering your questions, and deciding together whether the work fits what
+you are looking for.
 
-### From Laptop to Production: Self-Host LLMs with Ollama and vLLM, Then Distribute Them Like a Pro with Odock
-URL: https://odock.ai/blog/self-host-llms-with-ollama-and-vllm-and-distribute-them-with-odock/
-Summary: A practical path from prototyping on Ollama to serving production
-traffic on vLLM, then registering the self-hosted endpoint as a gateway
-provider so it can be distributed to teams or paying customers with virtual
-keys, budgets, pricing, and usage records.
+Every page is available in English under https://karen-schenck.fr/en/ —
+booking at https://karen-schenck.fr/en/contact/.
+
+## Cadre, limites et mentions
+
+Éditrice du site : Karen Schenck, psychopraticienne — Antibes, Alpes-Maritimes,
+France. Contact : contact@karen-schenck.fr, +33 6 84 37 60 62.
+
+Les informations présentées sur ce site ont un objectif d'information et ne
+remplacent pas une consultation. Elles ne constituent ni un diagnostic ni une
+prescription médicale.
+
+En cas d'urgence ou de détresse psychologique en France : composer le 15 (SAMU),
+le 3114 (numéro national de prévention du suicide) ou contacter les services
+d'urgence.
+
+La collecte de données sur ce site est limitée à ce qui est nécessaire pour
+répondre aux demandes. Détails :
+https://karen-schenck.fr/confidentialite/

@@ -1,63 +1,92 @@
-# Odock.ai — AI Governance Gateway for LLM & MCP Traffic
-# https://odock.ai
+# Karen Schenck — Psychopraticienne à Antibes
+# https://karen-schenck.fr
 
-## What Odock is
+## Qui est Karen Schenck
 
-Odock.ai is an open-source AI governance gateway that sits between applications
-and LLM providers or MCP servers. Every request passes through a six-stage
-lifecycle: authenticate, authorize, inspect, reserve budget, route, record.
+Karen Schenck est psychopraticienne à Antibes (Alpes-Maritimes, France). Elle
+propose un accompagnement thérapeutique pour adultes, en cabinet ou en
+visioconférence, en français et en anglais.
 
-Odock is OpenAI-compatible. Migration requires zero code changes — teams point
-existing API calls to the Odock endpoint and issue virtual API keys.
+Sa pratique est intégrative : elle associe quatre courants thérapeutiques
+complémentaires — Thérapies Cognitives et Comportementales (TCC),
+Gestalt-thérapie, thérapie des schémas et psychologie jungienne — mobilisés en
+fonction de la demande de chaque personne et de l'évolution de son
+accompagnement.
 
-## Who it is for
+## Pour qui
 
-- Platform engineering teams managing multi-provider LLM infrastructure
-- Security teams enforcing prompt injection protection, DLP, and access controls
-- FinOps teams enforcing AI spend budgets and quotas per team or project
-- Compliance teams needing audit-ready logs for EU AI Act high-risk provisions
+- Adultes traversant une période difficile ou un changement de vie
+- Personnes qui souhaitent identifier des blocages qui freinent leur évolution
+- Personnes confrontées à des difficultés qui se répètent
+- Résidents et expatriés de la région d'Antibes, en français ou en anglais
 
-## Key capabilities
+## Motifs de consultation
 
-- Virtual API keys with scoped access per team, user, project, or tenant
-- Budget and quota enforcement before upstream calls fire (not post-hoc)
-- MCP server governance: tool allowlists, access policies, audit trails
-- Prompt injection protection and data leakage controls at the gateway layer
-- Multi-provider routing, failover, and load balancing (OpenAI, Anthropic, etc.)
-- EU AI Act compliance support: structured audit evidence for every request
-- Plugin architecture for custom workflow steps
-- Deployment: cloud-hosted, self-hosted, or hybrid (VPC data plane)
+- Anxiété — inquiétudes envahissantes, ruminations, tension permanente, sommeil perturbé
+- Burn-out professionnel — fatigue qui ne cède plus au repos, démotivation, irritabilité
+- Difficultés relationnelles — conflits récurrents, difficulté à poser des limites, schémas qui se répètent
+- Transitions de vie — séparations, deuils, changements professionnels, perte de repères
 
-## Documentation
+## Approches thérapeutiques
 
-Full documentation: https://docs.odock.ai/docs/getting-started
+- Thérapies Cognitives et Comportementales (TCC) : travail sur les interactions entre pensées, émotions et comportements, avec des outils concrets
+- Gestalt-thérapie : travail dans l'ici et maintenant, à partir de l'expérience vécue, des émotions et du contact
+- Thérapie des schémas : identification des modes de fonctionnement construits au fil de la vie et de leur impact au présent
+- Psychologie jungienne : mise en conscience de processus inconscients, accompagnement du processus d'individuation
 
-## Key pages
+## Informations pratiques
 
-- Homepage: https://odock.ai
-- Enterprise: https://odock.ai/enterprise/
-- EU AI Act compliance: https://odock.ai/eu/
-- MCP Gateway: https://odock.ai/mcp-gateway/
-- LLM Gateway: https://odock.ai/llm-gateway/
-- Blog: https://odock.ai/blog/
-- AI gateway comparisons (LiteLLM, Kong, Cloudflare, Portkey, Envoy): https://odock.ai/compare/
-- GitHub: https://github.com/odock-ai
+- Cabinet : Antibes, Alpes-Maritimes (06600), France
+- Consultations : en cabinet ou en visioconférence
+- Durée d'une séance : 45 minutes
+- Tarif : 90 €
+- Langues : français, anglais
+- Consultations exclusivement sur rendez-vous
+- Moyens de paiement : carte bancaire, espèces, virement bancaire
+- Un acompte de 50 € est demandé à la réservation, intégralement remboursé en cas d'annulation ou de report au moins 24 heures avant la consultation
 
-## Featured articles
+## Pages principales
 
-- From chatbots to delegated work, why agentic AI needs a runtime control plane: https://odock.ai/blog/from-chatbots-to-delegated-work-why-agentic-ai-needs-a-runtime-control-plane/
-- AI Act transparency and GPAI enforcement, what changed after August 2026: https://odock.ai/blog/ai-act-transparency-and-gpai-enforcement-what-changed-after-august-2026/
-- A2A, MCP, and the agent standards race, why interoperability needs governance: https://odock.ai/blog/a2a-mcp-and-the-agent-standards-race-why-interoperability-needs-governance/
-- EU AI Act 2026, what the August 2 deadline means for AI teams: https://odock.ai/blog/eu-ai-act-2026-what-the-august-deadline-means-for-ai-teams/
-- ISO 42001 vs NIST AI RMF vs EU AI Act, AI governance frameworks compared: https://odock.ai/blog/iso-42001-vs-nist-ai-rmf-vs-eu-ai-act-ai-governance-frameworks-compared/
-- Why the AI gateway became mandatory infrastructure in 2026: https://odock.ai/blog/why-the-ai-gateway-became-mandatory-infrastructure-in-2026/
-- The 6 MCP security risks every enterprise faces in 2026: https://odock.ai/blog/mcp-security-risks-enterprise-ai-agents-2026/
-- AI agents are non-human identities now, the 2026 credential sprawl problem: https://odock.ai/blog/ai-agent-identity-and-non-human-identity-security-in-2026/
-- Shadow AI in 2026, why banning tools fails and governed enablement wins: https://odock.ai/blog/shadow-ai-2026-how-to-govern-unsanctioned-ai-tool-use/
-- The great model churn of 2026, why model-agnostic routing matters: https://odock.ai/blog/the-great-model-churn-of-2026-why-model-agnostic-routing-matters/
-- Self-host LLMs with Ollama and vLLM, distribute them with Odock: https://odock.ai/blog/self-host-llms-with-ollama-and-vllm-and-distribute-them-with-odock/
+- Accueil : https://karen-schenck.fr/
+- Ma pratique : https://karen-schenck.fr/ma-pratique/
+- Pourquoi consulter : https://karen-schenck.fr/pourquoi-consulter/
+- Anxiété : https://karen-schenck.fr/pourquoi-consulter/anxiete/
+- Burn-out professionnel : https://karen-schenck.fr/pourquoi-consulter/burn-out/
+- Difficultés relationnelles : https://karen-schenck.fr/pourquoi-consulter/difficultes-relationnelles/
+- Transitions de vie : https://karen-schenck.fr/pourquoi-consulter/transitions-de-vie/
+- Informations pratiques : https://karen-schenck.fr/informations-pratiques/
+- Contact & tarifs : https://karen-schenck.fr/contact/
+- Blog : https://karen-schenck.fr/blog/
+- Mentions légales : https://karen-schenck.fr/mentions-legales/
+- Politique de confidentialité : https://karen-schenck.fr/confidentialite/
+
+## Articles du blog
+
+- Comprendre l'anxiété : quand les inquiétudes prennent trop de place — https://karen-schenck.fr/blog/comprendre-anxiete/
+- Les premiers signes du burn-out professionnel — https://karen-schenck.fr/blog/les-premiers-signes-du-burn-out/
+- Pourquoi revit-on parfois les mêmes schémas relationnels ? — https://karen-schenck.fr/blog/schemas-relationnels-repetitifs/
+
+## English
+
+Karen Schenck is an integrative psychotherapist practising in Antibes, on the
+French Riviera. She works with adults in person or by video, in French and in
+English, drawing on Cognitive Behavioural Therapy (CBT), Gestalt therapy,
+Schema Therapy and Jungian psychology. Common reasons for consulting: anxiety,
+professional burnout, relationship difficulties and life transitions. Sessions
+last 45 minutes and cost €90, by appointment only.
+
+The full site is available in English under https://karen-schenck.fr/en/ —
+for example https://karen-schenck.fr/en/contact/ to book a session.
+
+## Cadre et limites
+
+Les contenus de ce site ont une vocation d'information et ne remplacent pas une
+consultation. Ils ne constituent ni un diagnostic ni une prescription.
+En cas d'urgence ou de détresse psychologique en France : 15 (SAMU) ou
+3114 (numéro national de prévention du suicide).
 
 ## Contact
 
-Demo requests: https://odock.ai/contact/
-Email: hello@odock.ai
+Prise de rendez-vous en ligne : https://karen-schenck.fr/contact/
+Téléphone : +33 6 84 37 60 62
+Email : contact@karen-schenck.fr
