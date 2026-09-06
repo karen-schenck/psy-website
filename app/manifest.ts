@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'Karen Schenck — Psychopraticienne',
     short_name: 'Karen Schenck',
-    description: 'Psychopraticienne à Antibes. Approche intégrative — TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne.',
+    description: 'Psychopraticienne à Antibes. Approche intégrative .  TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne.',
     start_url: assetPath('/'),
     display: 'standalone',
     background_color: '#F7F3EC',
