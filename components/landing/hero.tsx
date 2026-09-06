@@ -7,6 +7,7 @@ import { PetalBloom } from "@/components/landing/petal-mark"
 import { Parallax } from "@/components/shared/parallax"
 import { Button } from "@/components/ui/button"
 import { localizePath } from "@/lib/i18n"
+import { assetPath } from "@/lib/asset-path"
 
 /**
  * Opening band of the one-pager: value proposition on the left, Karen's
@@ -157,7 +158,7 @@ export function Hero() {
               </Parallax>
 
               <img
-                src={hero.imageSrc}
+                src={assetPath(hero.imageSrc)}
                 alt={hero.imageAlt}
                 width={920}
                 height={1311}

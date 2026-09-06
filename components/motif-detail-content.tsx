@@ -8,6 +8,7 @@ import { BookingCta } from "@/components/landing/booking-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { localizePath } from "@/lib/i18n"
+import { assetPath } from "@/lib/asset-path"
 
 export function MotifDetailContent({ slug }: { slug: string }) {
   const { content, locale } = useLandingContent()
@@ -42,7 +43,7 @@ export function MotifDetailContent({ slug }: { slug: string }) {
               role="img"
               aria-label={motif.imageAlt}
               className="aspect-[4/3] rounded-[var(--radius-panel)] bg-panel bg-cover bg-center shadow-[0_30px_60px_-40px_rgba(63,83,107,0.7)] lg:aspect-[5/4]"
-              style={{ backgroundImage: `url(${motif.imageSrc})` }}
+              style={{ backgroundImage: `url(${assetPath(motif.imageSrc)})` }}
             />
           </Reveal>
 

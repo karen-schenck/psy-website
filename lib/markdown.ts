@@ -1,3 +1,5 @@
+import { assetPath } from '@/lib/asset-path';
+
 export type MarkdownHeading = {
   id: string;
   title: string;
@@ -50,7 +52,7 @@ function renderImageBlock({
   caption?: string;
   href?: string;
 }) {
-  const figureImage = `<img src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" class="w-full rounded-lg border border-border bg-card object-cover shadow-sm" />`;
+  const figureImage = `<img src="${escapeHtml(assetPath(src))}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async" class="w-full rounded-lg border border-border bg-card object-cover shadow-sm" />`;
   const imageContent = href
     ? `<a href="${escapeHtml(href)}" class="block transition-opacity hover:opacity-90" target="_blank" rel="noopener noreferrer">${figureImage}</a>`
     : figureImage;

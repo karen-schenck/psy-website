@@ -3,6 +3,7 @@
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { PetalMark } from "@/components/landing/petal-mark"
 import { Reveal } from "@/components/shared/reveal"
+import { assetPath } from "@/lib/asset-path"
 
 /**
  * Who Karen is, on the one-pager: her own words from /ma-pratique beside a
@@ -22,7 +23,7 @@ export function AboutSection() {
             role="img"
             aria-label={about.imageAlt}
             className="aspect-[5/4] rounded-[var(--radius-panel)] bg-panel-strong bg-cover bg-center shadow-[0_30px_60px_-40px_rgba(63,83,107,0.7)]"
-            style={{ backgroundImage: `url(${about.imageSrc})` }}
+            style={{ backgroundImage: `url(${assetPath(about.imageSrc)})` }}
           />
           <PetalMark
             className="absolute -bottom-5 -right-4 h-16 w-16 text-accent/70 lg:-right-6 lg:h-20 lg:w-20"

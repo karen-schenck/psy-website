@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { DEFAULT_LOCALE, SUPPORTED_LOCALES, getSiteContent, type Locale, type SiteContent } from '@/lib/i18n';
+import { assetPath } from '@/lib/asset-path';
 
 type Breadcrumb = { name: string; url: string };
 
@@ -107,6 +108,9 @@ export function buildRootMetadata(content: SiteContent): Metadata {
     creator: siteName,
     publisher: siteName,
     referrer: 'origin-when-cross-origin',
+    icons: {
+      icon: [{ url: assetPath('/icon-light-32x32.svg') }],
+    },
     openGraph: {
       ...seo.openGraph,
       title: seo.title,
@@ -144,6 +148,9 @@ export function buildMetadata(locale: Locale, content: SiteContent): Metadata {
     creator: siteName,
     publisher: siteName,
     referrer: 'origin-when-cross-origin',
+    icons: {
+      icon: [{ url: assetPath('/icon-light-32x32.svg') }],
+    },
     openGraph: {
       ...seo.openGraph,
       title: seo.title,

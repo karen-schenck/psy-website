@@ -1,5 +1,7 @@
 "use client"
 
+import { assetPath } from "@/lib/asset-path"
+
 import { useEffect, useRef, type CSSProperties } from "react"
 
 type Layer = {
@@ -150,7 +152,11 @@ export function ParallaxImage({
       ref={ref}
       aria-hidden="true"
       className={`absolute inset-x-0 bg-secondary bg-cover bg-center ${className}`}
-      style={{ top: `-${overshoot}`, bottom: `-${overshoot}`, backgroundImage: `url(${src})` }}
+      style={{
+        top: `-${overshoot}`,
+        bottom: `-${overshoot}`,
+        backgroundImage: `url(${assetPath(src)})`,
+      }}
     />
   )
 }

@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { Reveal } from "@/components/shared/reveal"
 import { localizePath } from "@/lib/i18n"
+import { assetPath } from "@/lib/asset-path"
 
 /**
  * The reference layout's inset band: one rounded sand panel holding a picture
@@ -25,7 +26,7 @@ export function ApproachTeaser() {
               role="img"
               aria-label={tall.alt}
               className="row-span-2 h-full min-h-[16rem] rounded-xl bg-secondary bg-cover bg-center shadow-[0_24px_50px_-32px_rgba(63,83,107,0.6)]"
-              style={{ backgroundImage: `url(${tall.src})` }}
+              style={{ backgroundImage: `url(${assetPath(tall.src)})` }}
             />
             {stacked.map((image) => (
               <div
@@ -33,7 +34,7 @@ export function ApproachTeaser() {
                 role="img"
                 aria-label={image.alt}
                 className="aspect-[4/3] rounded-xl bg-secondary bg-cover bg-center shadow-[0_24px_50px_-32px_rgba(63,83,107,0.6)]"
-                style={{ backgroundImage: `url(${image.src})` }}
+                style={{ backgroundImage: `url(${assetPath(image.src)})` }}
               />
             ))}
           </div>

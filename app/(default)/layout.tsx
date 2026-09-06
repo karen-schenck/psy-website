@@ -3,6 +3,7 @@ import { Libre_Baskerville, Lato } from 'next/font/google';
 import HtmlLangSync from '@/components/html-lang-sync';
 import { DEFAULT_LOCALE, getSiteContent } from '@/lib/i18n';
 import { buildRootMetadata } from '@/lib/seo';
+import { assetPath } from '@/lib/asset-path';
 import '../globals.css';
 
 const baseMetadata = buildRootMetadata(getSiteContent(DEFAULT_LOCALE));
@@ -32,7 +33,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   ...baseMetadata,
   icons: {
-    icon: [{ url: '/icon-light-32x32.svg' }],
+    icon: [{ url: assetPath('/icon-light-32x32.svg') }],
   },
 };
 

@@ -5,6 +5,7 @@ import { PageHeader } from "@/components/shared/page-header"
 import { BookingCta } from "@/components/landing/booking-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
+import { assetPath } from "@/lib/asset-path"
 
 export function PracticeContent() {
   const { content, locale } = useLandingContent()
@@ -50,7 +51,7 @@ export function PracticeContent() {
               role="img"
               aria-label={practicePage.imageAlt}
               className="aspect-[4/5] rounded-[var(--radius-panel)] bg-panel bg-cover bg-center shadow-[0_30px_60px_-40px_rgba(63,83,107,0.7)]"
-              style={{ backgroundImage: `url(${practicePage.imageSrc})` }}
+              style={{ backgroundImage: `url(${assetPath(practicePage.imageSrc)})` }}
             />
           </Reveal>
 
