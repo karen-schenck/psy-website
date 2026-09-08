@@ -8,7 +8,7 @@ import { BookingCta } from "@/components/landing/booking-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { localizePath } from "@/lib/i18n"
-import { assetPath } from "@/lib/asset-path"
+import { MotifArtwork } from "@/components/shared/motif-artwork"
 
 const ICONS = {
   anxiete: Brain,
@@ -40,10 +40,11 @@ export function WhyConsultIndexContent() {
                   prefetch={false}
                   className="group flex h-full flex-col overflow-hidden rounded-2xl bg-panel transition-[transform,box-shadow] duration-300 hover:-translate-y-1 hover:shadow-[0_28px_50px_-32px_rgba(63,83,107,0.65)] sm:flex-row"
                 >
-                  <div
-                    role="presentation"
+                  <MotifArtwork
+                    alt={motif.imageAlt}
                     className="aspect-[4/3] w-full shrink-0 bg-secondary bg-cover bg-center sm:aspect-auto sm:w-2/5"
-                    style={{ backgroundImage: `url(${assetPath(motif.imageSrc)})` }}
+                    presentation
+                    src={motif.imageSrc}
                   />
                   <div className="flex flex-1 flex-col justify-between gap-6 p-7 lg:p-9">
                     <Icon className="h-7 w-7 text-accent" strokeWidth={1.4} />

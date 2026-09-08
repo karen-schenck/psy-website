@@ -8,7 +8,7 @@ import { BookingCta } from "@/components/landing/booking-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
 import { localizePath } from "@/lib/i18n"
-import { assetPath } from "@/lib/asset-path"
+import { MotifArtwork } from "@/components/shared/motif-artwork"
 
 export function MotifDetailContent({ slug }: { slug: string }) {
   const { content, locale } = useLandingContent()
@@ -39,11 +39,10 @@ export function MotifDetailContent({ slug }: { slug: string }) {
       <article className="site-container py-14 lg:py-20">
         <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-x-[clamp(2.5rem,4vw,4.5rem)]">
           <Reveal>
-            <div
-              role="img"
-              aria-label={motif.imageAlt}
+            <MotifArtwork
+              alt={motif.imageAlt}
               className="aspect-[4/3] rounded-[var(--radius-panel)] bg-panel bg-cover bg-center shadow-[0_30px_60px_-40px_rgba(63,83,107,0.7)] lg:aspect-[5/4]"
-              style={{ backgroundImage: `url(${assetPath(motif.imageSrc)})` }}
+              src={motif.imageSrc}
             />
           </Reveal>
 
