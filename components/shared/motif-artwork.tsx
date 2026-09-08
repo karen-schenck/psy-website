@@ -8,8 +8,29 @@ type MotifArtworkProps = {
   src: string
 }
 
+const layeredArtwork = [
+  {
+    backgroundSrc: "/images/anxiety-background.svg",
+    foregroundSrc: "/images/anxiety-foreground.gif",
+    sourceSuffix: "/anxiety-layered.svg",
+    stillSrc: "/images/anxiety-still.svg",
+  },
+  {
+    backgroundSrc: "/images/burnout-background.svg",
+    foregroundSrc: "/images/burnout-foreground.gif",
+    sourceSuffix: "/burnout-animated.svg",
+    stillSrc: "/images/burnout-still.svg",
+  },
+  {
+    backgroundSrc: "/images/relationship-background.svg",
+    foregroundSrc: "/images/relationship-foreground.gif",
+    sourceSuffix: "/couple-animated.svg",
+    stillSrc: "/images/relationship-still.svg",
+  },
+] as const
+
 export function MotifArtwork({ alt, className, presentation = false, src }: MotifArtworkProps) {
-  const isAnxietyArtwork = src.endsWith("/anxiety-layered.svg")
+  const layers = layeredArtwork.find(({ sourceSuffix }) => src.endsWith(sourceSuffix))
 
   return (
     <div
@@ -18,25 +39,25 @@ export function MotifArtwork({ alt, className, presentation = false, src }: Moti
       className={cn("relative overflow-hidden", className)}
       role={presentation ? "presentation" : "img"}
     >
-      {isAnxietyArtwork ? (
+      {layers ? (
         <>
           <picture>
             <source
               media="(prefers-reduced-motion: reduce)"
-              srcSet={assetPath("/images/anxiety-still.svg")}
+              srcSet={assetPath(layers.stillSrc)}
             />
             <img
               alt=""
               aria-hidden="true"
               className="absolute inset-0 h-full w-full object-cover"
-              src={assetPath("/images/anxiety-background.svg")}
+              src={assetPath(layers.backgroundSrc)}
             />
           </picture>
           <img
             alt=""
             aria-hidden="true"
             className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
-            src={assetPath("/images/anxiety-foreground.gif")}
+            src={assetPath(layers.foregroundSrc)}
           />
         </>
       ) : (
