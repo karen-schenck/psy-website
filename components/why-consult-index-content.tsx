@@ -45,6 +45,7 @@ export function WhyConsultIndexContent() {
                     className="aspect-[4/3] w-full shrink-0 bg-secondary bg-cover bg-center sm:aspect-auto sm:w-2/5"
                     presentation
                     src={motif.imageSrc}
+                    still
                   />
                   <div className="flex flex-1 flex-col justify-between gap-6 p-7 lg:p-9">
                     <Icon className="h-7 w-7 text-accent" strokeWidth={1.4} />

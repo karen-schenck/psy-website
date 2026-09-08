@@ -64,12 +64,15 @@ if (!chrome) {
 
 const workingDir = mkdtempSync(join(tmpdir(), "anxiety-gif-"))
 const renderPath = join(workingDir, "foreground.svg")
+const framesPerSecond = 10
+const loopDurationSeconds = 12
 const gifLoopStyles = `<style>
-  .sb0,.sb1,.sb2,.fb0,.fb1,.fb2{animation-duration:.3s}
+  .sb0,.sb1,.sb2{animation-duration:.3s}
+  .fb0,.fb1,.fb2{animation-duration:.6s}
   .churn{animation-duration:3s}
   .swell{animation-duration:1.5s}
   .flick{animation-duration:3s}
-  .breathe,.sway{animation-duration:3s}
+  .breathe,.sway{animation-duration:6s}
 </style>`
 const highResolutionSvg = foregroundSvg
   .replace("</svg>", `${gifLoopStyles}</svg>`)
@@ -99,16 +102,16 @@ try {
     ], { stdio: "ignore", timeout: 30_000 })
   }
 
-  const frameCount = 60
+  const frameCount = loopDurationSeconds * framesPerSecond
   for (let frame = 0; frame < frameCount; frame += 1) {
     renderFrame(
-      frame / 10,
+      frame / framesPerSecond,
       join(workingDir, `frame-${String(frame).padStart(3, "0")}.png`),
     )
   }
 
   const loopEndPath = join(workingDir, "loop-end.png")
-  renderFrame(6, loopEndPath)
+  renderFrame(loopDurationSeconds, loopEndPath)
   execFileSync("magick", [
     "compare", "-metric", "AE",
     join(workingDir, "frame-000.png"), loopEndPath, "null:",
@@ -116,7 +119,7 @@ try {
 
   execFileSync("ffmpeg", [
     "-y",
-    "-framerate", "10",
+    "-framerate", String(framesPerSecond),
     "-i", join(workingDir, "frame-%03d.png"),
     "-filter_complex",
     "[0:v]split[frames][palette_source];[palette_source]palettegen=reserve_transparent=1:stats_mode=diff[palette];[frames][palette]paletteuse=dither=sierra2_4a:alpha_threshold=128",

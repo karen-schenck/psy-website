@@ -6,6 +6,7 @@ type MotifArtworkProps = {
   className?: string
   presentation?: boolean
   src: string
+  still?: boolean
 }
 
 const layeredArtwork = [
@@ -29,8 +30,15 @@ const layeredArtwork = [
   },
 ] as const
 
-export function MotifArtwork({ alt, className, presentation = false, src }: MotifArtworkProps) {
+export function MotifArtwork({
+  alt,
+  className,
+  presentation = false,
+  src,
+  still = false,
+}: MotifArtworkProps) {
   const layers = layeredArtwork.find(({ sourceSuffix }) => src.endsWith(sourceSuffix))
+  const stillSrc = still && layers ? layers.stillSrc : src
 
   return (
     <div
@@ -39,7 +47,7 @@ export function MotifArtwork({ alt, className, presentation = false, src }: Moti
       className={cn("relative overflow-hidden", className)}
       role={presentation ? "presentation" : "img"}
     >
-      {layers ? (
+      {layers && !still ? (
         <>
           <picture>
             <source
@@ -65,7 +73,7 @@ export function MotifArtwork({ alt, className, presentation = false, src }: Moti
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover"
-          src={assetPath(src)}
+          src={assetPath(stillSrc)}
         />
       )}
     </div>
