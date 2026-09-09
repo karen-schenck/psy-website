@@ -82,7 +82,7 @@ const DEFAULT_BLOG_AUTHORS: Record<Locale, BlogAuthor> = {
   fr: {
     name: 'Karen Schenck',
     role: 'Psychopraticienne à Antibes',
-    bio: 'Karen Schenck est psychopraticienne à Antibes. Son approche intégrative associe TCC, Gestalt-thérapie, thérapie des schémas et psychologie jungienne.',
+    bio: 'Karen Schenck est psychopraticienne à Antibes. Son approche intégrative associe les thérapies cognitives et comportementales (TCC), la Gestalt-thérapie, la thérapie des schémas et la psychologie jungienne.',
     avatarLabel: 'KS',
     profileHref: '/ma-pratique',
   },

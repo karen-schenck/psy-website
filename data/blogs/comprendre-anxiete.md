@@ -35,7 +35,7 @@
     },
     {
       "question": "Quelle approche est utilisée pour travailler sur l’anxiété ?",
-      "answer": "Le travail s’appuie notamment sur les Thérapies Cognitives et Comportementales (TCC), qui permettent d’identifier les pensées et comportements qui entretiennent l’anxiété, en complément d’autres approches selon la situation de chaque personne."
+      "answer": "Le travail s’appuie notamment sur les thérapies cognitives et comportementales (TCC), qui permettent d’identifier les pensées et comportements qui entretiennent l’anxiété, en complément d’autres approches selon la situation de chaque personne."
     }
   ],
   "relatedSlugs": [
@@ -128,7 +128,7 @@ Il n’existe pas de seuil universel à partir duquel il « faudrait » consulte
 
 L’objectif n’est pas uniquement d’apaiser les symptômes de façon ponctuelle. Il s’agit d’identifier les mécanismes de pensée et de comportement qui entretiennent l’anxiété, afin de favoriser une évolution durable plutôt qu’un simple soulagement temporaire.
 
-Ce travail s’appuie notamment sur les **Thérapies Cognitives et Comportementales (TCC)**, qui permettent de mettre en lumière les liens entre pensées, émotions et comportements, et de construire progressivement des réponses plus adaptées face aux situations qui déclenchent l’anxiété. Selon les situations, d’autres approches — comme la Gestalt-thérapie, pour retravailler la relation au moment présent et aux sensations corporelles — peuvent venir compléter ce travail.
+Ce travail s’appuie notamment sur les **thérapies cognitives et comportementales (TCC)**, qui permettent de mettre en lumière les liens entre pensées, émotions et comportements, et de construire progressivement des réponses plus adaptées face aux situations qui déclenchent l’anxiété. Selon les situations, d’autres approches — comme la Gestalt-thérapie, pour retravailler la relation au moment présent et aux sensations corporelles — peuvent venir compléter ce travail.
 
 Comprendre ce qui se joue en vous est souvent la première étape pour avancer avec plus de clarté et de liberté.
 <!-- locale:en -->

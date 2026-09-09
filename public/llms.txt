@@ -8,9 +8,9 @@ propose un accompagnement thérapeutique pour adultes, en cabinet ou en
 visioconférence, en français et en anglais.
 
 Sa pratique est intégrative : elle associe quatre courants thérapeutiques
-complémentaires — Thérapies Cognitives et Comportementales (TCC),
-Gestalt-thérapie, thérapie des schémas et psychologie jungienne — mobilisés en
-fonction de la demande de chaque personne et de l'évolution de son
+complémentaires — les thérapies cognitives et comportementales (TCC), la
+Gestalt-thérapie, la thérapie des schémas et la psychologie jungienne — mobilisés
+en fonction de la demande de chaque personne et de l'évolution de son
 accompagnement.
 
 ## Pour qui
@@ -29,7 +29,7 @@ accompagnement.
 
 ## Approches thérapeutiques
 
-- Thérapies Cognitives et Comportementales (TCC) : travail sur les interactions entre pensées, émotions et comportements, avec des outils concrets
+- Thérapies cognitives et comportementales (TCC) : travail sur les interactions entre pensées, émotions et comportements, avec des outils concrets
 - Gestalt-thérapie : travail dans l'ici et maintenant, à partir de l'expérience vécue, des émotions et du contact
 - Thérapie des schémas : identification des modes de fonctionnement construits au fil de la vie et de leur impact au présent
 - Psychologie jungienne : mise en conscience de processus inconscients, accompagnement du processus d'individuation
