@@ -234,7 +234,6 @@
           "src": "/images/accompagnement-mains.webp",
           "alt": "Line illustration of two open hands around a young shoot, over beige, night-blue and terracotta shapes"
         },
-        
         {
           "src": "/images/cabinet-antibes.webp",
           "alt": "Cream armchairs and a wooden bookcase in a bright interior, the atmosphere of a consulting room"
@@ -363,26 +362,46 @@
     },
     "badge": "My practice",
     "title": "My practice",
-    "intro": "I don't believe a single method can respond to every situation. That is why I chose to combine several complementary therapeutic approaches, drawn on according to your needs and how your therapy evolves. The goal is to better understand the difficulties you face, identify their causes, and build lasting change.",
+    "intro": "Each person brings their own history and experience of difficulty. My work is to understand what is happening today, what keeps difficulties going and, when needed, how older patterns influence the present. My training offers complementary perspectives and tools, drawn on according to each person’s needs rather than applied systematically.",
     "imageSrc": "/images/pratique-outils.webp",
     "imageAlt": "Cream armchairs and a wooden bookshelf in a bright room, consultation room atmosphere",
     "modalitiesTitle": "Therapeutic approaches",
     "modalities": [
       {
         "title": "Cognitive Behavioural Therapy (CBT)",
-        "description": "Cognitive Behavioural Therapy (CBT) looks at how thoughts, emotions and behaviours interact. Certain ways of thinking or reacting can, without our being aware of it, maintain the difficulties we face. By shedding light on these mechanisms and offering concrete tools, CBT helps you gradually move out of these patterns and build responses better suited to everyday life."
+        "id": "tcc",
+        "paragraphs": [
+          "Cognitive Behavioural Therapy (CBT) looks at how thoughts, emotions and behaviours interact. Certain ways of thinking or reacting can, without our being aware of it, maintain the difficulties we face. By shedding light on these mechanisms and offering concrete tools, CBT helps you gradually move out of these patterns and build responses better suited to everyday life."
+        ],
+        "description": "Cognitive Behavioural Therapy (CBT) looks at how thoughts, emotions and behaviours interact. Certain ways of thinking or reacting can, without our being aware of it, maintain the difficulties we face. By shedding light on these mechanisms and offering concrete tools, CBT helps you gradually move out of these patterns and build responses better suited to everyday life.",
+        "summary": "CBT helps identify the thoughts, emotions and behaviours that maintain present difficulties. Practical tools support gradual changes to these patterns and new ways of responding to difficult situations."
       },
       {
         "title": "Gestalt therapy",
-        "description": "Gestalt therapy favours working in the here and now. It draws on lived experience, emotions, bodily sensations, and the quality of contact with yourself, others and your environment. This approach invites a more conscious presence to what is being experienced, and the chance to try new ways of relating to others."
+        "id": "gestalt",
+        "paragraphs": [
+          "Gestalt therapy favours working in the here and now. It draws on lived experience, emotions, bodily sensations, and the quality of contact with yourself, others and your environment. This approach invites a more conscious presence to what is being experienced, and the chance to try new ways of relating to others."
+        ],
+        "description": "Gestalt therapy favours working in the here and now. It draws on lived experience, emotions, bodily sensations, and the quality of contact with yourself, others and your environment. This approach invites a more conscious presence to what is being experienced, and the chance to try new ways of relating to others.",
+        "summary": "Gestalt therapy focuses on present experience: emotions, bodily sensations and relationships. It helps bring habitual responses into awareness and offers space to experience other ways of relating to yourself and others."
       },
       {
         "title": "Schema therapy",
-        "description": "Schema therapy explores the patterns that form over the course of a life, particularly in childhood, and that continue to influence emotions, behaviours or relationships. By identifying their origin and their impact in the present, it allows outdated patterns to evolve and new, more adapted bearings to gradually take hold."
+        "id": "schemas",
+        "paragraphs": [
+          "Schema therapy explores the patterns that form over the course of a life, particularly in childhood, and that continue to influence emotions, behaviours or relationships. By identifying their origin and their impact in the present, it allows outdated patterns to evolve and new, more adapted bearings to gradually take hold."
+        ],
+        "description": "Schema therapy explores the patterns that form over the course of a life, particularly in childhood, and that continue to influence emotions, behaviours or relationships. By identifying their origin and their impact in the present, it allows outdated patterns to evolve and new, more adapted bearings to gradually take hold.",
+        "summary": "Schema therapy explores long-standing patterns that still shape emotions, behaviour and relationships. Understanding their origins and present impact helps outdated responses evolve and new ways of responding take shape."
       },
       {
         "title": "Jungian psychology",
-        "description": "Jungian psychology offers a complementary perspective on the difficulties you face. Its aim is to gradually bring certain unconscious processes into awareness — processes that shape how we think, feel and act. By fostering deeper self-knowledge, this approach supports the process of individuation: the development of the personality toward a way of functioning that is more conscious, coherent, and true to oneself."
+        "id": "jung",
+        "paragraphs": [
+          "Jungian psychology offers a complementary perspective on the difficulties you face. Its aim is to gradually bring certain unconscious processes into awareness — processes that shape how we think, feel and act. By fostering deeper self-knowledge, this approach supports the process of individuation: the development of the personality toward a way of functioning that is more conscious, coherent, and true to oneself."
+        ],
+        "description": "Jungian psychology offers a complementary perspective on the difficulties you face. Its aim is to gradually bring certain unconscious processes into awareness — processes that shape how we think, feel and act. By fostering deeper self-knowledge, this approach supports the process of individuation: the development of the personality toward a way of functioning that is more conscious, coherent, and true to oneself.",
+        "summary": "Jungian psychology explores unconscious processes that influence how we think, feel and act. Greater self-awareness supports a way of being that is more conscious, coherent and true to oneself."
       }
     ],
     "journey": {
@@ -400,7 +419,9 @@
       ],
       "ctaLabel": "Book an appointment",
       "ctaHref": "/contact"
-    }
+    },
+    "readMoreLabel": "Continue reading",
+    "readLessLabel": "Show less"
   },
   "practicalInfoPage": {
     "metadata": {

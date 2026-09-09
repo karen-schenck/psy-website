@@ -261,7 +261,7 @@
         {
           "src": "/images/accompagnement-mains.webp",
           "alt": "Illustration au trait de deux mains ouvertes autour d'une jeune pousse, sur des formes beige, bleu nuit et terracotta"
-        }, 
+        },
         {
           "src": "/images/cabinet-antibes.webp",
           "alt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation"
@@ -385,31 +385,59 @@
   },
   "practicePage": {
     "metadata": {
-      "title": "Ma pratique — Approche intégrative | Karen Schenck",
+      "title": "Mon approche — Accompagnement intégratif | Karen Schenck",
       "description": "Une approche intégrative associant les thérapies cognitives et comportementales (TCC), la Gestalt-thérapie, la thérapie des schémas et la psychologie jungienne. Découvrez comment est construit l'accompagnement thérapeutique."
     },
-    "badge": "Ma pratique",
-    "title": "Ma pratique",
-    "intro": "Je ne crois pas qu'une seule méthode puisse répondre à toutes les situations. C'est pourquoi j'ai choisi d'associer plusieurs approches thérapeutiques complémentaires, mobilisées en fonction de votre demande et de l'évolution de votre accompagnement. L'objectif est de mieux comprendre les difficultés rencontrées, d'en identifier les causes et de construire des changements durables.",
+    "badge": "Un accompagnement intégratif",
+    "title": "Mon approche",
+    "intro": "Chaque personne arrive avec une histoire et une manière singulière de vivre ses difficultés. Mon travail consiste à comprendre ce qui se joue aujourd’hui, ce qui entretient ces difficultés et, si nécessaire, les fonctionnements plus anciens qui influencent le présent. Les approches auxquelles je suis formée offrent des éclairages et des outils complémentaires, mobilisés selon les besoins de chacun, sans application systématique.",
     "imageSrc": "/images/pratique-outils.webp",
     "imageAlt": "Fauteuils crème et bibliothèque en bois dans un intérieur lumineux, ambiance de cabinet de consultation",
-    "modalitiesTitle": "Les approches thérapeutiques",
+    "modalitiesTitle": "Les approches qui fondent ma pratique",
     "modalities": [
       {
         "title": "Thérapies cognitives et comportementales (TCC)",
-        "description": "Les thérapies cognitives et comportementales (TCC) s'intéressent aux interactions entre les pensées, les émotions et les comportements. Certaines façons de penser ou de réagir peuvent, sans que nous en ayons conscience, entretenir les difficultés rencontrées. En mettant en lumière ces mécanismes et en proposant des outils concrets, les TCC permettent de sortir progressivement de ces fonctionnements et de construire des réponses plus adaptées au quotidien."
+        "id": "tcc",
+        "paragraphs": [
+          "Les thérapies cognitives et comportementales permettent d’identifier les mécanismes qui entretiennent une difficulté dans le présent. Elles s’intéressent aux liens entre les pensées, les émotions et les comportements : une interprétation répétée d’une situation peut provoquer certaines émotions, conduire à des réactions ou à des stratégies d’évitement et, progressivement, installer un fonctionnement dont il devient difficile de sortir.",
+          "Le travail thérapeutique consiste à repérer ces mécanismes, à mieux comprendre leur fonctionnement et à les faire évoluer. Selon les situations, différents outils peuvent être utilisés pour questionner certaines pensées automatiques, modifier des comportements devenus inadaptés ou expérimenter progressivement d’autres manières de faire face aux situations difficiles.",
+          "Cette approche apporte ainsi une dimension structurée et concrète à l’accompagnement, particulièrement utile lorsque certains mécanismes se répètent et continuent d’alimenter l’anxiété, les évitements ou d’autres difficultés du quotidien."
+        ],
+        "description": "Les thérapies cognitives et comportementales (TCC) s'intéressent aux interactions entre les pensées, les émotions et les comportements. Certaines façons de penser ou de réagir peuvent, sans que nous en ayons conscience, entretenir les difficultés rencontrées. En mettant en lumière ces mécanismes et en proposant des outils concrets, les TCC permettent de sortir progressivement de ces fonctionnements et de construire des réponses plus adaptées au quotidien.",
+        "summary": "Les TCC aident à repérer les pensées, les émotions et les comportements qui entretiennent une difficulté dans le présent. Le travail s’appuie sur des outils concrets pour faire évoluer ces mécanismes et expérimenter d’autres manières de faire face aux situations difficiles."
       },
       {
         "title": "Gestalt-thérapie",
-        "description": "La Gestalt-thérapie privilégie le travail dans l'ici et maintenant. Elle s'appuie sur l'expérience vécue, les émotions, les sensations corporelles ainsi que sur la qualité du contact avec soi-même, les autres et l'environnement. Cette approche invite à développer une présence plus consciente à ce qui est vécu et à expérimenter de nouvelles façons d'être en relation."
+        "id": "gestalt",
+        "paragraphs": [
+          "La Gestalt-thérapie s’intéresse à la manière dont une personne vit et entre en relation dans le présent. Au-delà de ce qui est raconté, elle porte attention à ce qui se manifeste au cours de la séance : émotions, sensations corporelles, réactions, hésitations, besoins ou façons d’entrer en contact avec l’autre.",
+          "Ce travail dans « l’ici et maintenant » permet de prendre conscience de certains automatismes relationnels ou émotionnels qui peuvent se reproduire dans différentes situations de vie. Des façons de se protéger qui ont autrefois eu leur utilité peuvent, par exemple, devenir sources de frustration, de conflit ou d’insatisfaction lorsqu’elles se répètent systématiquement.",
+          "La thérapie permet progressivement de mieux identifier ce qui est ressenti et ce qui est nécessaire pour soi, mais aussi d’expérimenter d’autres manières d’être en relation. Il ne s’agit donc pas uniquement de comprendre son fonctionnement, mais également d’en faire l’expérience autrement."
+        ],
+        "description": "La Gestalt-thérapie privilégie le travail dans l'ici et maintenant. Elle s'appuie sur l'expérience vécue, les émotions, les sensations corporelles ainsi que sur la qualité du contact avec soi-même, les autres et l'environnement. Cette approche invite à développer une présence plus consciente à ce qui est vécu et à expérimenter de nouvelles façons d'être en relation.",
+        "summary": "La Gestalt-thérapie porte attention à ce qui se vit dans le présent : émotions, sensations, besoins et relation à l’autre. Elle aide à prendre conscience de ses automatismes et à expérimenter d’autres façons d’être en relation, au-delà de la seule compréhension."
       },
       {
         "title": "Thérapie des schémas",
-        "description": "La thérapie des schémas explore les modes de fonctionnement qui se construisent au fil de la vie, notamment dans l'enfance, et qui continuent d'influencer les émotions, les comportements ou les relations. En identifiant leur origine et leur impact dans le présent, elle permet de faire évoluer des schémas devenus inadaptés et d'installer progressivement de nouveaux repères."
+        "id": "schemas",
+        "paragraphs": [
+          "La thérapie des schémas permet d’aller plus loin lorsque certaines difficultés semblent profondément installées ou se répètent malgré la volonté de changer. Elle s’intéresse aux schémas précoces, c’est-à-dire à des représentations de soi, des autres et des relations qui se construisent notamment à partir des expériences vécues au cours de l’enfance et de l’adolescence.",
+          "Ces schémas peuvent rester actifs à l’âge adulte et influencer la manière d’interpréter certaines situations. Ils peuvent, par exemple, conduire à anticiper le rejet, à craindre l’abandon, à rechercher excessivement l’approbation, à se montrer très exigeant envers soi-même ou à faire passer systématiquement les besoins des autres avant les siens.",
+          "Le travail thérapeutique consiste à identifier ces schémas, à comprendre leur origine et à reconnaître les situations qui les réactivent aujourd’hui. Cette prise de conscience permet progressivement de différencier ce qui appartient à l’histoire passée de ce qui se joue réellement dans le présent, puis de développer des réponses plus adaptées à ses besoins actuels."
+        ],
+        "description": "La thérapie des schémas explore les modes de fonctionnement qui se construisent au fil de la vie, notamment dans l'enfance, et qui continuent d'influencer les émotions, les comportements ou les relations. En identifiant leur origine et leur impact dans le présent, elle permet de faire évoluer des schémas devenus inadaptés et d'installer progressivement de nouveaux repères.",
+        "summary": "La thérapie des schémas explore les fonctionnements anciens qui continuent d’influencer le présent. Elle permet de comprendre l’origine de certaines répétitions, de reconnaître ce qui les réactive et de développer des réponses plus adaptées à ses besoins actuels."
       },
       {
         "title": "Psychologie jungienne",
-        "description": "La psychologie jungienne apporte un éclairage complémentaire sur les difficultés rencontrées. Son objectif est de rendre progressivement conscients certains processus inconscients qui influencent notre manière de penser, de ressentir et d'agir. En favorisant une meilleure connaissance de soi, cette approche accompagne le processus d'individuation, c'est-à-dire le développement de la personnalité vers un fonctionnement plus conscient, plus cohérent et plus en accord avec soi-même."
+        "id": "jung",
+        "paragraphs": [
+          "La psychologie jungienne permet d’explorer une dimension plus profonde de la vie psychique. Elle considère qu’une partie de ce qui influence nos choix, nos émotions ou nos relations échappe à notre conscience et peut néanmoins se manifester à travers des répétitions, des conflits intérieurs, des rêves, des images ou certaines périodes de remise en question.",
+          "Le travail thérapeutique vise à mettre progressivement en lumière ces éléments afin de mieux comprendre ce qu’ils expriment et la place qu’ils occupent dans l’histoire de la personne. La psychologie jungienne accorde notamment une importance particulière aux différentes facettes de la personnalité, aux contradictions internes et aux aspects de soi qui ont pu être laissés de côté ou insuffisamment reconnus.",
+          "Cette démarche s’inscrit dans ce que Jung nomme le processus d’individuation : non pas chercher à correspondre à un modèle idéal, mais développer une relation plus consciente avec les différentes dimensions de sa personnalité afin de construire une manière d’être plus personnelle et plus cohérente."
+        ],
+        "description": "La psychologie jungienne apporte un éclairage complémentaire sur les difficultés rencontrées. Son objectif est de rendre progressivement conscients certains processus inconscients qui influencent notre manière de penser, de ressentir et d'agir. En favorisant une meilleure connaissance de soi, cette approche accompagne le processus d'individuation, c'est-à-dire le développement de la personnalité vers un fonctionnement plus conscient, plus cohérent et plus en accord avec soi-même.",
+        "summary": "La psychologie jungienne explore les dimensions moins conscientes de la vie psychique : répétitions, conflits intérieurs, rêves ou aspects de soi laissés de côté. Cette démarche aide à mieux se connaître et à construire une manière d’être plus personnelle et plus cohérente."
       }
     ],
     "journey": {
@@ -427,7 +455,9 @@
       ],
       "ctaLabel": "Prendre rendez-vous",
       "ctaHref": "/contact"
-    }
+    },
+    "readMoreLabel": "Continuer à lire",
+    "readLessLabel": "Réduire le texte"
   },
   "practicalInfoPage": {
     "metadata": {

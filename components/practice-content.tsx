@@ -5,6 +5,8 @@ import { PageHeader } from "@/components/shared/page-header"
 import { BookingCta } from "@/components/landing/booking-cta"
 import { Reveal } from "@/components/shared/reveal"
 import { useLandingContent } from "@/components/providers/landing-content-provider"
+import { ChevronDown } from "lucide-react"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { assetPath } from "@/lib/asset-path"
 
 export function PracticeContent() {
@@ -25,18 +27,31 @@ export function PracticeContent() {
           <h2 className="mb-10 max-w-[20ch] font-display text-[clamp(1.6rem,1.1rem+1.6vw,2.5rem)] leading-[1.16] text-heading">
             {practicePage.modalitiesTitle}
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid items-start gap-4 sm:grid-cols-2">
             {practicePage.modalities.map((modality, index) => (
               <Reveal key={modality.title} delay={index * 80}>
-                <article className="flex h-full flex-col gap-4 rounded-2xl bg-shell p-7 lg:p-8">
-                  <span aria-hidden="true" className="font-display text-sm text-accent">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <h3 className="font-display text-lg leading-snug text-heading">{modality.title}</h3>
-                  <p className="text-[13.5px] leading-relaxed text-foreground/75">
-                    {modality.description}
-                  </p>
-                </article>
+                <Collapsible asChild>
+                  <article className="group flex flex-col gap-4 rounded-2xl bg-shell p-7 lg:p-8">
+                    <span aria-hidden="true" className="font-display text-sm text-accent">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <h3 className="font-display text-lg leading-snug text-heading">{modality.title}</h3>
+                    <p className="text-[13.5px] leading-relaxed text-foreground/75 group-data-[state=open]:hidden">
+                      {modality.summary}
+                    </p>
+                    <CollapsibleContent className="hidden flex-col gap-4 data-[state=open]:flex">
+                      {modality.paragraphs.map((paragraph) => (
+                        <p key={paragraph} className="text-[13.5px] leading-relaxed text-foreground/85">{paragraph}</p>
+                      ))}
+                    </CollapsibleContent>
+                    <CollapsibleTrigger className="flex min-h-11 cursor-pointer items-center justify-between gap-3 rounded text-left text-sm text-accent hover:underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+                      <span className="group-data-[state=open]:hidden">{practicePage.readMoreLabel}</span>
+                      <span className="hidden group-data-[state=open]:inline">{practicePage.readLessLabel}</span>
+                      <span className="sr-only"> — {modality.title}</span>
+                      <ChevronDown aria-hidden="true" className="size-4 shrink-0 group-data-[state=open]:rotate-180" />
+                    </CollapsibleTrigger>
+                  </article>
+                </Collapsible>
               </Reveal>
             ))}
           </div>
