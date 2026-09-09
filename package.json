@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "assets:videos": "node scripts/generate-motif-videos.mjs",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",

@@ -1,5 +1,8 @@
+"use client"
+
 import { assetPath } from "@/lib/asset-path"
 import { cn } from "@/lib/utils"
+import { AnimatedArtwork } from "./animated-artwork"
 
 type MotifArtworkProps = {
   alt: string
@@ -11,20 +14,17 @@ type MotifArtworkProps = {
 
 const layeredArtwork = [
   {
-    backgroundSrc: "/images/anxiety-background.svg",
-    foregroundSrc: "/images/anxiety-foreground.gif",
+    videoName: "anxiety",
     sourceSuffix: "/anxiety-layered.svg",
     stillSrc: "/images/anxiety-still.svg",
   },
   {
-    backgroundSrc: "/images/burnout-background.svg",
-    foregroundSrc: "/images/burnout-foreground.gif",
+    videoName: "burnout",
     sourceSuffix: "/burnout-animated.svg",
     stillSrc: "/images/burnout-still.svg",
   },
   {
-    backgroundSrc: "/images/relationship-background.svg",
-    foregroundSrc: "/images/relationship-foreground.gif",
+    videoName: "relationship",
     sourceSuffix: "/couple-animated.svg",
     stillSrc: "/images/relationship-still.svg",
   },
@@ -40,6 +40,19 @@ export function MotifArtwork({
   const layers = layeredArtwork.find(({ sourceSuffix }) => src.endsWith(sourceSuffix))
   const stillSrc = still && layers ? layers.stillSrc : src
 
+  if (layers && !still) {
+    return (
+      <AnimatedArtwork
+        key={layers.videoName}
+        alt={alt}
+        className={className}
+        presentation={presentation}
+        name={layers.videoName}
+        stillSrc={layers.stillSrc}
+      />
+    )
+  }
+
   return (
     <div
       aria-hidden={presentation || undefined}
@@ -47,35 +60,12 @@ export function MotifArtwork({
       className={cn("relative overflow-hidden", className)}
       role={presentation ? "presentation" : "img"}
     >
-      {layers && !still ? (
-        <>
-          <picture>
-            <source
-              media="(prefers-reduced-motion: reduce)"
-              srcSet={assetPath(layers.stillSrc)}
-            />
-            <img
-              alt=""
-              aria-hidden="true"
-              className="absolute inset-0 h-full w-full object-cover"
-              src={assetPath(layers.backgroundSrc)}
-            />
-          </picture>
-          <img
-            alt=""
-            aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
-            src={assetPath(layers.foregroundSrc)}
-          />
-        </>
-      ) : (
-        <img
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
-          src={assetPath(stillSrc)}
-        />
-      )}
+      <img
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover"
+        src={assetPath(stillSrc)}
+      />
     </div>
   )
 }
