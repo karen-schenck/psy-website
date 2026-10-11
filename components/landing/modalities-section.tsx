@@ -48,6 +48,17 @@ export function ModalitiesSection() {
               </article>
             </Reveal>
           ))}
+          {/* Complementary tools: a full-width, unnumbered card after the four approaches. */}
+          <Reveal delay={items.length * 80} className="sm:col-span-2">
+            <article className="flex flex-col items-center gap-4 rounded-2xl bg-shell p-7 text-center lg:p-8">
+              <h3 className="font-display text-lg leading-snug text-heading">
+                {content.practicePage.complementaryTools.title}
+              </h3>
+              <p className="max-w-2xl text-[13.5px] leading-relaxed text-foreground/75">
+                {content.practicePage.complementaryTools.text}
+              </p>
+            </article>
+          </Reveal>
         </div>
 
         <div className="mt-10 text-center">
