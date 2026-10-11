@@ -1,5 +1,5 @@
 # Karen Schenck — Index de contenu complet pour les agents et crawlers LLM
-# https://karen-schenck.fr
+# https://karenschenck.fr
 
 ## Qui est Karen Schenck
 
@@ -62,7 +62,7 @@ période difficile. D'autres souhaitent identifier les blocages qui freinent leu
 évolution ou sortir de difficultés qui se répètent.
 
 ### Anxiété
-URL : https://karen-schenck.fr/pourquoi-consulter/anxiete/
+URL : https://karenschenck.fr/pourquoi-consulter/anxiete/
 Les inquiétudes prennent de plus en plus de place. Difficulté à arrêter de
 penser, à se détendre ou à retrouver un sommeil réparateur ; sentiment d'être
 souvent en alerte sans toujours comprendre pourquoi. Avec le temps, cet état de
@@ -75,7 +75,7 @@ d'identifier les mécanismes qui les entretiennent afin de favoriser une évolut
 durable.
 
 ### Burn-out professionnel
-URL : https://karen-schenck.fr/pourquoi-consulter/burn-out/
+URL : https://karenschenck.fr/pourquoi-consulter/burn-out/
 Sentiment de ne plus avoir d'énergie, même pour les tâches les plus simples. La
 fatigue ne disparaît plus avec le repos. Difficultés de concentration, sentiment
 d'être dépassé, irritabilité, démotivation. L'épuisement professionnel peut
@@ -87,7 +87,7 @@ facteurs qui ont contribué à cet épuisement, pour une récupération durable 
 pour limiter le risque de récidive.
 
 ### Difficultés relationnelles
-URL : https://karen-schenck.fr/pourquoi-consulter/difficultes-relationnelles/
+URL : https://karenschenck.fr/pourquoi-consulter/difficultes-relationnelles/
 Sentiment de revivre les mêmes situations malgré les efforts pour que les choses
 changent. Les conflits se répètent, il devient difficile de poser des limites, de
 trouver sa place dans la relation ou de construire des liens sereins. Certaines
@@ -99,7 +99,7 @@ leur origine et développer de nouvelles façons d'entrer en relation avec
 soi-même et avec les autres.
 
 ### Transitions de vie
-URL : https://karen-schenck.fr/pourquoi-consulter/transitions-de-vie/
+URL : https://karenschenck.fr/pourquoi-consulter/transitions-de-vie/
 Certains événements viennent bousculer les repères construits au fil du temps.
 Ces grandes étapes peuvent susciter des questionnements, des doutes, mais aussi
 un profond sentiment d'incertitude ou de tristesse. Ces périodes demandent
@@ -130,32 +130,32 @@ Si tel est le cas, les modalités de l'accompagnement sont définies ensemble.
 - Les consultations en visioconférence se déroulent dans les mêmes conditions
   qu'au cabinet
 - Prise de rendez-vous en ligne, confirmation immédiate :
-  https://karen-schenck.fr/contact/
+  https://karenschenck.fr/contact/
 - Téléphone : +33 6 84 37 60 62
-- Email : contact@karen-schenck.fr
+- Email : contact@karenschenck.fr
 
 ## Pages du site
 
-- Accueil : https://karen-schenck.fr/
-- Ma pratique : https://karen-schenck.fr/ma-pratique/
-- Pourquoi consulter : https://karen-schenck.fr/pourquoi-consulter/
-- Anxiété : https://karen-schenck.fr/pourquoi-consulter/anxiete/
-- Burn-out professionnel : https://karen-schenck.fr/pourquoi-consulter/burn-out/
-- Difficultés relationnelles : https://karen-schenck.fr/pourquoi-consulter/difficultes-relationnelles/
-- Transitions de vie : https://karen-schenck.fr/pourquoi-consulter/transitions-de-vie/
-- Informations pratiques : https://karen-schenck.fr/informations-pratiques/
-- Contact & tarifs : https://karen-schenck.fr/contact/
-- Blog : https://karen-schenck.fr/blog/
-- Mentions légales : https://karen-schenck.fr/mentions-legales/
-- Politique de confidentialité : https://karen-schenck.fr/confidentialite/
+- Accueil : https://karenschenck.fr/
+- Ma pratique : https://karenschenck.fr/ma-pratique/
+- Pourquoi consulter : https://karenschenck.fr/pourquoi-consulter/
+- Anxiété : https://karenschenck.fr/pourquoi-consulter/anxiete/
+- Burn-out professionnel : https://karenschenck.fr/pourquoi-consulter/burn-out/
+- Difficultés relationnelles : https://karenschenck.fr/pourquoi-consulter/difficultes-relationnelles/
+- Transitions de vie : https://karenschenck.fr/pourquoi-consulter/transitions-de-vie/
+- Informations pratiques : https://karenschenck.fr/informations-pratiques/
+- Contact & tarifs : https://karenschenck.fr/contact/
+- Blog : https://karenschenck.fr/blog/
+- Mentions légales : https://karenschenck.fr/mentions-legales/
+- Politique de confidentialité : https://karenschenck.fr/confidentialite/
 
 Chaque page existe en anglais sous le préfixe /en/ — par exemple
-https://karen-schenck.fr/en/ma-pratique/.
+https://karenschenck.fr/en/ma-pratique/.
 
 ## Articles du blog
 
 ### Comprendre l'anxiété : quand les inquiétudes prennent trop de place
-URL : https://karen-schenck.fr/blog/comprendre-anxiete/
+URL : https://karenschenck.fr/blog/comprendre-anxiete/
 Catégorie : Anxiété · Publié le 2026-06-15 · 6 min de lecture
 Résumé : L'anxiété chronique s'installe souvent progressivement, sans événement
 déclencheur évident. L'article explique ses mécanismes — ruminations, vigilance
@@ -166,7 +166,7 @@ permanente, sommeil perturbé — et les pistes d'accompagnement thérapeutique.
 - Un accompagnement vise à comprendre ces mécanismes, pas seulement à apaiser les symptômes ponctuellement.
 
 ### Les premiers signes du burn-out professionnel
-URL : https://karen-schenck.fr/blog/les-premiers-signes-du-burn-out/
+URL : https://karenschenck.fr/blog/les-premiers-signes-du-burn-out/
 Catégorie : Burn-out professionnel · Publié le 2026-06-29 · 6 min de lecture
 Résumé : L'épuisement professionnel ne survient pas du jour au lendemain. Il se
 construit par étapes, souvent invisibles au début. L'article détaille comment
@@ -178,7 +178,7 @@ motivation — et quand consulter.
 - Un accompagnement aide à identifier les facteurs à l'origine de l'épuisement, pour une récupération durable.
 
 ### Pourquoi revit-on parfois les mêmes schémas relationnels ?
-URL : https://karen-schenck.fr/blog/schemas-relationnels-repetitifs/
+URL : https://karenschenck.fr/blog/schemas-relationnels-repetitifs/
 Catégorie : Difficultés relationnelles · Publié le 2026-07-13 · 7 min de lecture
 Résumé : Conflits qui se répètent, difficulté à poser des limites, sentiment de
 revivre toujours les mêmes situations : l'article explore l'origine des schémas
@@ -211,13 +211,13 @@ The first session is a no-commitment conversation: understanding what brings you
 in, answering your questions, and deciding together whether the work fits what
 you are looking for.
 
-Every page is available in English under https://karen-schenck.fr/en/ —
-booking at https://karen-schenck.fr/en/contact/.
+Every page is available in English under https://karenschenck.fr/en/ —
+booking at https://karenschenck.fr/en/contact/.
 
 ## Cadre, limites et mentions
 
 Éditrice du site : Karen Schenck, psychopraticienne — Antibes, Alpes-Maritimes,
-France. Contact : contact@karen-schenck.fr, +33 6 84 37 60 62.
+France. Contact : contact@karenschenck.fr, +33 6 84 37 60 62.
 
 Les informations présentées sur ce site ont un objectif d'information et ne
 remplacent pas une consultation. Elles ne constituent ni un diagnostic ni une
@@ -229,4 +229,4 @@ d'urgence.
 
 La collecte de données sur ce site est limitée à ce qui est nécessaire pour
 répondre aux demandes. Détails :
-https://karen-schenck.fr/confidentialite/
+https://karenschenck.fr/confidentialite/

@@ -37,7 +37,7 @@ export function ContactContent() {
             <div className="overflow-hidden rounded-2xl bg-shell p-3">
               <iframe
                 title="Calendly"
-                src={`${contactPage.booking.calendlyUrl}?embed_domain=karen-schenck.fr&embed_type=Inline&background_color=F7F3EC&text_color=3F3A37&primary_color=3F536B`}
+                src={`${contactPage.booking.calendlyUrl}?embed_domain=karenschenck.fr&embed_type=Inline&background_color=F7F3EC&text_color=3F3A37&primary_color=3F536B`}
                 className="h-[640px] w-full rounded-xl border-0"
                 loading="lazy"
               />

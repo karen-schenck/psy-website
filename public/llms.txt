@@ -1,5 +1,5 @@
 # Karen Schenck — Psychopraticienne à Antibes
-# https://karen-schenck.fr
+# https://karenschenck.fr
 
 ## Qui est Karen Schenck
 
@@ -47,24 +47,24 @@ accompagnement.
 
 ## Pages principales
 
-- Accueil : https://karen-schenck.fr/
-- Ma pratique : https://karen-schenck.fr/ma-pratique/
-- Pourquoi consulter : https://karen-schenck.fr/pourquoi-consulter/
-- Anxiété : https://karen-schenck.fr/pourquoi-consulter/anxiete/
-- Burn-out professionnel : https://karen-schenck.fr/pourquoi-consulter/burn-out/
-- Difficultés relationnelles : https://karen-schenck.fr/pourquoi-consulter/difficultes-relationnelles/
-- Transitions de vie : https://karen-schenck.fr/pourquoi-consulter/transitions-de-vie/
-- Informations pratiques : https://karen-schenck.fr/informations-pratiques/
-- Contact & tarifs : https://karen-schenck.fr/contact/
-- Blog : https://karen-schenck.fr/blog/
-- Mentions légales : https://karen-schenck.fr/mentions-legales/
-- Politique de confidentialité : https://karen-schenck.fr/confidentialite/
+- Accueil : https://karenschenck.fr/
+- Ma pratique : https://karenschenck.fr/ma-pratique/
+- Pourquoi consulter : https://karenschenck.fr/pourquoi-consulter/
+- Anxiété : https://karenschenck.fr/pourquoi-consulter/anxiete/
+- Burn-out professionnel : https://karenschenck.fr/pourquoi-consulter/burn-out/
+- Difficultés relationnelles : https://karenschenck.fr/pourquoi-consulter/difficultes-relationnelles/
+- Transitions de vie : https://karenschenck.fr/pourquoi-consulter/transitions-de-vie/
+- Informations pratiques : https://karenschenck.fr/informations-pratiques/
+- Contact & tarifs : https://karenschenck.fr/contact/
+- Blog : https://karenschenck.fr/blog/
+- Mentions légales : https://karenschenck.fr/mentions-legales/
+- Politique de confidentialité : https://karenschenck.fr/confidentialite/
 
 ## Articles du blog
 
-- Comprendre l'anxiété : quand les inquiétudes prennent trop de place — https://karen-schenck.fr/blog/comprendre-anxiete/
-- Les premiers signes du burn-out professionnel — https://karen-schenck.fr/blog/les-premiers-signes-du-burn-out/
-- Pourquoi revit-on parfois les mêmes schémas relationnels ? — https://karen-schenck.fr/blog/schemas-relationnels-repetitifs/
+- Comprendre l'anxiété : quand les inquiétudes prennent trop de place — https://karenschenck.fr/blog/comprendre-anxiete/
+- Les premiers signes du burn-out professionnel — https://karenschenck.fr/blog/les-premiers-signes-du-burn-out/
+- Pourquoi revit-on parfois les mêmes schémas relationnels ? — https://karenschenck.fr/blog/schemas-relationnels-repetitifs/
 
 ## English
 
@@ -75,8 +75,8 @@ Schema Therapy and Jungian psychology. Common reasons for consulting: anxiety,
 professional burnout, relationship difficulties and life transitions. Sessions
 last 45 minutes and cost €90, by appointment only.
 
-The full site is available in English under https://karen-schenck.fr/en/ —
-for example https://karen-schenck.fr/en/contact/ to book a session.
+The full site is available in English under https://karenschenck.fr/en/ —
+for example https://karenschenck.fr/en/contact/ to book a session.
 
 ## Cadre et limites
 
@@ -87,6 +87,6 @@ En cas d'urgence ou de détresse psychologique en France : 15 (SAMU) ou
 
 ## Contact
 
-Prise de rendez-vous en ligne : https://karen-schenck.fr/contact/
+Prise de rendez-vous en ligne : https://karenschenck.fr/contact/
 Téléphone : +33 6 84 37 60 62
-Email : contact@karen-schenck.fr
+Email : contact@karenschenck.fr
