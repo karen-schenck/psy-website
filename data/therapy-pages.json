@@ -1,0 +1,294 @@
+{
+  "fr": {
+    "tcc": {
+      "diagramTitle": "Comprendre ce qui entretient une difficulté",
+      "diagramIntro": "Une même situation peut être vécue différemment selon ce que l’on pense, ressent et fait.",
+      "center": "Une situation",
+      "centerText": "Ce qui se passe autour de moi",
+      "kind": "cycle",
+      "nodes": [
+        [
+          "Mes pensées",
+          "Le sens que je donne à la situation."
+        ],
+        [
+          "Mes émotions",
+          "Ce que je ressens, dans mon esprit et mon corps."
+        ],
+        [
+          "Mes comportements",
+          "Ce que je fais, ou ce que j’évite."
+        ],
+        [
+          "Les conséquences",
+          "Ce qui peut renforcer ou faire évoluer mes pensées."
+        ]
+      ],
+      "note": "Ces dimensions s’influencent mutuellement. Le schéma propose un sens de lecture, mais les liens fonctionnent dans les deux sens.",
+      "example": "Un message reste sans réponse",
+      "exampleText": "« J’ai dû dire quelque chose de mal » : cette pensée peut susciter de l’inquiétude. Je relis mes messages ou j’évite de reprendre contact. Le doute reste présent et nourrit mon interprétation de départ.",
+      "support": "Ouvrir d’autres possibilités",
+      "supportText": "En séance, nous pouvons examiner cette interprétation, envisager d’autres explications et expérimenter une réponse différente. Le travail peut commencer par les pensées comme par les comportements.",
+      "source": "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/",
+      "sourceLabel": "NHS — Pensées, émotions et comportements"
+    },
+    "gestalt": {
+      "diagramTitle": "Le cycle du contact en Gestalt",
+      "diagramIntro": "Un besoin émerge, prend forme dans la relation à l’environnement, puis peut laisser place au repos.",
+      "center": "Ici et maintenant",
+      "centerText": "Être attentif à mon expérience",
+      "kind": "cycle",
+      "nodes": [
+        [
+          "Je ressens",
+          "Une sensation, une émotion ou une tension apparaît."
+        ],
+        [
+          "Je prends conscience",
+          "Je reconnais ce qui se passe et le besoin qui émerge."
+        ],
+        [
+          "Je me mobilise",
+          "L’énergie et l’envie d’agir prennent forme."
+        ],
+        [
+          "J’entre en contact",
+          "J’agis, je m’exprime et je vis l’expérience."
+        ],
+        [
+          "J’intègre",
+          "Je reconnais ce que cette expérience m’apporte."
+        ],
+        [
+          "Je me retire",
+          "Je peux me reposer et laisser émerger autre chose."
+        ]
+      ],
+      "note": "Une représentation simplifiée du cycle du contact : le vécu n’est pas toujours linéaire, et certaines étapes peuvent être interrompues ou difficiles à identifier.",
+      "example": "Sentir le besoin de poser une limite",
+      "exampleText": "Je remarque une tension lorsque j’accepte une demande. En y prêtant attention, je reconnais de la fatigue et un besoin de repos. Je peux alors chercher comment exprimer ma limite, observer ce que cela me fait et accueillir la suite de l’échange.",
+      "support": "Observer ce qui se passe dans la rencontre",
+      "supportText": "Le travail porte sur les émotions, les sensations et les façons d’entrer en relation qui apparaissent en séance. Il permet de repérer où le contact se complique et d’expérimenter d’autres ajustements.",
+      "source": "https://eagt.org/home/home/gt-menu/what-is-eagt/what-is-gestalt-therapy/",
+      "sourceLabel": "EAGT — La Gestalt-thérapie"
+    },
+    "schemas": {
+      "diagramTitle": "Quand le passé se rejoue dans le présent",
+      "diagramIntro": "Un schéma ancien peut orienter la lecture d’une situation actuelle et entretenir une répétition.",
+      "center": "Mes besoins",
+      "centerText": "Les reconnaître, apprendre à y répondre",
+      "kind": "cycle",
+      "nodes": [
+        [
+          "Une situation actuelle",
+          "Un événement touche un point sensible."
+        ],
+        [
+          "Un schéma se réactive",
+          "Une conviction ancienne sur moi ou les autres revient."
+        ],
+        [
+          "L’émotion prend de la place",
+          "Peur, honte, tristesse ou colère peuvent émerger."
+        ],
+        [
+          "Je me protège",
+          "Je m’efface, j’évite ou je cherche à tout contrôler."
+        ],
+        [
+          "La difficulté se répète",
+          "Ma réaction peut laisser mes besoins sans réponse."
+        ],
+        [
+          "Le schéma se renforce",
+          "L’expérience semble confirmer la conviction de départ."
+        ]
+      ],
+      "note": "Ce cycle illustre un mécanisme possible de maintien d’un schéma. Le travail thérapeutique vise à le reconnaître et à construire des réponses plus adaptées aux besoins actuels.",
+      "example": "Craindre l’abandon face à une distance",
+      "exampleText": "Une personne proche est moins disponible. Un schéma d’abandon peut se réactiver : « On finit toujours par me laisser ». La peur pousse alors à multiplier les demandes de réassurance ou, au contraire, à se retirer avant d’être blessé.",
+      "support": "Distinguer l’histoire passée du présent",
+      "supportText": "Nous cherchons à reconnaître le schéma, les situations qui l’activent et les besoins qu’il révèle. Ce repérage aide à développer des réponses qui tiennent compte de la situation réelle, plutôt que de la seule peur ancienne.",
+      "source": "https://www.schematherapysociety.org/Schema-Therapy/Schema-Questionnaires",
+      "sourceLabel": "ISST — Les concepts de la thérapie des schémas"
+    },
+    "jung": {
+      "diagramTitle": "Faire dialoguer les différentes facettes de soi",
+      "diagramIntro": "L’approche jungienne explore ce qui est conscient et ce qui reste moins connu dans notre vie psychique.",
+      "center": "Devenir soi",
+      "centerText": "Le processus d’individuation",
+      "kind": "constellation",
+      "nodes": [
+        [
+          "Ce que je montre",
+          "Mes rôles et la manière dont je me présente aux autres."
+        ],
+        [
+          "Ce que je laisse de côté",
+          "Des émotions, des désirs ou des qualités peu reconnus."
+        ],
+        [
+          "Ce qui se manifeste",
+          "Des rêves, des images ou des répétitions qui m’interpellent."
+        ],
+        [
+          "Ce qui me traverse",
+          "Des aspirations et des contradictions intérieures."
+        ]
+      ],
+      "note": "Ces facettes sont en relation : il ne s’agit ni d’étapes à suivre ni d’un modèle idéal à atteindre. L’individuation est un cheminement singulier.",
+      "example": "Se sentir à l’étroit dans un rôle",
+      "exampleText": "Je me présente toujours comme une personne solide et disponible, mais je ressens une fatigue ou une colère que je comprends mal. Explorer cette tension peut m’aider à reconnaître des limites, des désirs ou une vulnérabilité longtemps laissés de côté.",
+      "support": "Donner une place à ce qui émerge",
+      "supportText": "Le travail consiste à explorer le sens personnel de ces expériences et leurs liens avec l’histoire de la personne. Un rêve ou une image n’a pas une signification universelle à appliquer : il se comprend dans son contexte.",
+      "source": "https://iaap.org/jung-analytical-psychology/analytical-psychology/",
+      "sourceLabel": "IAAP — La psychologie analytique"
+    }
+  },
+  "en": {
+    "tcc": {
+      "diagramTitle": "Understanding what keeps a difficulty going",
+      "diagramIntro": "The same situation can feel different depending on what we think, feel and do.",
+      "center": "A situation",
+      "centerText": "What is happening around me",
+      "kind": "cycle",
+      "nodes": [
+        [
+          "My thoughts",
+          "The meaning I give to the situation."
+        ],
+        [
+          "My emotions",
+          "What I feel in my mind and body."
+        ],
+        [
+          "My behaviours",
+          "What I do, or what I avoid."
+        ],
+        [
+          "The consequences",
+          "What can reinforce or change my thoughts."
+        ]
+      ],
+      "note": "These dimensions influence each other. The diagram offers one reading direction, but the connections work both ways.",
+      "example": "A message goes unanswered",
+      "exampleText": "“I must have said something wrong”: this thought may bring worry. I reread my messages or avoid reaching out. Doubt remains and feeds my initial interpretation.",
+      "support": "Opening up other possibilities",
+      "supportText": "In therapy, we can examine this interpretation, consider other explanations and try a different response. Work can begin with thoughts or behaviours.",
+      "source": "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/self-help-cbt-techniques/thought-record/",
+      "sourceLabel": "NHS — Thoughts, feelings and behaviours"
+    },
+    "gestalt": {
+      "diagramTitle": "The Gestalt contact cycle",
+      "diagramIntro": "A need emerges, takes shape in contact with the environment, and may then give way to rest.",
+      "center": "Here and now",
+      "centerText": "Attending to my experience",
+      "kind": "cycle",
+      "nodes": [
+        [
+          "I sense",
+          "A sensation, emotion or tension appears."
+        ],
+        [
+          "I become aware",
+          "I recognise what is happening and the emerging need."
+        ],
+        [
+          "I mobilise",
+          "Energy and the wish to act take shape."
+        ],
+        [
+          "I make contact",
+          "I act, express myself and live the experience."
+        ],
+        [
+          "I integrate",
+          "I recognise what the experience brings me."
+        ],
+        [
+          "I withdraw",
+          "I can rest and allow something else to emerge."
+        ]
+      ],
+      "note": "A simplified view of the contact cycle: experience is not always linear, and some phases can be interrupted or difficult to recognise.",
+      "example": "Noticing the need for a boundary",
+      "exampleText": "I notice tension when accepting a request. Paying attention, I recognise tiredness and a need for rest. I can explore how to express my limit, notice how it feels and stay with what follows.",
+      "support": "Noticing what happens in the encounter",
+      "supportText": "Therapy attends to emotions, sensations and ways of relating that emerge in the session. It helps identify where contact becomes difficult and explore other ways of responding.",
+      "source": "https://eagt.org/home/home/gt-menu/what-is-eagt/what-is-gestalt-therapy/",
+      "sourceLabel": "EAGT — Gestalt therapy"
+    },
+    "schemas": {
+      "diagramTitle": "When the past echoes in the present",
+      "diagramIntro": "An old schema can shape how we read a current situation and keep a pattern going.",
+      "center": "My needs",
+      "centerText": "Recognising and responding to them",
+      "kind": "cycle",
+      "nodes": [
+        [
+          "A current situation",
+          "An event touches a sensitive point."
+        ],
+        [
+          "A schema is activated",
+          "An old belief about myself or others returns."
+        ],
+        [
+          "Emotions intensify",
+          "Fear, shame, sadness or anger may emerge."
+        ],
+        [
+          "I protect myself",
+          "I give in, avoid or try to control everything."
+        ],
+        [
+          "The difficulty repeats",
+          "My response can leave my needs unmet."
+        ],
+        [
+          "The schema grows stronger",
+          "The experience seems to confirm the original belief."
+        ]
+      ],
+      "note": "This cycle illustrates one possible way a schema is maintained. Therapy aims to recognise it and build responses better suited to current needs.",
+      "example": "Fearing abandonment when someone is distant",
+      "exampleText": "Someone close is less available. An abandonment schema may be activated: “People always leave me.” Fear may lead to repeated reassurance-seeking or withdrawing before being hurt.",
+      "support": "Separating past experience from the present",
+      "supportText": "We explore the schema, the situations that activate it and the needs it reveals. This helps develop responses that take account of the actual situation, rather than only an old fear.",
+      "source": "https://www.schematherapysociety.org/Schema-Therapy/Schema-Questionnaires",
+      "sourceLabel": "ISST — Schema therapy concepts"
+    },
+    "jung": {
+      "diagramTitle": "Bringing different aspects of self into dialogue",
+      "diagramIntro": "The Jungian approach explores what is conscious and what is less familiar in our inner life.",
+      "center": "Becoming oneself",
+      "centerText": "The process of individuation",
+      "kind": "constellation",
+      "nodes": [
+        [
+          "What I show",
+          "My roles and how I present myself to others."
+        ],
+        [
+          "What I set aside",
+          "Emotions, wishes or qualities I barely acknowledge."
+        ],
+        [
+          "What emerges",
+          "Dreams, images or repetitions that draw my attention."
+        ],
+        [
+          "What moves within me",
+          "Aspirations and inner contradictions."
+        ]
+      ],
+      "note": "These aspects are interconnected, rather than steps to follow or an ideal to achieve. Individuation is a personal journey.",
+      "example": "Feeling confined by a role",
+      "exampleText": "I always present myself as strong and available, yet feel tiredness or anger that I struggle to understand. Exploring this tension may help me recognise limits, wishes or vulnerability I have long set aside.",
+      "support": "Making room for what emerges",
+      "supportText": "Therapy explores the personal meaning of these experiences and their connections with a person’s history. A dream or image has no universal meaning to apply: it is understood in context.",
+      "source": "https://iaap.org/jung-analytical-psychology/analytical-psychology/",
+      "sourceLabel": "IAAP — Analytical psychology"
+    }
+  }
+}

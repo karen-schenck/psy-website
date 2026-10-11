@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link"
+import { localizePath } from "@/lib/i18n"
 import { SiteShell } from "@/components/shared/site-shell"
 import { PageHeader } from "@/components/shared/page-header"
 import { BookingCta } from "@/components/landing/booking-cta"
@@ -50,10 +52,24 @@ export function PracticeContent() {
                       <span className="sr-only"> — {modality.title}</span>
                       <ChevronDown aria-hidden="true" className="size-4 shrink-0 group-data-[state=open]:rotate-180" />
                     </CollapsibleTrigger>
+                    <Link href={localizePath(`/ma-pratique/${modality.id}`, locale)} prefetch={false} className="inline-flex min-h-11 items-center rounded text-sm text-primary underline underline-offset-4 focus-visible:outline-2 focus-visible:outline-offset-4">
+                      {locale === "fr" ? "Comprendre cette approche en images" : "Explore this approach visually"}
+                    </Link>
                   </article>
                 </Collapsible>
               </Reveal>
             ))}
+            {/* Complementary tools: a full-width, unnumbered card after the four approaches. */}
+            <Reveal delay={practicePage.modalities.length * 80} className="sm:col-span-2">
+              <article className="flex flex-col items-center gap-4 rounded-2xl text-center bg-shell p-7 lg:p-8">
+                <h3 className="font-display text-lg leading-snug text-heading">
+                  {practicePage.complementaryTools.title}
+                </h3>
+                <p className="max-w-2xl text-[13.5px] leading-relaxed text-foreground/75">
+                  {practicePage.complementaryTools.text}
+                </p>
+              </article>
+            </Reveal>
           </div>
         </Reveal>
       </section>

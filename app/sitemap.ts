@@ -37,6 +37,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
     })),
     { path: '/ma-pratique', priority: 0.8, changeFrequency: 'monthly' },
+    ...getSiteContent(DEFAULT_LOCALE).practicePage.modalities.map((modality) => ({
+      path: `/ma-pratique/${modality.id}`,
+      priority: 0.8,
+      changeFrequency: 'monthly' as const,
+    })),
     { path: '/informations-pratiques', priority: 0.7, changeFrequency: 'monthly' },
     { path: '/blog', priority: 0.7, changeFrequency: 'weekly' },
     { path: '/contact', priority: 0.6, changeFrequency: 'monthly' },

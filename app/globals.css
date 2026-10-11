@@ -278,3 +278,132 @@ html {
     animation: none;
   }
 }
+
+/* Therapy diagrams: the warm paper and organic shapes of the site's SVG artwork. */
+.therapy-diagram {
+  --therapy-paper: #ece2d8;
+  --therapy-clay: #e0cfbf;
+  --therapy-slate: #dbe0e3;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: var(--radius-panel);
+  background: var(--therapy-paper);
+  padding: 1.5rem 1rem;
+}
+.therapy-diagram-paper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  color: var(--accent);
+}
+.therapy-diagram-connections { display: none; }
+.therapy-diagram-center { text-align: center; max-width: 18rem; margin: 0 auto 2rem; }
+.therapy-diagram-nodes { display: grid; gap: 3rem; }
+.therapy-diagram-node { position: relative; text-align: center; padding: 1.75rem 1.5rem; }
+.therapy-node-shape { position: absolute; inset: 0; width: 100%; height: 100%; fill: var(--shell); }
+.therapy-diagram-node:nth-child(3n + 1) .therapy-node-shape { fill: var(--therapy-slate); }
+.therapy-diagram-node:nth-child(3n + 2) .therapy-node-shape { fill: var(--therapy-clay); }
+.therapy-mobile-arrow { position: absolute; bottom: -2.8rem; left: 50%; transform: translateX(-50%); width: 40px; height: 40px; overflow: visible; color: var(--accent); }
+@media (min-width: 1024px) {
+  .therapy-diagram { aspect-ratio: 4 / 3; padding: 0; }
+  .therapy-diagram-connections { display: block; }
+  .therapy-diagram-center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 20%; margin: 0; }
+  .therapy-diagram-node { position: absolute; left: var(--node-x); top: var(--node-y); transform: translate(-50%, -50%); width: 32%; padding: 1.75rem 1.5rem; }
+  .therapy-diagram-six .therapy-diagram-node { width: 34%; }
+  /* Type and spacing follow the diagram's own width, so the shapes never overflow when it shrinks. */
+  .therapy-diagram { container-type: inline-size; }
+  .therapy-diagram-node { padding: 3.4cqw 3cqw; }
+  .therapy-diagram-node span { font-size: 1.8cqw; margin-bottom: 0.8cqw; }
+  .therapy-diagram-node h3 { font-size: 2.4cqw; }
+  .therapy-diagram-node p { font-size: 2.05cqw; margin-top: 0.8cqw; }
+  .therapy-diagram-center p:first-of-type { font-size: 2.4cqw; }
+  .therapy-diagram-center p + p { font-size: 1.8cqw; margin-top: 0.8cqw; }
+  .therapy-mobile-arrow { display: none; }
+}
+@media print {
+  .therapy-diagram-paper { display: none; }
+  .therapy-diagram-node { break-inside: avoid; }
+}
+
+/* The line and its moving chevron share a timeline and remain burgundy. */
+.therapy-arrow-flow, .therapy-arrow-head { display: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .therapy-arrow-track { opacity: .45; }
+  .therapy-arrow-flow, .therapy-arrow-head {
+    display: block;
+    opacity: 0;
+    animation-duration: var(--flow-duration);
+    animation-timing-function: cubic-bezier(.4, 0, .2, 1);
+    animation-delay: var(--flow-delay);
+    animation-iteration-count: infinite;
+  }
+  .therapy-arrow-flow {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation-name: therapy-arrow-flow;
+  }
+  .therapy-arrow-head {
+    offset-distance: 0%;
+    offset-rotate: auto;
+    animation-name: therapy-arrow-head;
+  }
+
+  .therapy-mobile-arrow .therapy-arrow-flow { animation-name: therapy-mobile-flow; }
+  .therapy-mobile-arrow .therapy-arrow-head { animation-name: therapy-mobile-head; }
+  .therapy-petal {
+    transform-origin: center;
+    animation: therapy-petal-rotate 24s linear infinite;
+  }
+}
+@keyframes therapy-arrow-flow {
+  0% { stroke-dashoffset: 100; opacity: 0; }
+  2% { opacity: 1; }
+  10% { stroke-dashoffset: 0; opacity: 1; }
+  13%, 100% { stroke-dashoffset: 0; opacity: 0; }
+}
+@keyframes therapy-arrow-head {
+  0% { offset-distance: 0%; opacity: 0; }
+  2% { opacity: 1; }
+  10% { offset-distance: 100%; opacity: 1; }
+  13%, 100% { offset-distance: 100%; opacity: 0; }
+}
+/* At most a few arrows fit on a phone: give each a longer visible movement. */
+@keyframes therapy-mobile-flow {
+  0% { stroke-dashoffset: 100; opacity: 0; }
+  3% { opacity: 1; }
+  20% { stroke-dashoffset: 0; opacity: 1; }
+  25%, 100% { stroke-dashoffset: 0; opacity: 0; }
+}
+@keyframes therapy-mobile-head {
+  0% { offset-distance: 0%; opacity: 0; }
+  3% { opacity: 1; }
+  20% { offset-distance: 100%; opacity: 1; }
+  25%, 100% { offset-distance: 100%; opacity: 0; }
+}
+@keyframes therapy-petal-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@media print {
+  .therapy-arrow-flow, .therapy-arrow-head, .therapy-node-highlight { display: none; }
+  .therapy-petal { animation: none; }
+}
+
+/* Keep the arrow motion independent from the diagram shapes. */
+@media (prefers-reduced-motion: no-preference) {
+  .therapy-diagram-node {
+    --flow-delay: var(--mobile-flow-delay, 0s);
+    --flow-duration: var(--mobile-flow-duration, 3.6s);
+  }
+  .therapy-diagram-node:not([data-in-view]) .therapy-mobile-arrow .therapy-arrow-flow,
+  .therapy-diagram-node:not([data-in-view]) .therapy-mobile-arrow .therapy-arrow-head { animation-name: none; }
+}
+@media (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  .therapy-diagram-node { --flow-delay: var(--node-flow-delay); --flow-duration: inherit; }
+}
+@media print {
+}
